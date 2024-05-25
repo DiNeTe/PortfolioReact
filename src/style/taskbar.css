@@ -1,0 +1,100 @@
+#taskbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    background: rgba(51, 51, 51, 0.435);
+    color: white;
+    padding: 0 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .taskbar-left,
+  .taskbar-center,
+  .taskbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .taskbar-center {
+    position: absolute;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: center;
+    z-index: 0;
+  }
+
+  /* Affichage du menu au survol */
+.taskbar-left:hover #start-menu {
+    max-height: 300px; 
+    opacity: 1;
+  }
+
+  #logo-win {
+    width: 40px;
+    align-self: center;
+    display: flex;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 100);
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  #logo-win:hover{
+    transform: scale(1.2);
+    box-shadow: white 0 0 10px 0;
+    transition: transform 0.3s ease; /* transition pour l'effet de survol */
+
+  }
+
+
+  .icons-list {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+    align-content: center;
+    cursor: pointer;
+  }
+
+  #btc-price {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  #btc-icon {
+    height: 20px;
+    margin: 5px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  #btc-value {
+    font-size: 18px;
+
+  }
+  
+  #volume-control {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    margin: 15px;
+  }
+  
+  #volume-icon {
+    height: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .time {
+    font-size: 26px;
+    margin-right: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }

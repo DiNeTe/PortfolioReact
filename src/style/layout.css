@@ -1,0 +1,10 @@
+#desktop {
+    display: flex;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  #wallpaper {
+    height: 100vh;
+    width: 100vw;
+  }

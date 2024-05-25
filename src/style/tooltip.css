@@ -1,0 +1,27 @@
+  #nav-list li a {
+    position: relative;
+    display: inline-block;
+  }
+
+#nav-list li a::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 100%; /* Positionne l'info-bulle au-dessus de l'icône */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    white-space: nowrap;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    border: 1px solid rgb(255, 255, 255);
+  }
+  
+  #nav-list li a:hover::after {
+    opacity: 1;
+  }
