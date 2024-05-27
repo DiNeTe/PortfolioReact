@@ -1,72 +1,42 @@
 .window {
-    display: block;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%,1500%) scale(0);
-    width: 50%;
-    height: 5%;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 1000px rgba(255, 255, 255, 0.5);
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 5s ease-in-out, transform 0.5s ease-in-out;
-  }
-
-  .window.show {
-    display: block;
-    opacity: 1;
-    transform: translate(-50%, -20%) scale(1);
-    transition: opacity 0.2s ease-in-out, transform 0.5s ease-in-out;
-    width: 60%;
-    height: 60%;
-
-}
-  
-  .window-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 10px;
-    background-color: #0078d7;
-    color: white;
-  }
-  
-  .window-content {
-    padding: 20px;
-  }
-  
-  .close-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 30px;
-    cursor: pointer;
-  }
-  
-  .close-button:hover {
-    background-color: #ff5c5c;
-    height: 100%;
-    width: auto;
-  }
-
-  form#contact-form {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  height: 100%;
 }
 
-#window-content-contact {
+.window-header {
   display: flex;
-  justify-content: center;
-}
-
-#message {
-  display: flex;
-  justify-content: center;
-  height: 300px;
+  justify-content: space-between;
   align-items: center;
-  font-size: 1.5em;
-  color: #0078d7;
+  padding: 10px;
+  background-color: #0078d7;
+  color: white;
+  cursor: move; /* Indicate draggable area */
+}
+
+.window-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.fullscreen-button, .close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.fullscreen-button:hover, .close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.window-content {
+  padding: 20px;
+  max-height: calc(100% - 40px); /* Adjust for header height */
+  overflow: auto;
 }
