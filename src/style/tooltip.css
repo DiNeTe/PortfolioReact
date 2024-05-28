@@ -11,15 +11,14 @@
     transform: translateX(-50%);
     margin-bottom: 5px;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #fff;
+    background-color: rgb(255, 254, 247);
+    color: #000000;
     white-space: nowrap;
     font-size: 12px;
-    border-radius: 3px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
   }
   
   #nav-list li a:hover::after {

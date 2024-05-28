@@ -3,19 +3,20 @@
   position: relative;
   background-color: #fff;
   border: 1px solid #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  z-index: 5;
   height: 100%;
+  overflow: auto;
+  box-shadow: 0 0 1000px rgba(255, 255, 255, 0.5);
 }
 
 .window-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   background-color: #0078d7;
   color: white;
-  cursor: move; /* Indicate draggable area */
+  height: 3%;
 }
 
 .window-controls {
@@ -23,20 +24,62 @@
   gap: 5px;
 }
 
-.fullscreen-button, .close-button {
+.fullscreen-button,
+.close-button,
+.minimize-button {
   background: none;
   border: none;
   color: white;
   font-size: 20px;
   cursor: pointer;
+  display: flex;
 }
 
-.fullscreen-button:hover, .close-button:hover {
+.fullscreen-button:hover,
+.close-button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 .window-content {
   padding: 20px;
   max-height: calc(100% - 40px); /* Adjust for header height */
-  overflow: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes closeWindow {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes minimizeWindow {
+  from {
+    transform: scale(1);
+    opacity: 1;
+    transform-origin: bottom;
+  }
+  to {
+    transform: scale(0.1) translateY(calc(100vh - var(--taskbar-height)));
+    opacity: 0;
+    transform-origin: bottom;
+  }
+}
+
+.window-closing {
+  animation: closeWindow 0.3s forwards;
+}
+
+.window-minimizing {
+  animation: minimizeWindow 0.5s forwards;
+}
+
+.window-hidden {
+  display: none !important;
 }

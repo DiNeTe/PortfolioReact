@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Rnd } from 'react-rnd';
 
 type WindowsProps = {
@@ -11,14 +11,20 @@ type WindowsProps = {
   onClose: () => void;
   onDragStop: (e: any, d: any) => void;
   onResizeStop: (e: any, direction: any, ref: any, delta: any, position: any) => void;
+  onMinimize: () => void;
 };
 
 const Windows: React.FC<WindowsProps> = ({
-  header, children, content, id, apiData, showForm, onClose, onDragStop, onResizeStop
+  header, children, content, id, apiData, showForm, onClose, onDragStop, onResizeStop, onMinimize
 }) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+  const [isMinimizing, setIsMinimizing] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const [size, setSize] = useState({ width: window.innerWidth * 0.6, height: window.innerHeight * 0.6 });
   const [position, setPosition] = useState({ x: (window.innerWidth * 0.2), y: (window.innerHeight * 0.2) });
+
+  const windowRef = useRef<HTMLDivElement>(null);
 
   const toggleFullscreen = () => {
     if (isFullscreen) {
@@ -43,20 +49,48 @@ const Windows: React.FC<WindowsProps> = ({
     return () => window.removeEventListener('resize', handleResize);
   }, [isFullscreen, size.width, size.height]);
 
+  const handleClose = () => {
+    console.log('Closing window');
+    setIsClosing(true);
+    setTimeout(() => {
+      onClose();
+    }, 300); // Correspond à la durée de l'animation CSS
+  };
+
+  const handleMinimize = () => {
+    console.log('Minimizing window');
+    setIsMinimizing(true);
+    setTimeout(() => {
+      console.log('Window minimized');
+      onMinimize();
+      setIsMinimizing(false); // Reset state after animation
+      setIsHidden(true); // Hide the window after minimizing
+    }, 300); // Correspond à la durée de l'animation CSS
+  };
+
+  useEffect(() => {
+    if (!isMinimizing && !isClosing) {
+      setIsHidden(false); // Ensure the window is visible when not minimizing or closing
+    }
+  }, [isMinimizing, isClosing]);
+
+  useEffect(() => {
+    console.log('Window state:', { isClosing, isMinimizing, isHidden });
+  }, [isClosing, isMinimizing, isHidden]);
+
   return (
     <Rnd
       size={{ width: size.width, height: size.height }}
       position={{ x: position.x, y: position.y }}
       minWidth={300}
       minHeight={200}
-      bounds="window"
       dragHandleClassName="window-header"
       onDragStop={(e, d) => {
         setPosition({ x: d.x, y: d.y });
         onDragStop(e, d);
       }}
       onResizeStop={(e, direction, ref, delta, position) => {
-        setSize({ width: ref.style.width, height: ref.style.height });
+        setSize({ width: parseInt(ref.style.width, 10), height: parseInt(ref.style.height, 10) });
         setPosition(position);
         onResizeStop(e, direction, ref, delta, position);
       }}
@@ -71,14 +105,19 @@ const Windows: React.FC<WindowsProps> = ({
         right: true,
       }}
     >
-      <div className="window" id={id}>
+      <div
+        ref={windowRef}
+        className={`window ${isClosing ? 'window-closing' : ''} ${isMinimizing ? 'window-minimizing' : ''} ${isHidden ? 'window-hidden' : ''}`}
+        id={id}
+      >
         <div className="window-header">
           <h3>{header}</h3>
           <div className="window-controls">
             <button className="fullscreen-button" onClick={toggleFullscreen}>
-              {isFullscreen ? '↙️' : '↖️'}
+              <img src={isFullscreen ? "/icons/enlarge2.png" : "/icons/reduce2.png"} alt={isFullscreen ? "Réduire" : "Agrandir"} />
             </button>
-            <button className="close-button" onClick={onClose}>&times;</button>
+            <button className="minimize-button" onClick={handleMinimize}>-</button>
+            <button className="close-button" onClick={handleClose}>&times;</button>
           </div>
         </div>
         <div className="window-content">

@@ -6,6 +6,7 @@ type WindowDetails = {
   width: number;
   height: number;
   minimized: boolean;
+  open: boolean;
 };
 
 type WindowState = {
@@ -47,11 +48,22 @@ const useWindowState = (initialState: WindowState) => {
     }));
   };
 
+  const setWindowState = (id: string, newState: Partial<WindowDetails>) => {
+    setWindowsState(prevState => ({
+      ...prevState,
+      [id]: {
+        ...prevState[id],
+        ...newState
+      }
+    }));
+  };
+
   return {
     windowsState,
     toggleMinimize,
     updatePosition,
-    updateSize
+    updateSize,
+    setWindowState,
   };
 };
 

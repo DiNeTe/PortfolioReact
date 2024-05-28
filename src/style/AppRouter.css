@@ -1,0 +1,22 @@
+/* AppRouter.css */
+
+/* Définir un arrière-plan par défaut pour éviter l'écran blanc */
+
+/* Animation de transition en fondu */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out; /* Augmenter la durée de la transition pour plus de fluidité */
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out; /* Augmenter la durée de la transition pour plus de fluidité */
+}

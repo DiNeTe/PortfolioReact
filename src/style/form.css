@@ -1,0 +1,9 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+textarea#message {
+    height: 300px;
+}

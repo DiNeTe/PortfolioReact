@@ -1,5 +1,7 @@
-const LoginScreen = () => {
+const LoginScreen: React.FC  = () => {
+  console.log('Rendering LoginScreen');
   return (
+    
     <div className="loginScreenPage">
       <img src="./images/loginScreen.webp" className="wallpaper" alt="Wallpaper" />
       <div className="loginScreenInsert"> 
