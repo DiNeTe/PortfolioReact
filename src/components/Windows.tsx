@@ -1,8 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef,} from "react";
 import { Rnd } from "react-rnd";
-import { useWindowSize } from '../hooks/useWindowSize';
-import { useWindowLifecycle } from '../hooks/useWindowLifecycle';
-import WindowControls from './WindowControls';
+import { useWindowLifecycle } from "../hooks/useWindowLifecycle";
+import WindowControls from "./WindowControls";
 
 type WindowsProps = {
   header: string;
@@ -10,13 +9,18 @@ type WindowsProps = {
   content?: React.ReactNode;
   id?: string;
   apiData?: any;
-  showForm?: boolean;
   onClose: () => void;
   onDragStop: (e: any, d: any) => void;
-  onResizeStop: (e: any, direction: any, ref: any, delta: any, position: any) => void;
+  onResizeStop: (
+    e: any,
+    direction: any,
+    ref: any,
+    delta: any,
+    position: any
+  ) => void;
   onMinimize: () => void;
-  initialSize: { width: number, height: number };
-  initialPosition: { x: number, y: number };
+  initialSize: { width: number; height: number };
+  initialPosition: { x: number; y: number };
   zIndex: number;
   bringToFront: () => void;
 };
@@ -27,7 +31,6 @@ const Windows: React.FC<WindowsProps> = ({
   content,
   id,
   apiData,
-  showForm,
   onClose,
   onDragStop,
   onResizeStop,
@@ -38,15 +41,31 @@ const Windows: React.FC<WindowsProps> = ({
   bringToFront,
 }) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [size, setSize] = useState({ width: initialSize.width, height: initialSize.height });
+  const [position, setPosition] = useState(initialPosition);
 
-  const { size, position, setSize, setPosition, toggleFullscreen } = useWindowSize(initialSize.width, initialSize.height);
-  const { isHidden, isClosing, isMinimizing, handleClose, handleMinimize } = useWindowLifecycle(onClose, onMinimize);
+  const { isHidden, isClosing, isMinimizing, handleClose, handleMinimize } = 
+    useWindowLifecycle(onClose, onMinimize);
 
   const windowRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    setPosition(initialPosition);
-  }, [initialPosition]);
+  const handleToggleFullscreen = () => {
+    setIsFullscreen((prev) => {
+      const newFullscreen = !prev;
+      if (newFullscreen) {
+        setSize({ width: window.innerWidth, height: window.innerHeight });
+        setPosition({ x: 0, y: 0 });
+      } else {
+        const newSize = { width: window.innerWidth * 0.6, height: window.innerHeight * 0.6 };
+        setSize(newSize);
+        setPosition({
+          x: (window.innerWidth - newSize.width) / 2,
+          y: (window.innerHeight - newSize.height) / 2,
+        });
+      }
+      return newFullscreen;
+    });
+  };
 
   return (
     <Rnd
@@ -55,16 +74,22 @@ const Windows: React.FC<WindowsProps> = ({
       minWidth={300}
       minHeight={200}
       dragHandleClassName="window-header"
-      onDragStart={bringToFront}
+      onDragStart={() => {
+        console.log(`Dragging started for ${id}.`);
+        bringToFront();
+      }}
       onDragStop={(e, d) => {
+        console.log(`Dragging stopped for ${id}. New position: `, { x: d.x, y: d.y });
         setPosition({ x: d.x, y: d.y });
         onDragStop(e, d);
       }}
       onResizeStop={(e, direction, ref, delta, position) => {
-        setSize({
+        const newSize = {
           width: parseInt(ref.style.width, 10),
           height: parseInt(ref.style.height, 10),
-        });
+        };
+        console.log(`Resizing stopped for ${id}. New size: `, newSize);
+        setSize(newSize);
         setPosition(position);
         onResizeStop(e, direction, ref, delta, position);
       }}
@@ -82,18 +107,20 @@ const Windows: React.FC<WindowsProps> = ({
     >
       <div
         ref={windowRef}
-        className={`window ${isClosing ? "window-closing" : ""} ${isMinimizing ? "window-minimizing" : ""} ${isHidden ? "window-hidden" : ""}`}
+        className={`window ${isClosing ? "window-closing" : ""} ${
+          isMinimizing ? "window-minimizing" : ""
+        } ${isHidden ? "window-hidden" : ""}`}
         id={id}
-        onMouseDown={bringToFront}
+        onMouseDown={() => {
+          console.log(`Window ${id} clicked. Bringing to front.`);
+          bringToFront();
+        }}
       >
-        <div className="window-header" onClick={bringToFront}>
+        <div className="window-header">
           <h3>{header}</h3>
           <WindowControls
             isFullscreen={isFullscreen}
-            toggleFullscreen={() => {
-              setIsFullscreen(!isFullscreen);
-              toggleFullscreen(isFullscreen);
-            }}
+            toggleFullscreen={handleToggleFullscreen}
             handleMinimize={handleMinimize}
             handleClose={handleClose}
           />
@@ -101,17 +128,6 @@ const Windows: React.FC<WindowsProps> = ({
         <div className="window-content">
           {content && <div className="animated-text">{content}</div>}
           {apiData && <div className="api-data">{JSON.stringify(apiData)}</div>}
-          {showForm && (
-            <form className="contact-form">
-              <label htmlFor="name">Nom:</label>
-              <input type="text" id="name" name="name" required />
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" required />
-              <label htmlFor="message">Message:</label>
-              <textarea id="message" name="message" required />
-              <button type="submit">Envoyer</button>
-            </form>
-          )}
           {children}
         </div>
       </div>

@@ -1,9 +1,11 @@
-import React from 'react';
+import { useWindowActions } from '../hooks/windowActions';
+
+import StartMenuHandler from '../components/StartMenuHandler';
 import Windows from "../components/Windows";
 import Taskbar from '../components/Taskbar';
-import StartMenuHandler from '../components/StartMenuHandler';
-import { useWindowActions } from '../hooks/windowActions';
-import Typewriter from '../components/Typewriter';
+import PortfolioContent from '../components/PortfolioContent';
+import ContactForm from '../components/ContactForm';
+import AboutContent from '../components/AboutContent';
 
 const Home: React.FC = () => {
   const windowWidth = window.innerWidth;
@@ -34,12 +36,11 @@ const Home: React.FC = () => {
             header={windowId === 'about-window' ? 'A propos de moi' : windowId === 'portfolio-window' ? 'Mon portfolio' : 'Me contacter'}
             content={
               windowId === 'about-window'
-                ? <Typewriter text="Deepuis toujours passionné par l'informatique, j'ai constamment exploré et expérimenté avec les technologies. Aujourd'hui, je me tourne vers le développement web avec une grande motivation. Mon intérêt se porte sur l'IA, le Web3 et la blockchain. Je suis déterminé à contribuer activement à l'expansion du Web3 et à participer à l'innovation numérique." />
+                ? <AboutContent/>
                 : windowId === 'portfolio-window'
-                  ? 'Ici se trouvent mes projets de développement web...'
+                  ? <PortfolioContent /> 
                   : ''
             }
-            showForm={windowId === 'contact-window'}
             onClose={() => handleClose(windowId)}
             onMinimize={() => handleMinimize(windowId)}
             onDragStop={(_e, d) => updatePosition(windowId, d.x, d.y)}
@@ -48,7 +49,9 @@ const Home: React.FC = () => {
             initialPosition={{ x: windowsState[windowId].x, y: windowsState[windowId].y }}
             zIndex={windowsState[windowId].zIndex}
             bringToFront={() => bringToFront(windowId)}
-          />
+          >
+            {windowId === 'contact-window' && <ContactForm />}
+          </Windows>
         )
       ))}
     </section>

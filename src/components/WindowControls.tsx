@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface WindowControlsProps {
   isFullscreen: boolean;
@@ -14,11 +14,15 @@ const WindowControls: React.FC<WindowControlsProps> = ({
   handleClose,
 }) => (
   <div className="window-controls">
-    <button className="fullscreen-button" onClick={toggleFullscreen}>
-      <img src={isFullscreen ? "/icons/enlarge2.png" : "/icons/reduce2.png"} alt={isFullscreen ? "Réduire" : "Agrandir"} />
+    <button className="minimize-button" onClick={handleMinimize}>
+    ‒
     </button>
-    <button className="minimize-button" onClick={handleMinimize}>-</button>
-    <button className="close-button" onClick={handleClose}>&times;</button>
+    <button className="fullscreen-button" onClick={toggleFullscreen}>
+      {isFullscreen ? "❐" : "□"}
+    </button>
+    <button className="close-button" onClick={handleClose}>
+      x
+    </button>
   </div>
 );
 
