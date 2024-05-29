@@ -1,7 +1,8 @@
 import useWindowState from "./useWindowState";
 
 export const useWindowActions = (initialState: any) => {
-    const { windowsState, bringToFront, toggleMinimize, updatePosition, updateSize, setWindowState } = useWindowState(initialState);
+    const { windowsState, bringToFront, toggleMinimize, updatePosition, updateSize, setWindowState, resetWindowState  } = useWindowState(initialState);
+    
   // Fonction pour ouvrir une fenêtre spécifique
   const handleClick = (id: string) => {
     setWindowState(id, { open: true, minimized: false });
@@ -9,7 +10,7 @@ export const useWindowActions = (initialState: any) => {
 
   // Fonction pour fermer une fenêtre spécifique
   const handleClose = (id: string) => {
-    setWindowState(id, { open: false });
+    resetWindowState(id, { open: false } );
   };
 
   // Fonction pour minimiser une fenêtre spécifique

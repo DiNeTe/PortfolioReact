@@ -1,34 +1,55 @@
 /* Style du menu démarrer */
 #start-menu {
   display: none; /* Masqué par défaut */
-  flex-direction: column;
   position: absolute;
-  bottom: 50px; /* Ajustez en fonction de la taille de la barre des tâches */
+  bottom: 50px;
   left: 0;
-  width: 200px;
   background-color: rgba(36, 36, 36, 0.9);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   overflow: hidden;
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;}
-  
-  #avatar {
-    width: 75px;
-    height: 75px;
-    border-radius: 100%;
-  }
-  
-  #start-menu ul {
-    list-style: none;
-    padding: 10px;
-    margin: 0;
-  }
-  
-  #start-menu ul li {
-    padding: 8px;
-    cursor: pointer;
-  }
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
 
-  #start-menu ul li:hover {
-    background-color: rgba(200, 200, 0, 0.5);
-  }
+#start-menu-lateral-bar {
+  display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+max-width: 50px;
+padding: 5px 0;
+border-right: rgb(65, 65, 65) 0.1px solid;
+}
+
+#shutdown {
+  align-items: center;
+  cursor: pointer;
+  padding-right: 10%;
+  padding-left: 5%;
+  width: 50%;
+}
+
+#shutdown-txt {
+  color: white;
+  padding-left: 5%;
+}
+
+#avatar {
+  width: 80%;
+  border-radius: 100%;
+}
+
+#start-menu ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+#start-menu ul li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+#start-menu ul li:hover {
+  background-color: rgba(200, 200, 0, 0.5);
+}

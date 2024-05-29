@@ -82,6 +82,17 @@ const useWindowState = (initialState: WindowState) => {
     }));
   };
 
+  const resetWindowState = (id: string, newState: Partial<WindowDetails>) => {
+    setWindowsState(prevState => ({
+      ...prevState,
+      [id]: {
+        ...initialState[id], // Réinitialise les propriétés de la fenêtre ciblée
+        ...newState, // Applique les nouvelles propriétés
+
+      }
+    }));
+  };
+
   // Retourne l'état des fenêtres et les fonctions pour le gérer
   return {
     windowsState, // L'état des fenêtres
@@ -90,6 +101,7 @@ const useWindowState = (initialState: WindowState) => {
     updatePosition, // Fonction pour mettre à jour la position d'une fenêtre
     updateSize, // Fonction pour mettre à jour la taille d'une fenêtre
     setWindowState, // Fonction pour mettre à jour l'état d'une fenêtre avec de nouvelles propriétés
+    resetWindowState, // Fonction pour réinitialiser l'état d'une fenêtre
   };
 };
 
