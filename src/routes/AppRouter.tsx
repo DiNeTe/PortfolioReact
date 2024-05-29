@@ -18,13 +18,10 @@ const AppRouter: React.FC = () => {
 
   const currentKey = routeKeys[location.pathname] || 'default';
 
-  console.log('Location pathname:', location.pathname);
-  console.log('Current key:', currentKey);
-
   return (
     <SwitchTransition>
       <CSSTransition
-        key={currentKey} // Utiliser une clé unique générée
+        key={currentKey}
         timeout={300}
         classNames="fade"
       >

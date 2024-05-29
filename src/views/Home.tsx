@@ -1,118 +1,30 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Windows from "../components/Windows";
-import Icon from "../components/Icons";
-import BitcoinPrice from '../components/BitcoinPrice';
-import CurrentTime from '../components/CurrentTime';
+import Taskbar from '../components/Taskbar';
+import StartMenuHandler from '../components/StartMenuHandler';
+import { useWindowActions } from '../hooks/windowActions';
 import Typewriter from '../components/Typewriter';
-import useWindowState from '../hooks/useWindowState';
 
 const Home: React.FC = () => {
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+  const windowDimensions = { width: 800, height: 450 };
+  const initialX = (windowWidth - windowDimensions.width) / 2;
+  const initialY = (windowHeight - windowDimensions.height) / 2;
+
   const initialState = {
-    'about-window': { x: 0, y: 0, width: 600, height: 400, minimized: false, open: true },
-    'portfolio-window': { x: 0, y: 0, width: 600, height: 400, minimized: false, open: false },
-    'contact-window': { x: 0, y: 0, width: 600, height: 400, minimized: false, open: false },
+    'about-window': { x: initialX, y: initialY, width: windowDimensions.width, height: windowDimensions.height, minimized: false, open: true, zIndex: 1 },
+    'portfolio-window': { x: initialX + 50, y: initialY + 50, width: windowDimensions.width, height: windowDimensions.height, minimized: false, open: false, zIndex: 0 },
+    'contact-window': { x: initialX + 100, y: initialY + 100, width: windowDimensions.width, height: windowDimensions.height, minimized: false, open: false, zIndex: 0 },
   };
 
-  const { windowsState, toggleMinimize, updatePosition, updateSize, setWindowState } = useWindowState(initialState);
-
-  useEffect(() => {
-    const logoWin = document.getElementById('logo-win');
-    const startMenu = document.getElementById('start-menu');
-
-    const handleLogoClick = () => {
-      if (!startMenu) return;
-      if (startMenu.style.display === 'flex') {
-        startMenu.style.display = 'none';
-      } else {
-        startMenu.style.display = 'flex';
-      }
-    };
-
-    const handleClickOutside = (event: MouseEvent) => {
-      if (startMenu && !startMenu.contains(event.target as Node) && logoWin && !logoWin.contains(event.target as Node)) {
-        startMenu.style.display = 'none';
-      }
-    };
-
-    if (logoWin) {
-      logoWin.addEventListener('click', handleLogoClick);
-    }
-
-    document.addEventListener('click', handleClickOutside);
-
-    return () => {
-      if (logoWin) {
-        logoWin.removeEventListener('click', handleLogoClick);
-      }
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
-
-  console.log('Rendering Home');
-
-  const handleClick = (id: string) => {
-    setWindowState(id, { open: true, minimized: false });
-  };
-
-  const handleClose = (id: string) => {
-    setWindowState(id, { open: false });
-  };
-
-  const handleMinimize = (id: string) => {
-    toggleMinimize(id);
-  };
+  const { windowsState, bringToFront, handleClick, handleClose, handleMinimize, updatePosition, updateSize } = useWindowActions(initialState);
 
   return (
     <section id="desktop">
+      <StartMenuHandler />
       <img src="./images/wallpaper1.webp" id="wallpaper" alt="Wallpaper" />
-      <section id="taskbar">
-        <div className="taskbar-left">
-          <img src="./images/logoW11.png" id="logo-win" alt="Windows Logo" />
-          <div id="start-menu">
-            <ul>
-              <img src="./pp/avatar.png" id="avatar" alt="Avatar" />
-              <a href="/" id="username">deconnexion</a>
-              <li>Projet 1</li>
-              <li>Projet 2</li>
-              <li>Projet 3</li>
-            </ul>
-          </div>
-        </div>
-        <div className="taskbar-center">
-          <nav id="nav">
-            <ul id="nav-list">
-              <Icon
-                dataTitle="A propos de moi"
-                imgSrc="/icons/about-icon.png"
-                alt="A propos"
-                id="about-window"
-                onClick={() => handleClick('about-window')}
-              />
-              <Icon
-                dataTitle="Mon portfolio"
-                imgSrc="/icons/projects-icon.png"
-                alt="Projets"
-                id="portfolio-window"
-                onClick={() => handleClick('portfolio-window')}
-              />
-              <Icon
-                dataTitle="Me contacter"
-                imgSrc="/icons/contact-icon.png"
-                alt="Contact"
-                id="contact-window"
-                onClick={() => handleClick('contact-window')}
-              />
-            </ul>
-          </nav>
-        </div>
-        <div className="taskbar-right">
-          <BitcoinPrice />
-          <div id="volume-control">
-            <img src="/images/volume.png" alt="Volume" id="volume-icon" />
-          </div>
-          <CurrentTime />
-        </div>
-      </section>
+      <Taskbar handleClick={handleClick} bringToFront={bringToFront}/>
 
       {Object.keys(windowsState).map(windowId => (
         windowsState[windowId].open && (
@@ -132,6 +44,10 @@ const Home: React.FC = () => {
             onMinimize={() => handleMinimize(windowId)}
             onDragStop={(_e, d) => updatePosition(windowId, d.x, d.y)}
             onResizeStop={(_e, _direction, ref, _delta) => updateSize(windowId, parseInt(ref.style.width, 10), parseInt(ref.style.height, 10))}
+            initialSize={{ width: windowsState[windowId].width, height: windowsState[windowId].height }}
+            initialPosition={{ x: windowsState[windowId].x, y: windowsState[windowId].y }}
+            zIndex={windowsState[windowId].zIndex}
+            bringToFront={() => bringToFront(windowId)}
           />
         )
       ))}
