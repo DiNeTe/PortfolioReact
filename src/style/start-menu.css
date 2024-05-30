@@ -22,11 +22,14 @@ border-right: rgb(65, 65, 65) 0.1px solid;
 }
 
 #shutdown {
-  align-items: center;
+  display: flex;
   cursor: pointer;
-  padding-right: 10%;
+  width: 100%;
+}
+
+img#shutdown  {
+ width: 50%;
   padding-left: 5%;
-  width: 50%;
 }
 
 #shutdown-txt {

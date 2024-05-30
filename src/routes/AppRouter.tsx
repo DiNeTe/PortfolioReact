@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { v4 as uuidv4 } from 'uuid';
-import Home from '../views/Home';
-import LoginScreen from '../views/LoginScreen';
+
+import Home from '../views/HomePage';
+import Project from '../views/ProjectPage'; 
+import LoginScreen from '../views/LoginScreenPage';
+import NotFoundPage from '../views/NotFoundPage';
+
 
 const AppRouter: React.FC = () => {
   const location = useLocation();
@@ -25,10 +30,12 @@ const AppRouter: React.FC = () => {
         timeout={300}
         classNames="fade"
       >
-        <div className="transition-wrapper">
+        <div>
           <Routes location={location}>
             <Route path="/" element={<LoginScreen />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/project/:id" element={<Project />} />(" ")
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
       </CSSTransition>

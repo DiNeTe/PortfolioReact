@@ -1,5 +1,4 @@
 const LoginScreen: React.FC  = () => {
-  console.log('Rendering LoginScreen');
   return (
     
     <div className="loginScreenPage">

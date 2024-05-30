@@ -1,13 +1,52 @@
+import { useAppDependencies } from "../app/context";
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Project } from "../data/Project";
+import Tag from "./Tag";
+
 const PortfolioContent: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  // Utilisation des dépendances de l'application pour récupérer les données
+  const { projectDataSource } = useAppDependencies();
+  // Hook de navigation
+  const navigate = useNavigate();
+  // Fonction pour gérer le clic sur une carte
+  const CoverClick = (id: string) => {
+    // navigue vers la page de détail de l'hébergement
+    navigate(`/project/${id}`);
+  };
+
+  useEffect(() => {
+    async function initPage() {
+      const projects = await projectDataSource.fetchMany();
+      setProjects(projects);
+    }
+    initPage();
+  }, [projectDataSource]);
+
   return (
     <div>
-      <h2>Mon Portfolio</h2>
-      <p>Voici quelques-uns de mes projets de développement web :</p>
       <ul>
-        <li>Projet 1 : Description du projet 1...</li>
-        <li>Projet 2 : Description du projet 2...</li>
-        <li>Projet 3 : Description du projet 3...</li>
-        {/* Ajoute plus de projets ici */}
+        {projects.map((project: Project) => (
+          <li key={project.id} className="project-item">
+            <div className="project-header">
+              <div className="project-title">
+                <h2>{project.title}</h2>
+                <div id="tag-container">
+                  {project.tags.map((tag, index) => (
+                    <Tag key={index}>{tag}</Tag>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <img
+              className="cover-project"
+              src={project.cover}
+              alt={project.title}
+              onClick={() => CoverClick(project.id)}/>
+            
+          </li>
+        ))}
       </ul>
     </div>
   );

@@ -1,0 +1,31 @@
+[
+    {
+      "id": "1",
+      "title": "Nina Carducci - Photographe",
+      "cover": "/images/projets/Nina_Carducci_Photographe.jpg",
+      "pictures": [
+        "/images/projets/Nina_Carducci_gallerie.jpg",
+        "/images/projets/Nina_Carducci_Photographe.jpg",
+        "/images/projets/Nina_Carducci_gallerie.jpg"
+      ],
+      "tags": ["HTML", "CSS", "JavaScript"],
+      "description": "description 1"
+    },
+    {
+      "id": "2",
+      "title": "test 2",
+      "cover": "",
+      "pictures": [],
+      "tags": ["React", "Node.js", "MongoDB", "TypeScript"],
+      "description": "description 2"
+    },
+    {
+      "id": "3",
+      "title": "test 3",
+      "cover": "",
+      "pictures": [],
+      "tags": ["HTML", "SASS", "Node.js"],
+      "description": "description 3"
+    }
+  ]
+  

@@ -1,0 +1,41 @@
+.cover-project {
+  width: 100%;
+  cursor:pointer
+}
+
+.project-header {
+  display: flex;
+  padding: 10px;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+.project-title {
+  margin: 0;
+}
+
+#tag-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.tag-list {
+  display: flex;
+}
+
+.tag {
+  background-color: blue;
+  color: white;
+  border-radius: 25%;
+  width: 100px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

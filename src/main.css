@@ -8,3 +8,7 @@
 @import "style/windows.css";
 @import "style/form.css";
 @import "style/AppRouter.css";
+@import "style/portfolio-content.css";
+@import "style/notFoundPage.css";
+@import "style/slideshow.css";  
+@import "style/projectPage.css";

@@ -1,0 +1,30 @@
+
+
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-code {
+  font-size: 288px;
+  font-weight: 700;
+  color: rgb(0, 4, 214);
+  margin: 139px 0;
+}
+
+.error-text {
+  color: rgb(0, 4, 214);
+  font-size: 36px;
+  font-weight: 500;
+  display: flex;
+  text-align: center;
+}
+
+.home-link {
+  text-decoration: underline;
+  margin: 139px 0;
+  font-size: 18px;
+  font-weight: 500;
+}

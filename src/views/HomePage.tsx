@@ -1,4 +1,4 @@
-import { useWindowActions } from '../hooks/windowActions';
+import { useWindowActions } from '../hooks/useWindowActions';
 
 import StartMenuHandler from '../components/StartMenuHandler';
 import Windows from "../components/Windows";

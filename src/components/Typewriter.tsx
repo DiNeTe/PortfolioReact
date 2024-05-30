@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 type TypewriterProps = {
   text: string;
-  speed?: number; // Speed in milliseconds
+  speed?: number;
 };
 
 const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 20 }) => {
@@ -22,7 +22,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 20 }) => {
       index++;
     }, speed);
 
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
   }, [text, speed]);
 
   return <div>{displayedText}</div>;
