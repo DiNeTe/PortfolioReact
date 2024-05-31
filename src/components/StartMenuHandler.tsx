@@ -1,4 +1,3 @@
-// src/components/StartMenuHandler.tsx
 import React, { useEffect } from 'react';
 
 const StartMenuHandler: React.FC = () => {

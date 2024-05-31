@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 type TypewriterProps = {
   text: string;
@@ -6,19 +6,20 @@ type TypewriterProps = {
 };
 
 const Typewriter: React.FC<TypewriterProps> = ({ text, speed = 20 }) => {
-  const [displayedText, setDisplayedText] = useState<string>('');
-
+  const [displayedText, setDisplayedText] = useState<string>("");
+  let fullText = "";
+  
   useEffect(() => {
     let index = 0;
     const intervalId = setInterval(() => {
-      setDisplayedText((prev) => {
-        if (index < text.length) {
-          return prev + text[index];
-        } else {
-          clearInterval(intervalId);
-          return prev;
-        }
-      });
+      if (index < text.length) {
+        fullText += text[index];
+      } else {
+        clearInterval(intervalId);
+      }
+
+      setDisplayedText(fullText);
+
       index++;
     }, speed);
 

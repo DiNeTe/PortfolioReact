@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import Icon from "./Icons";
 import BitcoinPrice from "./BitcoinPrice";
@@ -39,9 +39,9 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront }) => {
         <div id="start-menu">
           <div id="start-menu-lateral-bar">
             <img src="./pp/avatar.png" id="avatar" alt="Avatar" />
-            <a href="/">
+            <NavLink to="/">
               <img src="/icons/shutdown.png" id="shutdown" alt="Shutdown" />
-            </a>
+            </NavLink>
           </div>
           <div id="start-menu-content">
             <ul>             

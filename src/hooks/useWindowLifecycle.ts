@@ -15,19 +15,23 @@ export const useWindowLifecycle = (onClose: () => void, onMinimize: () => void) 
     }
   }, [isMinimizing, isClosing]);
 
+   // useEffect se déclenche à chaque fois que isClosing, isMinimizing ou isHidden change
   useEffect(() => {
     console.log("Window state:", { isClosing, isMinimizing, isHidden });
   }, [isClosing, isMinimizing, isHidden]);
 
+
+  // Fonction handleClose pour gérer la fermeture de la fenêtre
   const handleClose = () => {
     console.log("Closing window");
     setIsClosing(true);
     setTimeout(() => {
       onClose();
-      setIsClosing(false); // Reset isClosing after closing
+      setIsClosing(false);
     }, 300);
   };
 
+  // Fonction handleMinimize pour gérer la minimisation de la fenêtre
   const handleMinimize = () => {
     console.log("Minimizing window");
     setIsMinimizing(true);
@@ -35,7 +39,7 @@ export const useWindowLifecycle = (onClose: () => void, onMinimize: () => void) 
       console.log("Window minimized");
       onMinimize();
       setIsMinimizing(false);
-      setIsHidden(true); // Set isHidden to true after minimization
+      setIsHidden(true);
     }, 300);
   };
 

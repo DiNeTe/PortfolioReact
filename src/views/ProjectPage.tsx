@@ -8,7 +8,7 @@ import Tag from "../components/Tag";
 import SlideShow from "../components/SlideShow";
 
 const ProjectPage: React.FC = () => {
-    // hook utilisé pour  obtenir l'id de l'hébergement.
+    // hook utilisé pour  obtenir l'id du projet.
     const { id } = useParams<{ id: string }>();
     // Utilisation des dépendances de l'application pour récupérer les données
     const { projectDataSource } = useAppDependencies();
@@ -21,7 +21,6 @@ const ProjectPage: React.FC = () => {
       async function init() {
         setLoading(true);
         const foundProject = await projectDataSource.fetchOne(id!);
-        console.log("Project pictures: ", foundProject.pictures);
         setProject(foundProject);
         setLoading(false);
       }
