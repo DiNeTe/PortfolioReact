@@ -1,41 +1,81 @@
+.portfolio-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.project-item {
+  position: relative;
+  margin-bottom: 40px; /* Increased gap between projects */
+  cursor: pointer;
+}
+
+.project-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .cover-project {
   width: 100%;
-  cursor:pointer
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.project-item:hover .cover-project {
+  filter: blur(5px) brightness(50%); /* Added brightness for darkening effect */
+  transform: scale(1.05); /* Optional: slight zoom effect */
+}
+
+.project-item:hover .project-overlay {
+  opacity: 1;
 }
 
 .project-header {
-  display: flex;
-  padding: 10px;
+  margin-top: 10px;
 }
 
-.project-title {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-
-}
-
-.project-title {
-  margin: 0;
+#tag-container Tag {
+  margin: 5px;
 }
 
 #tag-container {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .tag-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .tag {
-  background-color: blue;
-  color: white;
-  border-radius: 25%;
-  width: 100px;
-  height: 25px;
+  background-color: #6c63ff;
+  color: #fff;
+  border-radius: 25px;
+  padding: 5px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.9rem;
 }

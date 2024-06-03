@@ -6,13 +6,10 @@ import Tag from "./Tag";
 
 const PortfolioContent: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
-  // Utilisation des dépendances de l'application pour récupérer les données
   const { projectDataSource } = useAppDependencies();
-  // Hook de navigation
   const navigate = useNavigate();
-  // Fonction pour gérer le clic sur une carte
+
   const CoverClick = (id: string) => {
-    // navigue vers la page de détail de l'hébergement
     navigate(`/project/${id}`);
   };
 
@@ -25,13 +22,22 @@ const PortfolioContent: React.FC = () => {
   }, [projectDataSource]);
 
   return (
-    <div>
+    <div className="portfolio-content">
       <ul>
         {projects.map((project: Project) => (
-          <li key={project.id} className="project-item">
+          <li key={project.id} className="project-item" onClick={() => CoverClick(project.id)}>
+            <div className="project-container">
+              <img
+                className="cover-project"
+                src={project.cover}
+                alt={project.title}
+              />
+              <div className="project-overlay">
+                <h2>{project.title}</h2>
+              </div>
+            </div>
             <div className="project-header">
               <div className="project-title">
-                <h2>{project.title}</h2>
                 <div id="tag-container">
                   {project.tags.map((tag, index) => (
                     <Tag key={index}>{tag}</Tag>
@@ -39,12 +45,6 @@ const PortfolioContent: React.FC = () => {
                 </div>
               </div>
             </div>
-            <img
-              className="cover-project"
-              src={project.cover}
-              alt={project.title}
-              onClick={() => CoverClick(project.id)}/>
-            
           </li>
         ))}
       </ul>

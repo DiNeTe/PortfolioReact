@@ -1,31 +1,37 @@
 [
-    {
+  {
       "id": "1",
       "title": "Nina Carducci - Photographe",
-      "cover": "/images/projets/Nina_Carducci_Photographe.jpg",
+      "cover": "/images/projets/Nina/Nina_Carducci_Photographe.jpg",
       "pictures": [
-        "/images/projets/Nina_Carducci_gallerie.jpg",
-        "/images/projets/Nina_Carducci_Photographe.jpg",
-        "/images/projets/Nina_Carducci_gallerie.jpg"
+          "/images/projets/Nina/Nina_Carducci_gallerie.jpg",
+          "/images/projets/Nina/Nina_Carducci_Photographe.jpg"
       ],
-      "tags": ["HTML", "CSS", "JavaScript"],
-      "description": "description 1"
-    },
-    {
+      "tags": ["HTML", "CSS", "JavaScript", "SEO", "Performance"],
+      "description": "Optimisation SEO et performances du site de Nina Carducci, photographe. Audit des performances du site, optimisation des images, amélioration du code et de la structure HTML/CSS/JavaScript pour un meilleur chargement et accessibilité, et mise en place des bonnes pratiques SEO."
+  },
+  {
       "id": "2",
-      "title": "test 2",
-      "cover": "",
-      "pictures": [],
-      "tags": ["React", "Node.js", "MongoDB", "TypeScript"],
-      "description": "description 2"
-    },
-    {
+      "title": "Kasa",
+      "cover": "/images/projets/Kasa/kasa1.jpg",
+      "pictures": [
+          "/images/projets/Kasa/kasa1.jpg",
+          "/images/projets/Kasa/kasa2.jpg",
+          "/images/projets/Kasa/kasa3.jpg"
+      ],
+      "tags": ["React", "JavaScript", "CSS", "Sass", "DIP", "DI"],
+      "description": "Refonte complète du site Kasa, leader de la location d'appartements entre particuliers, en utilisant React pour le front-end et Node.js pour le back-end. Développement des composants React, mise en place de React Router, intégration des maquettes Figma, utilisation de Sass pour les styles, et implémentation de l'inversion et de l'injection de dépendances pour une architecture modulaire."
+  },
+  {
       "id": "3",
-      "title": "test 3",
-      "cover": "",
-      "pictures": [],
-      "tags": ["HTML", "SASS", "Node.js"],
-      "description": "description 3"
-    }
-  ]
-  
+      "title": "Mon Vieux Grimoire",
+      "cover": "/images/projets/MVG/MVG1.jpg",
+      "pictures": [
+          "/images/projets/MVG/MVG1.jpg",
+          "/images/projets/MVG/MVG2.jpg",
+          "/images/projets/MVG/MVG3.jpg"
+      ],
+      "tags": ["Node.js", "Express", "MongoDB", "REST API", "JWT", "Multer"],
+      "description": "Développement du back-end pour le site de notation de livres 'Mon Vieux Grimoire' utilisant Node.js, Express et MongoDB. Création d'une API RESTful, implémentation de l'authentification des utilisateurs avec JWT, gestion et optimisation des images téléchargées par les utilisateurs avec Multer, et intégration de la fonctionnalité de notation et de calcul de la moyenne des livres."
+  }
+]

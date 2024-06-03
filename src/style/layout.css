@@ -1,12 +1,18 @@
 #desktop {
-    display: flex;
-    background-size: cover;
-    height: 100vh;
-    background-color: black;
-  }
-  
-  #wallpaper {
-    height: 100vh;
-    width: 100vw;
-  }
+  display: flex;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#wallpaper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
 

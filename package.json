@@ -16,6 +16,7 @@
     "react-rnd": "^10.4.11",
     "react-router-dom": "^6.23.1",
     "react-transition-group": "^4.4.5",
+    "typewriter-effect": "^2.21.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {

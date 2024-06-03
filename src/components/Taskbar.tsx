@@ -60,7 +60,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront }) => {
               dataTitle="A propos de moi"
               imgSrc="/icons/about-icon.png"
               alt="A propos"
-              id="about-window"
+              id="about-window-ico"
               onClick={() => {
                 handleClick("about-window");
                 bringToFront("about-window");
@@ -70,7 +70,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront }) => {
               dataTitle="Mon portfolio"
               imgSrc="/icons/projects-icon.png"
               alt="Projets"
-              id="portfolio-window"
+              id="portfolio-window-ico"
               onClick={() => {
                 handleClick("portfolio-window");
                 bringToFront("portfolio-window");
@@ -80,7 +80,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront }) => {
               dataTitle="Me contacter"
               imgSrc="/icons/contact-icon.png"
               alt="Contact"
-              id="contact-window"
+              id="contact-window-ico"
               onClick={() => {
                 handleClick("contact-window");
                 bringToFront("contact-window");
