@@ -112,7 +112,6 @@ const Windows: React.FC<WindowsProps> = ({
         } ${isHidden ? "window-hidden" : ""}`}
         id={id}
         onMouseDown={() => {
-          console.log(`Window ${id} clicked. Bringing to front.`);
           bringToFront();
         }}
       >

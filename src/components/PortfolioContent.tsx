@@ -27,6 +27,15 @@ const PortfolioContent: React.FC = () => {
         {projects.map((project: Project) => (
           <li key={project.id} className="project-item" onClick={() => CoverClick(project.id)}>
             <div className="project-container">
+            <div className="project-header">
+              <div className="project-title">
+              <div id="tag-container">
+                  {project.tags.map((tag, index) => (
+                    <Tag key={index}>{tag}</Tag>
+                  ))}
+                </div>
+              </div>
+            </div>
               <img
                 className="cover-project"
                 src={project.cover}
@@ -36,15 +45,7 @@ const PortfolioContent: React.FC = () => {
                 <h2>{project.title}</h2>
               </div>
             </div>
-            <div className="project-header">
-              <div className="project-title">
-                <div id="tag-container">
-                  {project.tags.map((tag, index) => (
-                    <Tag key={index}>{tag}</Tag>
-                  ))}
-                </div>
-              </div>
-            </div>
+            
           </li>
         ))}
       </ul>

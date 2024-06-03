@@ -2,21 +2,23 @@ import { useState, useEffect } from 'react';
 
 const useTypewriter = (text: string, speed: number = 50): string => {
   const [displayText, setDisplayText] = useState<string>('');
+  let fullText = '';
 
   useEffect(() => {
-    let i = 0;
-    const typingInterval = setInterval(() => {
-      if (i < text.length) {
-        setDisplayText(prevText => prevText + text.charAt(i));
-        i++;
+    let index = 0;
+    const intervalId = setInterval(() => {
+      if (index < text.length) {
+        fullText += text[index];
       } else {
-        clearInterval(typingInterval);
+        clearInterval(intervalId);
       }
+
+      setDisplayText(fullText);
+
+      index++;
     }, speed);
 
-    return () => {
-      clearInterval(typingInterval);
-    };
+    return () => clearInterval(intervalId);
   }, [text, speed]);
 
   return displayText;

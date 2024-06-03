@@ -1,7 +1,26 @@
 #home-page {
-    overflow:hidden;
-  }
+  overflow: hidden;
+}
 
-#about-window{
-    background-color:#1e1e1e;
+#about-window {
+  background-color: #1e1e1e;
+}
+
+#about-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.typewriter-about {
+  width: 70%;
+  font-size: 1.3vw;
+}
+
+img#pp-about\ {
+  border-radius: 100%;
+  position: absolute;
+  top: 100px; /* Ajustez cette valeur selon vos besoins */
+  right: 50px; /* Ajustez cette valeur selon vos besoins */
+  width: 20%; /* Ajustez la taille selon vos besoins */
+  height: auto;
 }
