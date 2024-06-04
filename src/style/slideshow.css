@@ -1,6 +1,6 @@
 .slideshow-container {
   width: 100%;
-  height: auto;
+  height: 625px;
   display: flex;
   flex-direction: column;
   position: relative;

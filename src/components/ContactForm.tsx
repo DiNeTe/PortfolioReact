@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
-import Mailto from './Mailto';
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = `Message de ${name}`;
+    const body = `Nom de l'expéditeur: ${name}\nEmail de contact: ${email}\n\nMessage:\n${message}`;
+    const mailto = `mailto:wbrp51@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Ouvrir le lien mailto avec window.open
+    window.open(mailto, '_blank');
+  };
+
   return (
-    <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+    <form className="contact-form" onSubmit={handleSubmit}>
       <label htmlFor="name">Nom:</label>
       <input
         type="text"
@@ -34,9 +43,7 @@ const ContactForm: React.FC = () => {
         onChange={(e) => setMessage(e.target.value)}
         required
       />
-      <Mailto email="votre@adresse.com" subject={`Message de ${name}`} body={`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`}>
-        <button type="submit">Envoyer</button>
-      </Mailto>
+      <button type="submit">Envoyer</button>
     </form>
   );
 };

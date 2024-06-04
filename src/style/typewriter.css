@@ -6,6 +6,7 @@
     border-radius: 10px;
     display: inline-block;
     position: relative;
+    font-size: 24px;
   }
   
   .typewriter-cursor {
@@ -15,9 +16,12 @@
     animation: blink 1s step-end infinite;
   }
 
+  .typewriter-about {
+    width: 70%;
+    font-size: 24px;
+  }
 
-  
-  @keyframes blink {
+    @keyframes blink {
     from, to {
       visibility: visible;
     }

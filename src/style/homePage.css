@@ -11,11 +11,6 @@
   flex-direction: row;
 }
 
-.typewriter-about {
-  width: 70%;
-  font-size: 1.3vw;
-}
-
 img#pp-about\ {
   border-radius: 100%;
   position: absolute;
@@ -23,4 +18,27 @@ img#pp-about\ {
   right: 50px; /* Ajustez cette valeur selon vos besoins */
   width: 20%; /* Ajustez la taille selon vos besoins */
   height: auto;
+}
+
+.pdf-link {
+  position: absolute;
+  top: 8%; /* Ajustez cette valeur pour modifier la hauteur */
+  left: 2%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+#pdf-ico {
+  width: 50px; /* Ajustez la taille selon vos besoins */
+  height: auto;
+}
+
+.pdf-text {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
 }

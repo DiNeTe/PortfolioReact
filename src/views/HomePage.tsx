@@ -6,6 +6,8 @@ import Taskbar from "../components/Taskbar";
 import PortfolioContent from "../components/PortfolioContent";
 import ContactForm from "../components/ContactForm";
 import AboutContent from "../components/AboutContent";
+import IcoPdfCv from "../components/IcoPdfCv";
+
 
 const Home: React.FC = () => {
   const windowWidth = window.innerWidth;
@@ -24,6 +26,7 @@ const Home: React.FC = () => {
       open: true,
       zIndex: 1,
     },
+
     "portfolio-window": {
       x: initialX + 50,
       y: initialY + 50,
@@ -33,6 +36,7 @@ const Home: React.FC = () => {
       open: false,
       zIndex: 0,
     },
+    
     "contact-window": {
       x: initialX + 100,
       y: initialY + 100,
@@ -59,7 +63,11 @@ const Home: React.FC = () => {
       <StartMenuHandler />
       <img src="./images/wallpaper1.webp" id="wallpaper" alt="Wallpaper" />
       <Taskbar handleClick={handleClick} bringToFront={bringToFront} />
+      
+      <IcoPdfCv />
+      
 
+      
       {Object.keys(windowsState).map(
         (windowId) =>
           windowsState[windowId].open && (
@@ -75,10 +83,13 @@ const Home: React.FC = () => {
               }
               content={
                 windowId === "about-window" ? (
-                  <><div id="about-content">
-                    <AboutContent />
-                    <img id="pp-about " src="/pp/avatar.png" />
-                  </div>
+                  <>
+                    <div id="about-content">
+                      <AboutContent />
+                      <div id="about-avatar">
+                        <img id="pp-about " src="/pp/avatar.png" />
+                      </div>
+                    </div>
                   </>
                 ) : windowId === "portfolio-window" ? (
                   <PortfolioContent />
@@ -107,7 +118,7 @@ const Home: React.FC = () => {
               zIndex={windowsState[windowId].zIndex}
               bringToFront={() => bringToFront(windowId)}
             >
-              {windowId === "contact-window" && <ContactForm/>}
+              {windowId === "contact-window" && <ContactForm />}
             </Windows>
           )
       )}

@@ -50,7 +50,6 @@
   justify-content: center;
   overflow: auto;
   z-index: 15;
-
 }
 
 @keyframes closeWindow {

@@ -29,7 +29,7 @@ const PortfolioContent: React.FC = () => {
             <div className="project-container">
             <div className="project-header">
               <div className="project-title">
-              <div id="tag-container">
+              <div id="tag-container-window">
                   {project.tags.map((tag, index) => (
                     <Tag key={index}>{tag}</Tag>
                   ))}

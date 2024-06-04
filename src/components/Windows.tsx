@@ -75,11 +75,9 @@ const Windows: React.FC<WindowsProps> = ({
       minHeight={200}
       dragHandleClassName="window-header"
       onDragStart={() => {
-        console.log(`Dragging started for ${id}.`);
         bringToFront();
       }}
       onDragStop={(e, d) => {
-        console.log(`Dragging stopped for ${id}. New position: `, { x: d.x, y: d.y });
         setPosition({ x: d.x, y: d.y });
         onDragStop(e, d);
       }}
@@ -88,7 +86,6 @@ const Windows: React.FC<WindowsProps> = ({
           width: parseInt(ref.style.width, 10),
           height: parseInt(ref.style.height, 10),
         };
-        console.log(`Resizing stopped for ${id}. New size: `, newSize);
         setSize(newSize);
         setPosition(position);
         onResizeStop(e, direction, ref, delta, position);

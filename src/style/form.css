@@ -1,8 +1,14 @@
+.contact-window{
+    display: flex;
+    background-color: #f4f4f4;
+    justify-content: end;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
     width: 70%;
-    margin: 0 auto;
+    height: 100%;
     padding: 20px;
     background: #f9f9f9;
     border-radius: 8px;
@@ -74,9 +80,8 @@
 }
 
 textarea#message {
-    height: 150px; /* Ajustement de la hauteur */
-    resize: vertical;
-}
+    resize: none;
+    min-height: 75px;}
 
 .contact-form button:focus {
   box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
