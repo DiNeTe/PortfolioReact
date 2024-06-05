@@ -8,7 +8,6 @@ import ContactForm from "../components/ContactForm";
 import AboutContent from "../components/AboutContent";
 import IcoPdfCv from "../components/IcoPdfCv";
 
-
 const Home: React.FC = () => {
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
@@ -36,7 +35,7 @@ const Home: React.FC = () => {
       open: false,
       zIndex: 0,
     },
-    
+
     "contact-window": {
       x: initialX + 100,
       y: initialY + 100,
@@ -63,11 +62,9 @@ const Home: React.FC = () => {
       <StartMenuHandler />
       <img src="./images/wallpaper1.webp" id="wallpaper" alt="Wallpaper" />
       <Taskbar handleClick={handleClick} bringToFront={bringToFront} />
-      
-      <IcoPdfCv />
-      
 
-      
+      <IcoPdfCv />
+
       {Object.keys(windowsState).map(
         (windowId) =>
           windowsState[windowId].open && (
@@ -81,8 +78,12 @@ const Home: React.FC = () => {
                   ? "Mon portfolio"
                   : "Me contacter"
               }
+              contentId={
+                windowId === "contact-window" ? "contact-window-content" : undefined
+              }
               content={
-                windowId === "about-window" ? (
+                windowId === "about-window" 
+                ? (
                   <>
                     <div id="about-content">
                       <AboutContent />

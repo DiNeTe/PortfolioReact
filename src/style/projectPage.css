@@ -66,13 +66,14 @@ a.title-project {
 }
 
 .github-ico:hover{
-  transform: scale(1.3);
+  transform: scale(1.2);
 
 }
 
 .title-project h1 {
   display: inline-block; /* Permet d'aligner le titre à côté de l'icône */
   margin: 5px; /* Ajoute un espace entre le titre et l'icône */
+  color:#1e1e1e
 }
 
 .link-container{
@@ -86,6 +87,7 @@ a.title-project {
 .link-container,
 #tag-container {
   flex: 0 100% 0; /* On conserve la répartition des éléments */
+  color:#1e1e1e
 }
 
 #tag-container {
@@ -119,4 +121,41 @@ a.title-project {
 
 .description-container .Typewriter {
   white-space: pre-wrap;
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f4f4f4; /* Fond assorti à la page */
+  border-radius: 10px;
+}
+
+.project-footer a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s ease-in-out;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  min-width: 150px;
+  border: 2px solid #1e1e1e;
+  border-radius: 10px;
+}
+
+.project-footer a:hover {
+  transform: scale(1.05);
+  color: white;
+  background-color: #1e1e1e;
+}
+
+.prev-project-container, .next-project-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
 }

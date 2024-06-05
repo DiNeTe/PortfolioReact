@@ -1,43 +1,72 @@
 [
   {
-    "id": "1",
-    "title": "Nina Carducci - Photographe",
-    "cover": "/images/projets/Nina/Nina_Carducci_Photographe.jpg",
-    "pictures": [
-      "/images/projets/Nina/Nina_Carducci_gallerie.jpg",
-      "/images/projets/Nina/Nina_Carducci_Photographe.jpg"
-    ],
-    "tags": ["HTML", "CSS", "JavaScript", "SEO", "Performance"],
-    "description": "Optimisation SEO et performances du site de Nina Carducci, photographe. Audit des performances du site, optimisation des images, amélioration du code et de la structure HTML/CSS/JavaScript pour un meilleur chargement et accessibilité, et mise en place des bonnes pratiques SEO.",
-    "link": "https://dinete.github.io/nina-carducci/",
-    "linkGH": "https://github.com/DiNeTe/nina-carducci/tree/nina-carducci_prod"
+      "id": "1",
+      "title": "Nina Carducci - Photographe",
+      "cover": "/images/projets/Nina/Nina_Carducci_Photographe.jpg",
+      "pictures": [
+          "/images/projets/Nina/Nina_Carducci_gallerie.jpg",
+          "/images/projets/Nina/Nina_Carducci_Photographe.jpg"
+      ],
+      "tags": ["HTML", "CSS", "JavaScript", "SEO", "Performance"],
+      "description": "Optimisation SEO et performances du site de Nina Carducci, photographe. Audit des performances du site, optimisation des images, amélioration du code et de la structure HTML/CSS/JavaScript pour un meilleur chargement et accessibilité, et mise en place des bonnes pratiques SEO.",
+      "link": "https://dinete.github.io/nina-carducci/",
+      "linkGH": "https://github.com/DiNeTe/nina-carducci/tree/nina-carducci_prod"
   },
   {
-    "id": "2",
-    "title": "Kasa",
-    "cover": "/images/projets/Kasa/kasa1.jpg",
-    "pictures": [
-      "/images/projets/Kasa/kasa1.jpg",
-      "/images/projets/Kasa/kasa2.jpg",
-      "/images/projets/Kasa/kasa3.jpg"
-    ],
-    "tags": ["React", "JavaScript", "CSS", "Sass", "DIP", "DI"],
-    "description": "Refonte complète du site Kasa, leader de la location d'appartements entre particuliers, en utilisant React pour le front-end et Node.js pour le back-end. Développement des composants React, mise en place de React Router, intégration des maquettes Figma, utilisation de Sass pour les styles, et implémentation de l'inversion et de l'injection de dépendances pour une architecture modulaire.",
-    "link": "https://kasa-location-immobiliere-iota.vercel.app/",
-    "linkGH": "https://github.com/DiNeTe/Kasa-location_immobiliere/tree/inversion-des-dependances"
+      "id": "2",
+      "title": "Kasa",
+      "cover": "/images/projets/Kasa/kasa1.jpg",
+      "pictures": [
+          "/images/projets/Kasa/kasa1.jpg",
+          "/images/projets/Kasa/kasa2.jpg",
+          "/images/projets/Kasa/kasa3.jpg"
+      ],
+      "tags": ["React", "JavaScript", "CSS", "Sass", "DIP", "DI"],
+      "description": "Refonte complète du site Kasa, leader de la location d'appartements entre particuliers, en utilisant React pour le front-end et Node.js pour le back-end. Développement des composants React, mise en place de React Router, intégration des maquettes Figma, utilisation de Sass pour les styles, et implémentation de l'inversion et de l'injection de dépendances pour une architecture modulaire.",
+      "link": "https://kasa-location-immobiliere-iota.vercel.app/",
+      "linkGH": "https://github.com/DiNeTe/Kasa-location_immobiliere/tree/inversion-des-dependances"
   },
   {
-    "id": "3",
-    "title": "Mon Vieux Grimoire",
-    "cover": "/images/projets/MVG/MVG1.jpg",
-    "pictures": [
-      "/images/projets/MVG/MVG1.jpg",
-      "/images/projets/MVG/MVG2.jpg",
-      "/images/projets/MVG/MVG3.jpg"
-    ],
-    "tags": ["Node.js", "Express", "MongoDB", "REST API", "JWT", "Multer"],
-    "description": "Développement du back-end pour le site de notation de livres 'Mon Vieux Grimoire' utilisant Node.js, Express et MongoDB. Création d'une API RESTful, implémentation de l'authentification des utilisateurs avec JWT, gestion et optimisation des images téléchargées par les utilisateurs avec Multer, et intégration de la fonctionnalité de notation et de calcul de la moyenne des livres.",
-    "link": "https://mon-vieux-grimoire-5tbb.vercel.app/",
-    "linkGH": "https://github.com/DiNeTe/Mon_Vieux_Grimoire"
+      "id": "3",
+      "title": "Mon Vieux Grimoire",
+      "cover": "/images/projets/MVG/MVG1.jpg",
+      "pictures": [
+          "/images/projets/MVG/MVG1.jpg",
+          "/images/projets/MVG/MVG2.jpg",
+          "/images/projets/MVG/MVG3.jpg"
+      ],
+      "tags": ["Node.js", "Express", "MongoDB", "REST API", "JWT", "Multer"],
+      "description": "Développement du back-end pour le site de notation de livres 'Mon Vieux Grimoire' utilisant Node.js, Express et MongoDB. Création d'une API RESTful, implémentation de l'authentification des utilisateurs avec JWT, gestion et optimisation des images téléchargées par les utilisateurs avec Multer, et intégration de la fonctionnalité de notation et de calcul de la moyenne des livres.",
+      "link": "https://mon-vieux-grimoire-5tbb.vercel.app/",
+      "linkGH": "https://github.com/DiNeTe/Mon_Vieux_Grimoire"
+  },
+  {
+      "id": "4",
+      "title": "Booki",
+      "cover": "/images/projets/Booki/booki1.jpg",
+      "pictures": [
+          "/images/projets/Booki/booki1.jpg",
+          "/images/projets/Booki/booki2.jpg"
+      ],
+      "tags": ["HTML", "CSS", "Responsive Design"],
+      "description": "Intégration de l'interface utilisateur du site Booki en utilisant HTML et CSS. Collaboration étroite avec l'UI designer pour respecter les maquettes fournies et création d'un site responsive.",
+      "link": "https://booki-project.example.com",
+      "linkGH": "https://github.com/DiNeTe/booki-project"
+  },
+  {
+      "id": "5",
+      "title": "Portfolio Sophie Bluel",
+      "cover": "/images/projets/Sophie Bluel/sophie_bluel1.jpg",
+      "pictures": [
+          "/images/projets/SophieBluel/sophiebluel1.jpg",
+          "/images/projets/SophieBluel/sophiebluel2.jpg",
+          "/images/projets/SophieBluel/sophiebluel3.jpg",
+          "/images/projets/SophieBluel/sophiebluel4.jpg",
+          "/images/projets/SophieBluel/sophiebluel5.jpg"
+      ],
+      "tags": ["JavaScript", "HTML", "CSS", "API", "Node.js"],
+      "description": "Développement de fonctionnalités dynamiques pour le portfolio de Sophie Bluel, architecte d'intérieur. Implémentation d'une galerie de projets, d'une page de connexion pour l'administrateur, et d'une modale pour l'ajout de nouveaux projets.",
+      "link": "https://sophiebluel-portfolio.example.com",
+      "linkGH": "https://github.com/DiNeTe/sophiebluel-portfolio"
   }
 ]

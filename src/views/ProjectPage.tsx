@@ -17,12 +17,17 @@ const ProjectPage: React.FC = () => {
   const { projectDataSource } = useAppDependencies();
   const [project, setProject] = useState<Project | undefined>(undefined);
   const [loading, setLoading] = useState(true);
+  const [allProjects, setAllProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     async function init() {
       setLoading(true);
       const foundProject = await projectDataSource.fetchOne(id!);
       setProject(foundProject);
+
+      const manyProjects = await projectDataSource.fetchMany();
+      setAllProjects(manyProjects);
+
       setLoading(false);
     }
     init();
@@ -35,6 +40,14 @@ const ProjectPage: React.FC = () => {
   if (!project) {
     return <Navigate to="/not-found" replace />;
   }
+
+  const currentIndex = allProjects.findIndex((proj) => proj.id === id);
+  const prevProjectIndex =
+    (currentIndex - 1 + allProjects.length) % allProjects.length;
+  const nextProjectIndex = (currentIndex + 1) % allProjects.length;
+
+  const prevProject = allProjects[prevProjectIndex];
+  const nextProject = allProjects[nextProjectIndex];
 
   // Rendu principal du composant
   return (
@@ -61,7 +74,7 @@ const ProjectPage: React.FC = () => {
             href={project.linkGH}
             target="_blank"
             rel="noreferrer"
-            className="github-link"
+            className="github-Navlink"
           >
             <img
               className="github-ico"
@@ -81,6 +94,30 @@ const ProjectPage: React.FC = () => {
         <div className="description-container">
           <TypewriterEffect text={project.description} />
         </div>
+      </div>
+      <div className="project-footer">
+        <div className="prev-project-container">
+        {prevProject && (
+          <NavLink
+            to={`/project/${prevProject.id}`}
+            className="prev-project-button"
+
+          >
+            {`← Projet précédent`} 
+
+          </NavLink>
+        )}</div>
+        <div className="next-project-container">
+        {nextProject && (
+          <NavLink
+            to={`/project/${nextProject.id}`}
+            className="next-project-button"
+          >
+            {`Projet suivant  →`}
+
+          </NavLink>
+        )}
+      </div>
       </div>
     </div>
   );

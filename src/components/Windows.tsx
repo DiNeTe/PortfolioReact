@@ -8,6 +8,7 @@ type WindowsProps = {
   children?: React.ReactNode;
   content?: React.ReactNode;
   id?: string;
+  contentId?: string;
   apiData?: any;
   onClose: () => void;
   onDragStop: (e: any, d: any) => void;
@@ -30,6 +31,7 @@ const Windows: React.FC<WindowsProps> = ({
   children,
   content,
   id,
+  contentId,
   apiData,
   onClose,
   onDragStop,
@@ -121,7 +123,7 @@ const Windows: React.FC<WindowsProps> = ({
             handleClose={handleClose}
           />
         </div>
-        <div className="window-content">
+        <div className="window-content" id={contentId}>
           {content && <div className="animated-text">{content}</div>}
           {apiData && <div className="api-data">{JSON.stringify(apiData)}</div>}
           {children}
