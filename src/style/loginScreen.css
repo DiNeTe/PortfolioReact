@@ -1,64 +1,66 @@
 .loginScreenPage {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    color: black;
-  }
-  
-  .wallpaper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  
-  .loginScreenInsert {
-    display: flex;
-    position: fixed;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 1;
-    gap: 35px;
-  }
-  
-  .pp {
-    border-radius: 100%;
-  }
-  
-  .fullName {
-    color: white;
-    font-size: 3rem;
-  }
-  
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: black;
+}
+
+.wallpaper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.loginScreenInsert {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  gap: 35px;
+}
+
+.pp {
+  border-radius: 100%;
+}
+
+.fullName {
+  color: white;
+  font-size: 3rem;
+}
+
 .password {
-    color: rgb(0, 0, 0);
-    font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+}
 
-  }
+.loginLink {
+  color: white;
+  font-weight: 500;
+  font-size: larger;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  padding: 5px 10px;
+  background: none;
+  border: none;
+}
 
-  .loginLink {
-    color: white;
-    width: auto;
-    display: flex;
-    justify-content:center;
-    border-radius: 25px;
-    padding: 5px 10px;
-    
-  }
-  
-  .loginLink:hover {
-    box-shadow: white 0 0 10px 0;
-    background-color: white;
-    color: rgb(5, 5, 80);
-    
+.loginLink:hover {
+  box-shadow: white 0 0 10px 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
 }
 
 .password.error {
@@ -74,7 +76,8 @@
 }
 
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   25% {
@@ -85,5 +88,36 @@
   }
   75% {
     transform: translateX(-5px);
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+}
+
+.spinner {
+  border: 8px dashed #adadad;
+  border-top: 8px dashed transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s steps(10) infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

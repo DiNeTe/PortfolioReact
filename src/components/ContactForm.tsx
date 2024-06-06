@@ -11,7 +11,6 @@ const ContactForm: React.FC = () => {
     const body = `Nom de l'expéditeur: ${name}\nEmail de contact: ${email}\n\nMessage:\n${message}`;
     const mailto = `mailto:wbrp51@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    // Ouvrir le lien mailto avec window.open
     window.open(mailto, '_blank');
   };
 

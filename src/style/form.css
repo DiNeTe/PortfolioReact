@@ -1,6 +1,5 @@
 #contact-window-content {
     display: flex;
-    background-color: #f4f4f4;
     justify-content: center; /* Centrer horizontalement */
     align-items: center; /* Centrer verticalement */
     width: 100%;

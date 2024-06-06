@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-// composant fonctionnel React
 const NotFoundPage: React.FC = () => {
   return (
     <div className="not-found-page">

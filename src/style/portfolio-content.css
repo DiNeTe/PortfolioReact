@@ -1,8 +1,8 @@
 .portfolio-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  padding: 20px 10%;
+  justify-content: center;
 }
 
 ul {
@@ -15,20 +15,28 @@ ul {
   position: relative;
   margin-bottom: 40px; /* Increased gap between projects */
   cursor: pointer;
+display: flex;
+justify-content: center;
 }
 
 .project-container {
   position: relative;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cover-project {
   width: 100%;
   transition: filter 0.3s ease, transform 0.3s ease;
   margin-top: 02%;
-
+  border-radius: 25px;
 }
+
+
 
 .project-overlay {
   position: absolute;
@@ -82,12 +90,12 @@ ul {
 }
 
 .tag {
-  background-color: #6c63ff;
+  background-color: #0078d7;
   color: #fff;
   border-radius: 25px;
   padding: 5px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 0.9rem;  
 }

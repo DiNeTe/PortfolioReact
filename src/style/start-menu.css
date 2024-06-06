@@ -1,6 +1,6 @@
 /* Style du menu démarrer */
 #start-menu {
-  display: none; /* Masqué par défaut */
+  display: none;
   position: absolute;
   bottom: 50px;
   left: 0;

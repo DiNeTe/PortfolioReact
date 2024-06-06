@@ -7,6 +7,7 @@ import { useAppDependencies } from "../app/context";
 
 import Tag from "../components/Tag";
 import SlideShow from "../components/SlideShow";
+import Icon from "../components/Icons";
 
 import TypewriterEffect from "../components/TypewriterEffect";
 
@@ -49,14 +50,12 @@ const ProjectPage: React.FC = () => {
   const prevProject = allProjects[prevProjectIndex];
   const nextProject = allProjects[nextProjectIndex];
 
-  // Rendu principal du composant
   return (
     <div className="project-page">
       <div className="project-header">
         <NavLink to="/home" className="back-arrow">
           ← Retour à l'accueil
         </NavLink>
-        <div className="link-container">
           <a
             href={project.link}
             target="_blank"
@@ -70,19 +69,6 @@ const ProjectPage: React.FC = () => {
               alt="Lien vers le projet"
             />
           </a>
-          <a
-            href={project.linkGH}
-            target="_blank"
-            rel="noreferrer"
-            className="github-Navlink"
-          >
-            <img
-              className="github-ico"
-              src="/icons/github.png"
-              alt="Lien vers GitHub"
-            />
-          </a>
-        </div>
         <div id="tag-container">
           {project.tags.map((tag, index) => (
             <Tag key={index}>{tag}</Tag>
@@ -92,32 +78,44 @@ const ProjectPage: React.FC = () => {
       <div className="project-body">
         <SlideShow images={project.pictures} />
         <div className="description-container">
-          <TypewriterEffect text={project.description} />
+          <TypewriterEffect
+            className="typewriter-project-page"
+            text={project.description}
+          />
         </div>
+      </div>
+      <div className="github-link">
+        <Icon
+          dataTitle="code source"
+          imgSrc="/icons/github.png"
+          alt="Lien vers GitHub"
+          id="github-ico"
+          onClick={() => {
+            window.open(project.linkGH, "_blank");
+          }}
+        />
       </div>
       <div className="project-footer">
         <div className="prev-project-container">
-        {prevProject && (
-          <NavLink
-            to={`/project/${prevProject.id}`}
-            className="prev-project-button"
-
-          >
-            {`← Projet précédent`} 
-
-          </NavLink>
-        )}</div>
+          {prevProject && (
+            <NavLink
+              to={`/project/${prevProject.id}`}
+              className="prev-project-button"
+            >
+              {`← Projet précédent`}
+            </NavLink>
+          )}
+        </div>
         <div className="next-project-container">
-        {nextProject && (
-          <NavLink
-            to={`/project/${nextProject.id}`}
-            className="next-project-button"
-          >
-            {`Projet suivant  →`}
-
-          </NavLink>
-        )}
-      </div>
+          {nextProject && (
+            <NavLink
+              to={`/project/${nextProject.id}`}
+              className="next-project-button"
+            >
+              {`Projet suivant  →`}
+            </NavLink>
+          )}
+        </div>
       </div>
     </div>
   );

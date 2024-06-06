@@ -1,26 +1,29 @@
-  #nav-list li a {
-    position: relative;
-    display: inline-block;
-  }
+.icon-link {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
 
-#nav-list li a::after {
-    content: attr(data-title);
-    position: absolute;
-    bottom: 100%; /* Positionne l'info-bulle au-dessus de l'icône */
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 5px;
-    padding: 5px;
-    background-color: rgb(255, 254, 247);
-    color: #000000;
-    white-space: nowrap;
-    font-size: 12px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s;
-    border: 1px solid rgb(0, 0, 0);
-  }
-  
-  #nav-list li a:hover::after {
-    opacity: 1;
-  }
+.icon-link::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: rgb(255, 254, 247);
+  color: #000000;
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px; /* Optionnel : pour arrondir les coins */
+  z-index: 1000; /* Assurez-vous que l'info-bulle est au-dessus d'autres éléments */
+}
+
+.icon-link:hover::after {
+  opacity: 1;
+}

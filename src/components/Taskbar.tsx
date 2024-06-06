@@ -18,9 +18,9 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront }) => {
 
   // Hook de navigation
   const navigate = useNavigate();
-  // Fonction pour gérer le clic sur une carte
+  // Fonction pour gérer le clic sur une photo de couverture
   const CoverClick = (id: string) => {
-    // navigue vers la page de détail de l'hébergement
+    // navigue vers la page de détail des projets
     navigate(`/project/${id}`);
   };
 

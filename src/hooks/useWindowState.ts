@@ -18,7 +18,7 @@ type WindowState = {
 
 const useWindowState = (initialState: WindowState) => {
   const [windowsState, setWindowsState] = useState<WindowState>(initialState);
-  const [maxZIndex, setMaxZIndex] = useState(Object.keys(initialState).length); // Initialiser avec le nombre de fenêtres
+  const [maxZIndex, setMaxZIndex] = useState(Object.keys(initialState).length);
 
   const bringToFront = (id: string) => {
     setWindowsState((prevState) => {
