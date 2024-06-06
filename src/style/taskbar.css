@@ -98,3 +98,8 @@
   cursor: pointer;
   z-index: 1;
 }
+
+#avatar{
+  border:1px solid white;
+  background: white;
+}
