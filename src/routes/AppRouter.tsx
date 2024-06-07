@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
@@ -9,10 +9,10 @@ import Project from '../views/ProjectPage';
 import LoginScreen from '../views/LoginScreenPage';
 import NotFoundPage from '../views/NotFoundPage';
 
-
 const AppRouter: React.FC = () => {
   const location = useLocation();
   const [routeKeys, setRouteKeys] = useState<{ [key: string]: string }>({});
+  const nodeRef = useRef(null); // Créez une référence pour le nœud DOM
 
   useEffect(() => {
     setRouteKeys((prevKeys) => ({
@@ -29,12 +29,13 @@ const AppRouter: React.FC = () => {
         key={currentKey}
         timeout={300}
         classNames="fade"
+        nodeRef={nodeRef} // Passez la référence à CSSTransition
       >
-        <div>
+        <div ref={nodeRef}>
           <Routes location={location}>
             <Route path="/" element={<LoginScreen />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/project/:id" element={<Project />} />(" ")
+            <Route path="/project/:id" element={<Project />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </div>
