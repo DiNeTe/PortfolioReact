@@ -16,7 +16,6 @@ const TypewriterEffect: React.FC<TypewriterEffectProps> = ({
 
   return (
     <div className={`typewriter ${className}`}>
-      {" "}
       <span>{displayText}</span>
       <span className="typewriter-cursor">|</span>
     </div>
