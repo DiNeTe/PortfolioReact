@@ -1,4 +1,4 @@
-import React, { useState, useRef,} from "react";
+import React, { useState, useRef } from "react";
 import { Rnd } from "react-rnd";
 import { useWindowLifecycle } from "../hooks/useWindowLifecycle";
 import WindowControls from "./WindowControls";
@@ -42,22 +42,29 @@ const Windows: React.FC<WindowsProps> = ({
   zIndex,
   bringToFront,
 }) => {
+  // État pour gérer le mode plein écran
   const [isFullscreen, setIsFullscreen] = useState(false);
+  // États pour gérer la taille et la position de la fenêtre
   const [size, setSize] = useState({ width: initialSize.width, height: initialSize.height });
   const [position, setPosition] = useState(initialPosition);
 
+  // Hook personnalisé pour gérer les cycles de vie des fenêtres (fermeture, minimisation)
   const { isHidden, isClosing, isMinimizing, handleClose, handleMinimize } = 
     useWindowLifecycle(onClose, onMinimize);
 
+  // Référence pour la fenêtre
   const windowRef = useRef<HTMLDivElement>(null);
 
+  // Fonction pour basculer entre le mode plein écran et le mode normal
   const handleToggleFullscreen = () => {
     setIsFullscreen((prev) => {
       const newFullscreen = !prev;
       if (newFullscreen) {
+        // Passe en mode plein écran
         setSize({ width: window.innerWidth, height: window.innerHeight });
         setPosition({ x: 0, y: 0 });
       } else {
+        // Passe en mode normal
         const newSize = { width: window.innerWidth * 0.6, height: window.innerHeight * 0.6 };
         setSize(newSize);
         setPosition({
@@ -76,13 +83,16 @@ const Windows: React.FC<WindowsProps> = ({
       minWidth={300}
       minHeight={200}
       dragHandleClassName="window-header"
+      // Apporte la fenêtre au premier plan lorsqu'elle est déplacée
       onDragStart={() => {
         bringToFront();
       }}
+      // Met à jour la position lorsque le déplacement est terminé
       onDragStop={(e, d) => {
         setPosition({ x: d.x, y: d.y });
         onDragStop(e, d);
       }}
+      // Met à jour la taille et la position lorsque le redimensionnement est terminé
       onResizeStop={(e, direction, ref, delta, position) => {
         const newSize = {
           width: parseInt(ref.style.width, 10),
@@ -93,6 +103,7 @@ const Windows: React.FC<WindowsProps> = ({
         onResizeStop(e, direction, ref, delta, position);
       }}
       style={{ zIndex: zIndex }}
+      // Permet le redimensionnement depuis toutes les directions
       enableResizing={{
         bottom: true,
         bottomRight: true,
@@ -116,6 +127,7 @@ const Windows: React.FC<WindowsProps> = ({
       >
         <div className="window-header">
           <h3>{header}</h3>
+          {/* Contrôles de la fenêtre (plein écran, minimiser, fermer) */}
           <WindowControls
             isFullscreen={isFullscreen}
             toggleFullscreen={handleToggleFullscreen}
@@ -123,6 +135,7 @@ const Windows: React.FC<WindowsProps> = ({
             handleClose={handleClose}
           />
         </div>
+        {/* Contenu de la fenêtre */}
         <div className="window-content" id={contentId}>
           {content && <div className="animated-text">{content}</div>}
           {apiData && <div className="api-data">{JSON.stringify(apiData)}</div>}

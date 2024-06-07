@@ -9,12 +9,18 @@ import AboutContent from "../components/AboutContent";
 import IcoPdfCv from "../components/IcoPdfCv";
 
 const Home: React.FC = () => {
+  // Récupère les dimensions actuelles de la fenêtre du navigateur
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
+
+  // Définit les dimensions de base des fenêtres de l'application
   const windowDimensions = { width: 800, height: 450 };
+
+  // Calcule la position initiale pour centrer les fenêtres
   const initialX = (windowWidth - windowDimensions.width) / 2;
   const initialY = (windowHeight - windowDimensions.height) / 2;
 
+  // Définition de l'état initial pour chaque fenêtre
   const initialState = {
     "about-window": {
       x: initialX,
@@ -25,7 +31,6 @@ const Home: React.FC = () => {
       open: true,
       zIndex: 1,
     },
-
     "portfolio-window": {
       x: initialX + 50,
       y: initialY + 50,
@@ -35,7 +40,6 @@ const Home: React.FC = () => {
       open: false,
       zIndex: 0,
     },
-
     "contact-window": {
       x: initialX + 100,
       y: initialY + 100,
@@ -47,6 +51,7 @@ const Home: React.FC = () => {
     },
   };
 
+  // Utilisation du hook personnalisé pour gérer les actions des fenêtres
   const {
     windowsState,
     bringToFront,
@@ -59,12 +64,19 @@ const Home: React.FC = () => {
 
   return (
     <section id="desktop">
+      {/* Gestionnaire du menu démarrer */}
       <StartMenuHandler />
+
+      {/* Fond d'écran du bureau */}
       <img src="./images/wallpaper1.webp" id="wallpaper" alt="Wallpaper" />
+
+      {/* Barre des tâches avec gestion des clics et mise au premier plan */}
       <Taskbar handleClick={handleClick} bringToFront={bringToFront} />
 
+      {/* Icône pour télécharger le CV au format PDF */}
       <IcoPdfCv />
 
+      {/* Rendu des fenêtres si elles sont ouvertes */}
       {Object.keys(windowsState).map(
         (windowId) =>
           windowsState[windowId].open && (
