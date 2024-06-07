@@ -99,7 +99,29 @@
   z-index: 1;
 }
 
-#avatar{
-  border:1px solid white;
+#close-all-windows {
+  display: none;
+}
+
+#avatar {
+  border: 1px solid white;
   background: white;
 }
+/* @media only screen and (max-width: 430px) {
+  #btc-price, #logo-win, #volume-icon {
+    display: none;
+  }
+  .time {
+    position: fixed;
+    top: 1px;
+    right: -10px;
+    font-size: 20px;
+  }
+  #close-all-windows{
+    display:flex
+  }
+
+  #taskbar {
+    z-index: 2000;
+  }
+} */

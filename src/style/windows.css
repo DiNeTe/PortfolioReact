@@ -87,3 +87,22 @@
 .window-hidden {
   display: none !important;
 }
+
+/* @media only screen and (max-width: 430px) {
+  .window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 92%;
+    box-sizing: border-box;
+  }
+  .fullscreen-button,
+  .minimize-button {
+    display: none;
+  }
+
+  .window-header {
+    display: none;
+  }
+} */

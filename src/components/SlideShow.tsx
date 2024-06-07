@@ -28,10 +28,10 @@ const SlideShow: React.FC<SlideshowProps> = ({ images }) => {
         <>
       <div className="nav-btn">
         <button className="prev-btn" onClick={goToPrevious}>
-          <img className="nav-slideshow" src="/icons/gotoprev.svg" alt="Image précédente" />
+          <img className="nav-slideshow" src="./icons/gotoprev.svg" alt="Image précédente" />
         </button>
         <button className="next-btn" onClick={goToNext}>
-          <img className="nav-slideshow" src="/icons/gotonext.svg" alt="Image suivante" />
+          <img className="nav-slideshow" src="./icons/gotonext.svg" alt="Image suivante" />
         </button>
         </div>
         <span className="counter">

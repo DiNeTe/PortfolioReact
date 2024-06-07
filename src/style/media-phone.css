@@ -1,0 +1,80 @@
+@media only screen and (max-width: 500px) {
+  #btc-price,
+  #volume-control,
+  #logo-win, .pp, .fullName, .loadingContainer {
+    display: none;
+  }
+/* HomePage */
+  #wallpaper {
+    object-fit: cover;
+  }
+
+  .pdf-link{
+    top: 120vw;  
+    left: 15vw;
+  }
+
+  .time {
+    position:fixed;
+    font-size: 30vw;
+    top: 20vw;  
+    left: 20vw;
+}
+/* LoginPage */
+.password
+{
+border-radius: 50px;
+}
+
+.loginLink{
+    position: fixed;
+    bottom: 7vw;
+}
+/* ProjectsPage */
+
+.project-page {
+    display: block;}
+
+  #tag-container{
+    display: none;
+}
+
+.project-header {
+    height: 10px;
+}
+
+.title-project h1 {
+    font-size: 5vw;
+}
+
+a.title-project {
+    margin-top: 10px;}
+
+.back-arrow{
+    position: fixed;
+    bottom: 0;
+}
+
+.project-body{
+    flex-direction: column;
+}
+
+.slideshow-container{
+    height: 70vw;
+}
+
+.typewriter span{
+font-size: 0.7em;
+}
+
+.project-footer{
+    display: block;
+}
+
+.project-footer a{
+    font-size: 12px;
+    padding: 0;
+}
+.prev-project-container, .next-project-container {
+
+}}

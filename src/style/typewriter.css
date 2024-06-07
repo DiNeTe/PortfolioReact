@@ -65,5 +65,12 @@
   }
   50% {
     visibility: hidden;
+  }}
+
+  
+/* @media only screen and (max-width: 430px) {
+  .typewriter-about {
+    width: 100%;
+    margin:0 ;
   }
-}
+} */
