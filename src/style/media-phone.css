@@ -1,80 +1,103 @@
 @media only screen and (max-width: 500px) {
   #btc-price,
   #volume-control,
-  #logo-win, .pp, .fullName, .loadingContainer {
+  #logo-win,
+  .pp,
+  .fullName,
+  .loadingContainer {
     display: none;
   }
-/* HomePage */
+  /* HomePage */
   #wallpaper {
     object-fit: cover;
   }
 
-  .pdf-link{
-    top: 120vw;  
+  .pdf-link {
+    top: 120vw;
     left: 15vw;
   }
 
   .time {
-    position:fixed;
+    position: fixed;
     font-size: 30vw;
-    top: 20vw;  
+    top: 20vw;
     left: 20vw;
-}
-/* LoginPage */
-.password
-{
-border-radius: 50px;
-}
+  }
+  /* LoginPage */
+  .password {
+    border-radius: 50px;
+  }
 
-.loginLink{
+  .loginLink {
     position: fixed;
     bottom: 7vw;
-}
-/* ProjectsPage */
+  }
+  /* ProjectsPage */
 
-.project-page {
-    display: block;}
-
-  #tag-container{
-    display: none;
-}
-
-.project-header {
-    height: 10px;
-}
-
-.title-project h1 {
-    font-size: 5vw;
-}
-
-a.title-project {
-    margin-top: 10px;}
-
-.back-arrow{
-    position: fixed;
-    bottom: 0;
-}
-
-.project-body{
-    flex-direction: column;
-}
-
-.slideshow-container{
-    height: 70vw;
-}
-
-.typewriter span{
-font-size: 0.7em;
-}
-
-.project-footer{
+  .project-page {
     display: block;
-}
+  }
 
-.project-footer a{
-    font-size: 12px;
+  .project-header {
+    flex-direction: column;
+  }
+  .title-project h1 {
+    font-size: 5vw;
+  }
+
+  a.title-project {
+    margin-bottom: 10px;
+  }
+
+  #tag-container {
+    position: relative;
+  }
+
+  .tag {
+    font-size: 0.5rem;
+  }
+
+  .back-arrow {
+    left: 5%;
+    bottom: 2%;
+  }
+
+  .project-body {
+    flex-direction: column;
+  }
+
+  .slideshow-container,
+  .typewriter-project-page {
+    height: 70vw;
+    margin: 0;
+  }
+
+  .typewriter-project-page {
+    height: 60vw;
+  }
+
+  .typewriter span {
+    font-size: 0.7em;
+  }
+
+  .project-footer {
+    display: flex;
+    width: 100%;
     padding: 0;
-}
-.prev-project-container, .next-project-container {
+    margin: 0;
+    position: static;
+    top: 362px;
+  }
 
-}}
+  .project-footer a {
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .github-link {
+    position: fixed;
+    right: 5%;
+    bottom: 2%;
+    cursor: pointer;
+  }
+}
