@@ -8,6 +8,7 @@ import PortfolioContent from "../components/PortfolioContent";
 import ContactForm from "../components/ContactForm";
 import AboutContent from "../components/AboutContent";
 import IcoPdfCv from "../components/IcoPdfCv";
+import CurrentTime from "../components/CurrentTime";
 
 const Home: React.FC = () => {
   const windowWidth = window.innerWidth;
@@ -16,10 +17,10 @@ const Home: React.FC = () => {
   const initialX = (windowWidth - windowDimensions.width) / 2;
   const initialY = (windowHeight - windowDimensions.height) / 2;
 
-  const initialState = {
+  const initialStateDesktop  = {
     "about-window": {
-      x: initialX-50,
-      y: initialY-50,
+      x: initialX - 50,
+      y: initialY - 50,
       width: windowDimensions.width,
       height: windowDimensions.height,
       minimized: false,
@@ -58,6 +59,49 @@ const Home: React.FC = () => {
     },
   };
 
+  const initialStateMobile = {
+    "about-window": {
+      x: 0,
+      y: 0,
+      width: window.innerWidth,
+      height: window.innerHeight -75,
+      minimized: false,
+      open: true,
+      zIndex: 10,
+    },
+    "skills-window": {
+      x: 0,
+      y: 0,
+      width: window.innerWidth,
+      height: window.innerHeight -75,
+      minimized: false,
+      open: false,
+      zIndex: 0,
+    },
+    "portfolio-window": {
+      x: 0,
+      y: 0,
+      width: window.innerWidth,
+      height: window.innerHeight -75,
+      minimized: false,
+      open: false,
+      zIndex: 0,
+    },
+    "contact-window": {
+      x: 0,
+      y: 0,
+      width: window.innerWidth,
+      height: window.innerHeight -75,
+      minimized: false,
+      open: false,
+      zIndex: 0,
+    },
+  };
+    
+
+  // Sélection de l'état initial en fonction de la taille de l'écran
+  const initialState = windowWidth <= 500 ? initialStateMobile : initialStateDesktop;
+
   const {
     windowsState,
     bringToFront,
@@ -76,6 +120,7 @@ const Home: React.FC = () => {
       <Taskbar handleClick={handleClick} bringToFront={bringToFront} handleCloseAll={handleCloseAll} />
 
       <IcoPdfCv />
+      <CurrentTime className="desktop"/>
 
       {Object.keys(windowsState).map(
         (windowId) =>

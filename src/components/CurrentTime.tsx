@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-const CurrentTime: React.FC = () => {
+interface CurrentTimeProps {
+  className?: string;
+}
+
+const CurrentTime: React.FC<CurrentTimeProps> = ({className= ""}) => {
   const [currentTime, setCurrentTime] = useState<string>(() => 
     new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
   );
@@ -15,7 +19,7 @@ const CurrentTime: React.FC = () => {
   }, []);
 
   return (
-    <div className="time" id="taskbarTime">
+    <div className={`time${className}`}>
       {currentTime}
     </div>
   );

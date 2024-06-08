@@ -4,28 +4,10 @@
   #logo-win,
   .pp,
   .fullName,
-  .loadingContainer {
+  .loadingContainer,
+  .time,
+  .back-arrow {
     display: none;
-  }
-  /* HomePage */
-  #wallpaper {
-    object-fit: cover;
-  }
-
-  .pdf-link {
-    top: 120vw;
-    left: 15vw;
-  }
-
-  .time {
-    position: fixed;
-    font-size: 30vw;
-    top: 20vw;
-    left: 20vw;
-  }
-
-  #home-button {
-    display: flex;
   }
   /* LoginPage */
   .password {
@@ -36,14 +18,89 @@
     position: fixed;
     bottom: 7vw;
   }
+
+  /* HomePage */
+  #wallpaper {
+    object-fit: cover;
+  }
+
+  .pdf-link {
+    top: 120vw;
+    left: 15vw;
+  }
+
+  #home-button {
+    display: flex;
+    width: 60px;
+  }
+
+  #nav ul li a:hover img {
+    transform: scale(1);
+  }
+
+  #home-button:hover img {
+    box-shadow: rgb(255, 255, 255) 0 0 10px 0;
+    border-radius: 50px;
+    width: 60px;
+  }
+
+  .icon-link {
+    min-width: 40px;
+  }
+
+  .icon-link::after {
+    content: none;
+  }
+
+  .timedesktop {
+    color: white;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    top: 10%;
+    position: fixed;
+    font-size: 5em;
+  }
+
+  /* windows */
+  .window-header {
+    display: none;
+  }
+
+  .window-content {
+    display: block;
+  }
+
+  .typewriter-about {
+    margin-top: 10vh;
+    max-width: 100vh;
+    height: 60vh;
+  }
+
+  .typewriter-about span {
+    font-size: 0.9em;
+  } 
+
+  img#pp-about\ {
+    top: 500px;
+    right: 20px;
+    width: 175px;
+}
+
+
+  .contact-form {
+    height: 70vh;
+  }
+
   /* ProjectsPage */
 
   .project-page {
-    height: 100vh; 
-   }
+    height: 100vh;
+  }
 
   .project-header {
     flex-direction: column;
+    padding: 0;
   }
   .title-project h1 {
     font-size: 5vw;
@@ -61,49 +118,67 @@
     font-size: 0.5rem;
   }
 
-  .back-arrow {
-    position: fixed;
-    left: 5%;
-    bottom: 2%;
-  }
-
   .project-body {
     flex-direction: column;
     margin-top: 25%;
+    gap: 0;
   }
 
   .slideshow-container,
   .typewriter-project-page {
-    height: 70vw;
+    height: 60vw;
     margin: 0;
   }
 
-  .typewriter-project-page {
-    height: 60vw;
+  img.nav-slideshow {
+    width: 25px;
   }
 
-  .typewriter span {
+  .typewriter-project-page {
+    height: 90vw;
+  }
+
+  .typewriter-project-page span {
     font-size: 0.7em;
   }
 
   .project-footer {
-    display: flex;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    position: static;
-    top: 362px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    gap: 25px;
   }
-
-  .project-footer a {
-    font-size: 16px;
-    padding: 0;
-  }
-
   .github-link {
     position: fixed;
-    right: 5%;
-    bottom: 1%;
+    width: 50px;
+    left: 18px;
+    top: 299px;
     cursor: pointer;
+    border-radius: 50px;
+    background: white;
+  }
+
+  a#github-ico {
+    padding: 0;
+  }
+
+  .nav-projects {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+  }
+
+  a.prev-project-button,
+  a.next-project-button {
+    padding: 0;
+  }
+
+  #back-arrow-footer {
+    display: flex;
+    border: none;
+    justify-content: start;
+    width: 100%;
+    margin-left: 50px;
+    padding: 0;
   }
 }

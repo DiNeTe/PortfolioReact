@@ -15,8 +15,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2%;
   z-index: 100;
+  padding: 20px;
+  background: transparent;
 }
 
 .back-arrow {
@@ -30,6 +31,10 @@
 
 .back-arrow:hover {
   text-decoration: underline;
+}
+
+#back-arrow-footer {
+  display: none;
 }
 
 a.title-project {
@@ -60,11 +65,21 @@ a.title-project:hover {
 }
 
 .github-link {
-  position: fixed;
-  right: 2%;
-  bottom: 7%;
   cursor: pointer;
   z-index: 100;
+  align-items: center;
+  display: flex;
+  width: 30%;
+  justify-content: center;
+}
+
+
+a#github-ico {
+  border: none;
+}
+
+a#github-ico:hover {
+  background: none;
 }
 
 #github-ico img {
@@ -114,7 +129,6 @@ a.title-project:hover {
   border-radius: 10px;
 }
 
-
 .description-container .Typewriter {
   white-space: pre-wrap;
 }
@@ -122,12 +136,12 @@ a.title-project:hover {
 .project-footer {
   display: flex;
   position: fixed;
-  bottom: 2%;
-  justify-content: space-between;
-  margin-top: 10px;
-  padding: 10px 20px;
-  border-radius: 10px;
+  bottom: 0;
   z-index: 110;
+  width: 100%;
+  margin: 0 20px;
+  padding: 20px;
+  background: transparent;
 }
 
 .project-footer a {
@@ -139,7 +153,6 @@ a.title-project:hover {
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
-  min-width: 150px;
   border: 2px inset #000000;
   border-radius: 10px;
 }
@@ -148,16 +161,25 @@ a.title-project:hover {
   transform: scale(1.05);
   color: white;
   background: #383838;
-
-}a.prev-project-button,a.next-project-button {
-  background: white;
 }
 
+.nav-projects {
+  flex-direction: row;
+  display: flex;
+  width: 70%;
+  padding: 0;
+  justify-content: space-evenly;
+}
+
+a.prev-project-button,
+a.next-project-button {
+  background: white;
+  min-width: 150px;
+}
 
 .prev-project-container,
 .next-project-container {
-  flex: 1;
   display: flex;
   justify-content: center;
-  margin: 0 10px;
+  align-items: center;
 }

@@ -99,19 +99,9 @@ const ProjectPage: React.FC = () => {
           />
         </div>
       </div>
-      {/* Lien vers le code source du projet sur GitHub */}
-      <div className="github-link">
-        <Icon
-          dataTitle="code source"
-          imgSrc="/icons/github.png"
-          alt="Lien vers GitHub"
-          id="github-ico"
-          onClick={() => {
-            window.open(project.linkGH, "_blank");
-          }}
-        />
-      </div>
+      
       <div className="project-footer">
+        <div className="nav-projects">
         {/* Lien vers le projet précédent, s'il existe */}
         <div className="prev-project-container">
           {prevProject && (
@@ -134,6 +124,23 @@ const ProjectPage: React.FC = () => {
             </NavLink>
           )}
         </div>
+        </div>
+        {/* Lien de retour à la page d'accueil */}
+        <NavLink to="/home" id="back-arrow-footer">
+          ← Retour à l'accueil
+        </NavLink>
+        {/* Lien vers le code source du projet sur GitHub */}
+      <div className="github-link">
+        <Icon
+          dataTitle="code source"
+          imgSrc="/icons/github.png"
+          alt="Lien vers GitHub"
+          id="github-ico"
+          onClick={() => {
+            window.open(project.linkGH, "_blank");
+          }}
+        />
+      </div>
       </div>
     </div>
   );
