@@ -125,10 +125,13 @@ const ProjectPage: React.FC = () => {
           )}
         </div>
         </div>
+        <div className="back-arrow-container">
         {/* Lien de retour à la page d'accueil */}
         <NavLink to="/home" id="back-arrow-footer">
-          ← Retour à l'accueil
+          Retour à l'accueil
         </NavLink>
+        </div>
+
         {/* Lien vers le code source du projet sur GitHub */}
       <div className="github-link">
         <Icon

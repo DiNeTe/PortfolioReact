@@ -6,7 +6,8 @@
   .fullName,
   .loadingContainer,
   .time,
-  .back-arrow {
+  .back-arrow,
+  .window-controls {
     display: none;
   }
   /* LoginPage */
@@ -22,6 +23,8 @@
   /* HomePage */
   #wallpaper {
     object-fit: cover;
+    overflow: hidden;
+    height: 100vh;
   }
 
   .pdf-link {
@@ -64,7 +67,8 @@
 
   /* windows */
   .window-header {
-    display: none;
+    background: none;
+    color: #333;
   }
 
   .window-content {
@@ -72,21 +76,19 @@
   }
 
   .typewriter-about {
-    margin-top: 10vh;
     max-width: 100vh;
     height: 60vh;
   }
 
   .typewriter-about span {
     font-size: 0.9em;
-  } 
+  }
 
   img#pp-about\ {
-    top: 500px;
-    right: 20px;
+    top: 393px;
+    right: 121px;
     width: 175px;
-}
-
+  }
 
   .contact-form {
     height: 70vh;
@@ -101,6 +103,7 @@
   .project-header {
     flex-direction: column;
     padding: 0;
+    background-color: rgba(244, 244, 244, 0.5);
   }
   .title-project h1 {
     font-size: 5vw;
@@ -108,6 +111,7 @@
 
   a.title-project {
     margin-bottom: 10px;
+    background: #f4f4f4;
   }
 
   #tag-container {
@@ -120,7 +124,7 @@
 
   .project-body {
     flex-direction: column;
-    margin-top: 25%;
+    margin: 25% 0;
     gap: 0;
   }
 
@@ -145,17 +149,18 @@
   .project-footer {
     flex-direction: column;
     align-items: center;
-    padding-top: 0;
-    gap: 25px;
+    padding: 10px;
+    gap: 20px;
+    background-color: rgba(244, 244, 244, 0.5);
   }
   .github-link {
     position: fixed;
     width: 50px;
-    left: 18px;
-    top: 299px;
+    right: 3px;
+    top: 3px;
     cursor: pointer;
     border-radius: 50px;
-    background: white;
+    background: #f4f4f4;
   }
 
   a#github-ico {
@@ -170,15 +175,25 @@
 
   a.prev-project-button,
   a.next-project-button {
-    padding: 0;
+    padding: 2px 7px;
+
+    border: none;
+    background-color: #333;
+    color: #f4f4f4;
+  }
+
+  .back-arrow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   #back-arrow-footer {
     display: flex;
     border: none;
-    justify-content: start;
-    width: 100%;
-    margin-left: 50px;
-    padding: 0;
+    padding: 2px 7px;
+    background-color: #f4f4f4;
+    border-radius: 15px;
   }
 }
