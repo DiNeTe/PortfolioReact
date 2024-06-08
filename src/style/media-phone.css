@@ -90,6 +90,21 @@
     width: 175px;
   }
 
+  .portfolio-content {
+    padding:0
+  }
+  
+  .project-item {
+    border:2px solid #333;
+    border-radius: 30px;
+    background-color: #333;
+  }
+
+  .cover-project{
+    border-radius: 0 0 25px 25px;
+    border-top: 2px solid #333;
+  }
+
   .contact-form {
     height: 70vh;
   }
@@ -119,7 +134,8 @@
   }
 
   .tag {
-    font-size: 0.5rem;
+    font-size: 2.5vw;
+    padding: 0px 5px 2px;
   }
 
   .project-body {
@@ -130,7 +146,7 @@
 
   .slideshow-container,
   .typewriter-project-page {
-    height: 60vw;
+    height: 68vw;
     margin: 0;
   }
 
@@ -138,12 +154,41 @@
     width: 25px;
   }
 
+  .nav-btn {
+    align-items: end;
+  }
+
+  img.nav-slideshow {
+    width: 10px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    padding: 0 20%;
+  }
+
+  .prev-btn:hover,
+  .next-btn:hover {
+    background: none;
+    border: none;
+    border-radius: 0;
+  }
+
+  .counter {
+    height: unset;
+    color: #333;
+    background-color: rgba(244, 244, 244, 0.5);
+    bottom: 0px;
+    height: 30px;
+    align-items: center;
+  }
+
   .typewriter-project-page {
     height: 90vw;
   }
 
   .typewriter-project-page span {
-    font-size: 0.7em;
+    font-size: 4vw;
   }
 
   .project-footer {
@@ -156,8 +201,8 @@
   .github-link {
     position: fixed;
     width: 50px;
-    right: 3px;
-    top: 3px;
+    right: 1%;
+    top: 1%;
     cursor: pointer;
     border-radius: 50px;
     background: #f4f4f4;
@@ -165,6 +210,10 @@
 
   a#github-ico {
     padding: 0;
+  }
+
+  #github-ico img {
+    width: 30px;
   }
 
   .nav-projects {
@@ -195,5 +244,10 @@
     padding: 2px 7px;
     background-color: #f4f4f4;
     border-radius: 15px;
+    transition: transform 0.2s ease-in-out;
   }
+
+  #back-arrow-footer:hover {
+    transform: scale(1.2)
+}
 }
