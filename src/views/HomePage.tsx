@@ -1,4 +1,5 @@
-import { useWindowActions } from "../hooks/useWindowActions";
+import React from "react";
+import  useWindowActions  from "../hooks/useWindowActions";
 
 import StartMenuHandler from "../components/StartMenuHandler";
 import Windows from "../components/Windows";
@@ -17,13 +18,23 @@ const Home: React.FC = () => {
 
   const initialState = {
     "about-window": {
-      x: initialX,
-      y: initialY,
+      x: initialX-50,
+      y: initialY-50,
       width: windowDimensions.width,
       height: windowDimensions.height,
       minimized: false,
       open: true,
       zIndex: 1,
+    },
+
+    "skills-window": {
+      x: initialX,
+      y: initialY,
+      width: windowDimensions.width,
+      height: windowDimensions.height,
+      minimized: false,
+      open: false,
+      zIndex: 0,
     },
 
     "portfolio-window": {
@@ -55,13 +66,14 @@ const Home: React.FC = () => {
     handleMinimize,
     updatePosition,
     updateSize,
+    handleCloseAll,
   } = useWindowActions(initialState);
 
   return (
     <section id="desktop">
       <StartMenuHandler />
       <img src="./images/wallpaper1.webp" id="wallpaper" alt="Wallpaper" />
-      <Taskbar handleClick={handleClick} bringToFront={bringToFront} />
+      <Taskbar handleClick={handleClick} bringToFront={bringToFront} handleCloseAll={handleCloseAll} />
 
       <IcoPdfCv />
 
@@ -74,6 +86,8 @@ const Home: React.FC = () => {
               header={
                 windowId === "about-window"
                   ? "A propos de moi"
+                  : windowId === "skills-window"
+                  ? "Mes compétences"
                   : windowId === "portfolio-window"
                   ? "Mon portfolio"
                   : "Me contacter"

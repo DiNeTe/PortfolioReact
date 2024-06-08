@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 import Icon from "./Icons";
@@ -10,9 +10,10 @@ import { Project } from "../data/Project";
 interface TaskbarProps {
   handleClick: (id: string) => void;
   bringToFront: (id: string) => void;
+  handleCloseAll: () => void; // Ajout de handleCloseAll
 }
 
-const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront }) => {
+const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleCloseAll }) => {
   const [projects, setProjects] = useState<Project[]>([]);
   const { projectDataSource } = useAppDependencies();
 
@@ -44,11 +45,12 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront }) => {
             </NavLink>
           </div>
           <div id="start-menu-content">
-            <ul>             
-                {projects.map((project, index) => (
-                  <li key={index} onClick={() => CoverClick(project.id)}>{project.title}
-                  </li>
-                ))}
+            <ul>
+              {projects.map((project, index) => (
+                <li key={index} onClick={() => CoverClick(project.id)}>
+                  {project.title}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -56,6 +58,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront }) => {
       <div className="taskbar-center">
         <nav id="nav">
           <ul id="nav-list">
+            
             <Icon
               dataTitle="A propos de moi"
               imgSrc="/icons/about-icon.png"
@@ -64,6 +67,25 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront }) => {
               onClick={() => {
                 handleClick("about-window");
                 bringToFront("about-window");
+              }}
+            />
+            <Icon
+              dataTitle="Mes compétences"
+              imgSrc="/icons/skill.png"
+              alt="Mes compétences"
+              id="skill-window-ico"
+              onClick={() => {
+                handleClick("skills-window");
+                bringToFront("skills-window");
+              }}
+            />
+            <Icon
+              dataTitle="Accueil"
+              imgSrc="/icons/homeButton.png"
+              alt="Close all windows"
+              id="home-button"
+              onClick={() => {
+                handleCloseAll(); // Appel direct à handleCloseAll
               }}
             />
             <Icon

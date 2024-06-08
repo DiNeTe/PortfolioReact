@@ -56,3 +56,12 @@ img#shutdown  {
 #start-menu ul li:hover {
   background: rgb(51, 51, 51);
 }
+
+#home-button{
+  /* display: none; */
+  width: 80px;
+  z-index: 100;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}

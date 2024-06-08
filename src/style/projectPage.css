@@ -11,10 +11,12 @@
 
 .project-header {
   width: 100%;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2%;
+  z-index: 100;
 }
 
 .back-arrow {
@@ -62,6 +64,7 @@ a.title-project:hover {
   right: 2%;
   bottom: 7%;
   cursor: pointer;
+  z-index: 100;
 }
 
 #github-ico img {
@@ -89,7 +92,7 @@ a.title-project:hover {
 }
 
 .project-body {
-  margin-top: 2%;
+  margin-top: 6%;
   display: flex;
   width: 100%;
   gap: 20px;
@@ -118,12 +121,13 @@ a.title-project:hover {
 
 .project-footer {
   display: flex;
+  position: fixed;
+  bottom: 2%;
   justify-content: space-between;
-  width: 30%;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #f4f4f4; /* Fond assorti à la page */
   border-radius: 10px;
+  z-index: 110;
 }
 
 .project-footer a {
@@ -144,7 +148,11 @@ a.title-project:hover {
   transform: scale(1.05);
   color: white;
   background: #383838;
+
+}a.prev-project-button,a.next-project-button {
+  background: white;
 }
+
 
 .prev-project-container,
 .next-project-container {

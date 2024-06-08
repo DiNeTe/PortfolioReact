@@ -80,20 +80,3 @@ img#pp-about\ {
   font-size: 14px;
   text-align: center;
 }
-
-/* @media only screen and (max-width: 430px) {
-  #about-content {
-    display: block;
-    width: 125%;
-  }
-
-  #pp-about {
-    animation: randomMove 20s ease-in-out infinite;
-
-    width: 40%;
-    position: relative;
-bottom: -50px;
-left: 85px;
-  }
-
-} */

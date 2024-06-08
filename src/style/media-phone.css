@@ -23,6 +23,10 @@
     top: 20vw;
     left: 20vw;
   }
+
+  #home-button {
+    display: flex;
+  }
   /* LoginPage */
   .password {
     border-radius: 50px;
@@ -35,8 +39,8 @@
   /* ProjectsPage */
 
   .project-page {
-    display: block;
-  }
+    height: 100vh; 
+   }
 
   .project-header {
     flex-direction: column;
@@ -58,12 +62,14 @@
   }
 
   .back-arrow {
+    position: fixed;
     left: 5%;
     bottom: 2%;
   }
 
   .project-body {
     flex-direction: column;
+    margin-top: 25%;
   }
 
   .slideshow-container,
@@ -97,7 +103,7 @@
   .github-link {
     position: fixed;
     right: 5%;
-    bottom: 2%;
+    bottom: 1%;
     cursor: pointer;
   }
 }

@@ -40,7 +40,7 @@ const PortfolioContent: React.FC = () => {
           // Élément de la liste pour chaque projet
           <li key={project.id} className="project-item" onClick={() => CoverClick(project.id)}>
             <div className="project-container">
-              <div className="project-header">
+              <div className="portfolio-project-header">
                 <div className="project-title">
                   {/* Conteneur des tags du projet */}
                   <div id="tag-container-window">
