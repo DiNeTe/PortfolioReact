@@ -24,16 +24,21 @@ justify-content: center;
   width: 100%;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+}
+
+.project-container:hover {
+  box-shadow: black 0px 0px 20px;
 }
 
 .cover-project {
   width: 100%;
   transition: filter 0.3s ease, transform 0.3s ease;
-  margin-top: 02%;
-  border-radius: 25px;
+  margin-bottom: 02%;
+  border-radius: 10px;
 }
 
 
@@ -49,6 +54,7 @@ justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
   text-align: center;
+
 }
 
 .project-item:hover .cover-project {
@@ -58,10 +64,11 @@ justify-content: center;
 
 .project-item:hover .project-overlay {
   opacity: 1;
+
 }
 
 .portfolio-project-header {
-  margin-top: 10px;
+  margin: 10px;
 }
 
 #tag-container Tag {

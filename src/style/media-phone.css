@@ -79,11 +79,13 @@
 
   .window-header {
     background: none;
-    color: #333;
+    background: rgba(232, 238, 248, 0.5);
+    color: #333 ;
   }
 
   .window-content {
     display: block;
+    background: rgba(232, 238, 248, 0.5);
   }
 
   .typewriter-about {
@@ -106,15 +108,18 @@
   }
 
   .project-item {
-    border: 2px solid #333;
-    border-radius: 30px;
-    background-color: #333;
-  }
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(232, 238, 248, 0.5); /* Fond semi-transparent */
+    backdrop-filter: blur(5px);  }
 
   .cover-project {
-    border-radius: 0 0 25px 25px;
-    border-top: 2px solid #333;
+    border-radius: 10px 10px 0 0;
   }
+
+  .project-overlay {
+    font-size: 1em;
+  } 
 
   #contact-window-content {
     align-items: start;
@@ -131,24 +136,30 @@
 
   .project-page {
     height: 100vh;
+    background: rgb(232, 238, 248)
   }
 
   .project-header {
     flex-direction: column;
     padding: 0;
-    background-color: rgba(244, 244, 244, 0.5);
+    background: rgba(232, 238, 248, 0.5); /* Fond semi-transparent */
+    backdrop-filter: blur(5px);  
+    padding-bottom: 10px;
+    height: 70px;
   }
+
+
   .title-project h1 {
     font-size: 5vw;
   }
 
   a.title-project {
-    margin-bottom: 10px;
-    background: #f4f4f4;
+    margin-bottom: 5px;
   }
 
   #tag-container {
     position: relative;
+    margin: 5px;
   }
 
   .tag {
@@ -160,6 +171,7 @@
     flex-direction: column;
     margin: 25% 0 30%;
     gap: 0;
+    
   }
 
   .slideshow-container {
@@ -207,7 +219,7 @@
   }
 
   .typewriter-project-page span {
-    font-size: 4vw;
+    font-size: 5vw;
   }
 
   .project-footer {
@@ -215,16 +227,18 @@
     align-items: center;
     padding: 10px;
     gap: 20px;
-    background-color: rgba(244, 244, 244, 0.5);
+    background: rgba(232, 238, 248, 0.5); /* Fond semi-transparent */
+    backdrop-filter: blur(5px);
+    height: 70px;
   }
+
   .github-link {
     position: fixed;
-    width: 30px;
-    right: 5%;
-    top: 1%;
+    width: 50px;
+    right: 6%;
+    bottom: 895%;
     cursor: pointer;
     border-radius: 50px;
-    background: #f4f4f4;
   }
 
   a#github-ico {
@@ -262,7 +276,7 @@
     display: flex;
     border: none;
     padding: 2px 7px;
-    background-color: #f4f4f4;
+    background-color: rgba(#232, 238, 248);
     border-radius: 15px;
     transition: transform 0.2s ease-in-out;
   }

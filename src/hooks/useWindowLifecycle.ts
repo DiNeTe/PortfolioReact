@@ -17,7 +17,6 @@ export const useWindowLifecycle = (onClose: () => void, onMinimize: () => void) 
 
    // useEffect se déclenche à chaque fois que isClosing, isMinimizing ou isHidden change
   useEffect(() => {
-    console.log("Window state:", { isClosing, isMinimizing, isHidden });
   }, [isClosing, isMinimizing, isHidden]);
 
 

@@ -16,7 +16,6 @@
   }
   
   #nav ul li a {
-    color: white;
     text-decoration: none;
   }
 
@@ -25,11 +24,13 @@
     height: 90%; 
     width: 90%;
     vertical-align: middle;
-    transition: transform 0.3s ease; /* transition pour l'effet de survol */
+    transition: transform 0.3s ease;
+    filter: brightness(0.8)
   }
 
   #nav ul li a:hover img {
     transform: scale(1.4);
+    filter: brightness(1.5)
   }
 
  
