@@ -2,8 +2,6 @@
   #btc-price,
   #volume-control,
   #logo-win,
-  .pp,
-  .fullName,
   .loadingContainer,
   .time,
   .back-arrow,
@@ -11,8 +9,34 @@
     display: none;
   }
   /* LoginPage */
+
+  .loginScreenInsert {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 5%;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .pp {
+    border-radius: 100%;
+    width: 25%;
+    border: 2px solid white;
+    margin: 10%;
+  }
+
   .password {
     border-radius: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    font-size: 1.3rem;
+    margin-bottom: 1%;
+    margin: 15%;
+    width: 75%;
+    height: 40px;
+    border: none;
   }
 
   .loginLink {
@@ -71,7 +95,7 @@
 
   /* windows */
   .window {
-    border:5px solid #333;
+    border: 5px solid #333;
     border-radius: 10px;
     margin: 5px;
     overflow: hidden;
@@ -80,7 +104,7 @@
   .window-header {
     background: none;
     background: rgba(232, 238, 248, 0.5);
-    color: #333 ;
+    color: #333;
   }
 
   .window-content {
@@ -90,17 +114,24 @@
 
   .typewriter-about {
     max-width: 100vh;
-    height: 70vh;
+    height: 75vh;
+    border: none;
+    box-shadow: none;
   }
 
   .typewriter-about span {
     font-size: 0.9em;
+    color: #333;
+  }
+
+  .typewriter::before {
+    background: none;
   }
 
   img#pp-about\ {
-    top: 40px;
-    right: 15px;
-    width: 100px;
+    top: 500px;
+    right: 59px;
+    width: 132px;
   }
 
   .portfolio-content {
@@ -109,9 +140,9 @@
 
   .project-item {
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background: rgba(232, 238, 248, 0.5); /* Fond semi-transparent */
-    backdrop-filter: blur(5px);  }
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+  }
 
   .cover-project {
     border-radius: 10px 10px 0 0;
@@ -119,7 +150,7 @@
 
   .project-overlay {
     font-size: 1em;
-  } 
+  }
 
   #contact-window-content {
     align-items: start;
@@ -127,27 +158,26 @@
   }
 
   .contact-form {
-    height: 70vh;
     margin: 10px;
     width: 100%;
+    height: 75%;
   }
 
   /* ProjectsPage */
 
   .project-page {
     height: 100vh;
-    background: rgb(232, 238, 248)
+    background: rgb(232, 238, 248);
   }
 
   .project-header {
     flex-direction: column;
     padding: 0;
     background: rgba(232, 238, 248, 0.5); /* Fond semi-transparent */
-    backdrop-filter: blur(5px);  
+    backdrop-filter: blur(5px);
     padding-bottom: 10px;
     height: 70px;
   }
-
 
   .title-project h1 {
     font-size: 5vw;
@@ -171,7 +201,6 @@
     flex-direction: column;
     margin: 25% 0 30%;
     gap: 0;
-    
   }
 
   .slideshow-container {

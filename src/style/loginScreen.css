@@ -23,33 +23,50 @@
 .loginScreenInsert {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   width: 100%;
   height: 100%;
-  z-index: 1;
+}
+
+#portfolio {
+  margin-top: 3%;
 }
 
 .pp {
   border-radius: 100%;
   width: 10%;
-  border: 2px solid white ;
+  margin: 2%;
+  border: 2px solid white;
 }
 
 .fullName {
   color: white;
   font-size: 3rem;
-  margin: 2%;
+  margin: 0;
+}
+
+#job {
+  margin: 0 0 2%;
 }
 
 .password {
-  color: rgb(0, 0, 0);
-  font-size: 1.5rem;
-  margin-bottom: 1%;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  font-size: 1.3rem;
+  margin-bottom: 2%;
+  width: 15%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-screen-infos-txt {
+  color: rgba(255, 255, 255, 0.70);
 }
 
 .loginLink {
-  color: white;
+  color: rgba(255, 255, 255, 0.80);
   font-weight: 500;
   font-size: larger;
   width: auto;
@@ -69,8 +86,7 @@
 }
 
 .password.error {
-  border: 3px groove    red;
-
+  border: 3px groove red;
 }
 
 .password.error::placeholder {
