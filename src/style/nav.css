@@ -21,16 +21,15 @@
 
     
   #nav ul li a img {
-    height: 90%; 
-    width: 90%;
+
     vertical-align: middle;
     transition: transform 0.3s ease;
-    filter: brightness(0.8)
+    filter: brightness(0.7)
   }
 
   #nav ul li a:hover img {
     transform: scale(1.4);
-    filter: brightness(1.5);
+    filter: brightness(1);
   }
 
  

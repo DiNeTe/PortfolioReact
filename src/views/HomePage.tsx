@@ -55,12 +55,14 @@ const Home: React.FC = () => {
     },
   };
 
+const heightWindowsMobile = window.innerHeight - 103
+
   const initialStateMobile = {
     "about-window": {
       x: 0,
       y: 0,
       width: window.innerWidth,
-      height: window.innerHeight - 95,
+      height: heightWindowsMobile,
       minimized: false,
       open: false,
       zIndex: 10,
@@ -69,7 +71,7 @@ const Home: React.FC = () => {
       x: 0,
       y: 0,
       width: window.innerWidth,
-      height: window.innerHeight - 95,
+      height: heightWindowsMobile,
       minimized: false,
       open: false,
       zIndex: 0,
@@ -78,7 +80,7 @@ const Home: React.FC = () => {
       x: 0,
       y: 0,
       width: window.innerWidth,
-      height: window.innerHeight - 95,
+      height: heightWindowsMobile,
       minimized: false,
       open: false,
       zIndex: 0,
@@ -87,7 +89,7 @@ const Home: React.FC = () => {
       x: 0,
       y: 0,
       width: window.innerWidth,
-      height: window.innerHeight - 95,
+      height: heightWindowsMobile,
       minimized: false,
       open: false,
       zIndex: 0,
@@ -185,8 +187,9 @@ const Home: React.FC = () => {
                     <div id="about-content">
                       <AboutContent />
                       <Draggable>
-                          
+                          <div>
                           <img id="pp-about" src="/pp/avatar.png" alt="Avatar" />
+                          </div>
                       </Draggable>
                     </div>
                   </>

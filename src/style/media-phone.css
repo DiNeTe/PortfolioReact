@@ -62,17 +62,21 @@
 
   #home-button {
     display: flex;
-    width: 60px;
+    width: 75px;
+  }
+
+  #home-button img {
+    width: 75px;
   }
 
   #nav ul li a:hover img {
     transform: scale(1);
   }
 
-  #home-button:hover img {
-    box-shadow: rgb(255, 255, 255) 0 0 10px 0;
+  #home-button:hover img,
+  #home-button-project-page:hover  {
+    box-shadow: rgb(255, 255, 255) 0px 0 15px 2px;
     border-radius: 50px;
-    width: 60px;
   }
 
   .icon-link {
@@ -95,7 +99,6 @@
 
   /* windows */
   .window {
-    border: 5px solid #333;
     border-radius: 10px;
     margin: 5px;
     overflow: hidden;
@@ -120,17 +123,19 @@
     box-shadow: none;
   }
 
+  .typewriter-about::before {
+    background: none;
+  }
+
   .typewriter-about span {
     font-size: 0.9em;
     color: #333;
   }
 
   img#pp-about {
-    top: 439px;
-    right: 47px;
-    width: 125px;
-    border-radius: 100%;
-    position: absolute;
+    top: 200px;
+    right: 50px;
+    width: 100px;
   }
 
   .portfolio-content {
@@ -160,6 +165,15 @@
     margin: 10px;
     width: 100%;
     height: 75%;
+  }
+
+  .react-draggable {
+    z-index: 1;
+  }
+
+  .react-draggable.react-draggable-dragged {
+    z-index: 1;
+    position: absolute;
   }
 
   /* ProjectsPage */
@@ -241,12 +255,10 @@
     text-shadow: none;
   }
 
-
-
   .typewriter-project-page {
     min-height: 90vw;
     max-height: auto;
-    padding:15px;
+    padding: 15px;
   }
 
   .typewriter-project-page span {
@@ -307,18 +319,23 @@
     font-size: 50px;
     color: #333;
     align-items: end;
-}
-  
+  }
+
+  a.prev-project-button:hover, a.next-project-button:hover {
+    text-shadow: rgb(255, 255, 255) 0 0 10px 0;
+  }
+
   #home-button-project-page {
     display: flex;
-      position: fixed;
-      width: 60px;
-      bottom: -3px;
-
-    }
+    width: 75px;
+    bottom: 7.5px;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+  }
 
   #home-button-project-page img {
     width: 75px;
-    display: flex
+    border-radius: 50px;
   }
 }
