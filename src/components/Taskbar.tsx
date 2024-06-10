@@ -39,7 +39,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleClos
         <img src="./images/logoW11.png" id="logo-win" alt="Windows Logo" />
         <div id="start-menu">
           <div id="start-menu-lateral-bar">
-            <img src="./pp/avatar.png" id="avatar" alt="Avatar" />
+            <img src="/pp/avatar.png" id="avatar" alt="Avatar" />
             <NavLink to="/">
               <img src="/icons/shutdown.png" id="shutdown" alt="Shutdown" />
             </NavLink>
