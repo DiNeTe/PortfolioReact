@@ -30,7 +30,7 @@
 
   #nav ul li a:hover img {
     transform: scale(1.4);
-    filter: brightness(1.5)
+    filter: brightness(1.5);
   }
 
  

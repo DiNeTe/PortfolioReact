@@ -36,7 +36,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleClos
   return (
     <section id="taskbar">
       <div className="taskbar-left">
-        <img src="./images/logoW11.png" id="logo-win" alt="Windows Logo" />
+        <img src="/icons/logoW11.png" id="logo-win" alt="Windows Logo" />
         <div id="start-menu">
           <div id="start-menu-lateral-bar">
             <img src="/pp/avatar.png" id="avatar" alt="Avatar" />
@@ -114,7 +114,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleClos
       <div className="taskbar-right">
         <BitcoinPrice />
         <div id="volume-control">
-          <img src="/images/volume.png" alt="Volume" id="volume-icon" />
+          <img src="/icons/volume.png" alt="Volume" id="volume-icon" />
         </div>
         <CurrentTime />
       </div>

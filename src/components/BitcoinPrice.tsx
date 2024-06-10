@@ -22,7 +22,7 @@ const BitcoinPrice: React.FC = () => {
 
   return (
     <div id="btc-price">
-      <img src="./images/Bitcoin.png" alt="Bitcoin" id="btc-icon" />
+      <img src="./icons/Bitcoin.png" alt="Bitcoin" id="btc-icon" />
       <span id="btc-value">{btcPrice ? `${btcPrice} $` : "Loading..."}</span>
     </div>
   );

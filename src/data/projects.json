@@ -2,10 +2,10 @@
   {
       "id": "1",
       "title": "Nina Carducci - Photographe",
-      "cover": "/images/projets/Nina/Nina_Carducci_Photographe.jpg",
+      "cover": "/images/projets/Nina/Nina_Carducci_Photographe.webp",
       "pictures": [
-          "/images/projets/Nina/Nina_Carducci_gallerie.jpg",
-          "/images/projets/Nina/Nina_Carducci_Photographe.jpg"
+          "/images/projets/Nina/Nina_Carducci_gallerie.webp",
+          "/images/projets/Nina/Nina_Carducci_Photographe.webp"
       ],
       "tags": ["HTML", "CSS", "TypeScript", "SEO", "Performance"],
       "description": "Optimisation SEO et performances du site de Nina Carducci, photographe. Audit des performances du site, optimisation des images, amélioration du code et de la structure HTML/CSS/JavaScript pour un meilleur chargement et accessibilité, et mise en place des bonnes pratiques SEO.",
@@ -15,11 +15,11 @@
   {
       "id": "2",
       "title": "Kasa",
-      "cover": "/images/projets/Kasa/kasa1.jpg",
+      "cover": "/images/projets/Kasa/kasa1.webp",
       "pictures": [
-          "/images/projets/Kasa/kasa1.jpg",
-          "/images/projets/Kasa/kasa2.jpg",
-          "/images/projets/Kasa/kasa3.jpg"
+          "/images/projets/Kasa/kasa1.webp",
+          "/images/projets/Kasa/kasa2.webp",
+          "/images/projets/Kasa/kasa3.webp"
       ],
       "tags": ["React", "TypeScript", "CSS", "Sass", "DIP", "DI"],
       "description": "Refonte complète du site Kasa, leader de la location d'appartements entre particuliers, en utilisant React pour le front-end et Node.js pour le back-end. Développement des composants React, mise en place de React Router, intégration des maquettes Figma, utilisation de Sass pour les styles, et implémentation de l'inversion et de l'injection de dépendances pour une architecture modulaire.",
@@ -29,11 +29,11 @@
   {
       "id": "3",
       "title": "Mon Vieux Grimoire",
-      "cover": "/images/projets/MVG/MVG1.jpg",
+      "cover": "/images/projets/MVG/MVG1.webp",
       "pictures": [
-          "/images/projets/MVG/MVG1.jpg",
-          "/images/projets/MVG/MVG2.jpg",
-          "/images/projets/MVG/MVG3.jpg"
+          "/images/projets/MVG/MVG1.webp",
+          "/images/projets/MVG/MVG2.webp",
+          "/images/projets/MVG/MVG3.webp"
       ],
       "tags": ["Node.js", "Express", "MongoDB", "REST API", "JWT", "Multer"],
       "description": "Développement du back-end pour le site de notation de livres 'Mon Vieux Grimoire' utilisant Node.js, Express et MongoDB. Création d'une API RESTful, implémentation de l'authentification des utilisateurs avec JWT, gestion et optimisation des images téléchargées par les utilisateurs avec Multer, et intégration de la fonctionnalité de notation et de calcul de la moyenne des livres.",
@@ -43,11 +43,11 @@
   {
       "id": "4",
       "title": "Booki",
-      "cover": "/images/projets/Booki/booki1.jpg",
+      "cover": "/images/projets/Booki/booki1.webp",
       "pictures": [
-          "/images/projets/Booki/booki1.jpg",
-          "/images/projets/Booki/booki2.jpg",
-          "/images/projets/Booki/booki3.jpg"
+          "/images/projets/Booki/booki1.webp",
+          "/images/projets/Booki/booki2.webp",
+          "/images/projets/Booki/booki3.webp"
       ],
       "tags": ["HTML", "CSS", "Responsive Design"],
       "description": "Intégration de l'interface utilisateur du site Booki en utilisant HTML et CSS. Collaboration étroite avec l'UI designer pour respecter les maquettes fournies et création d'un site responsive.",
@@ -57,13 +57,13 @@
   {
       "id": "5",
       "title": "Portfolio Sophie Bluel",
-      "cover": "/images/projets/SophieBluel/sophiebluel1.jpg",
+      "cover": "/images/projets/SophieBluel/sophiebluel1.webp",
       "pictures": [
-          "/images/projets/SophieBluel/sophiebluel1.jpg",
-          "/images/projets/SophieBluel/sophiebluel2.jpg",
-          "/images/projets/SophieBluel/sophiebluel3.jpg",
-          "/images/projets/SophieBluel/sophiebluel4.jpg",
-          "/images/projets/SophieBluel/sophiebluel5.jpg"
+          "/images/projets/SophieBluel/sophiebluel1.webp",
+          "/images/projets/SophieBluel/sophiebluel2.webp",
+          "/images/projets/SophieBluel/sophiebluel3.webp",
+          "/images/projets/SophieBluel/sophiebluel4.webp",
+          "/images/projets/SophieBluel/sophiebluel5.webp"
       ],
       "tags": ["TypeScript", "HTML", "CSS", "API", "Node.js"],
       "description": "Développement de fonctionnalités dynamiques pour le portfolio de Sophie Bluel, architecte d'intérieur. Implémentation d'une galerie de projets, d'une page de connexion pour l'administrateur, et d'une modale pour l'ajout de nouveaux projets.",

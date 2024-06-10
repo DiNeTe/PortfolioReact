@@ -102,28 +102,50 @@ const Home: React.FC = () => {
   const initialState =
     windowWidth <= 500 ? initialStateMobile : initialStateDesktop;
 
-  const {
-    windowsState,
-    bringToFront,
-    handleClick,
-    handleClose,
-    handleMinimize,
-    updatePosition,
-    updateSize,
-    handleCloseAll,
-  } = useWindowActions(initialState);
+    const {
+      windowsState,
+      bringToFront,
+      handleClick: handleTaskbarClick,
+      handleClose,
+      handleMinimize,
+      updatePosition,
+      updateSize,
+      handleCloseAll,
+    } = useWindowActions(initialState);
+
+  // Empêche le clic pendant le drag
+  let drag = false;
+
+  const handleDrag = () => {
+    drag = true;
+  };
+
+  const handleStop = () => {
+    setTimeout(() => {
+      drag = false;
+    }, 0);
+  };
+
+  const handlePdfClick = (e: React.MouseEvent) => {
+    if (drag) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  };
 
   return (
     <section id="desktop">
       <StartMenuHandler />
       <img src="./images/wallpaper1.webp" id="wallpaper" alt="Wallpaper" />
       <Taskbar
-        handleClick={handleClick}
+        handleClick={handleTaskbarClick}
         bringToFront={bringToFront}
         handleCloseAll={handleCloseAll}
       />
-      <Draggable>
-        <IcoPdfCv />
+      <Draggable onDrag={handleDrag} onStop={handleStop}>
+        <div onClick={handlePdfClick}>
+          <IcoPdfCv />
+        </div>
       </Draggable>
 
       <CurrentTime className="desktop" />
