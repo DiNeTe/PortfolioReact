@@ -122,8 +122,10 @@ const Home: React.FC = () => {
         bringToFront={bringToFront}
         handleCloseAll={handleCloseAll}
       />
+      <Draggable>
+        <IcoPdfCv />
+      </Draggable>
 
-      <IcoPdfCv />
       <CurrentTime className="desktop" />
 
       {Object.keys(windowsState).map(
@@ -151,11 +153,11 @@ const Home: React.FC = () => {
                   <>
                     <div id="about-content">
                       <AboutContent />
-                        <Draggable>
-                          <div id="about-avatar">
-                            <img id="pp-about" src="/pp/avatar.png" />
-                          </div>
-                        </Draggable>
+                      <Draggable>
+                        <div id="about-avatar">
+                          <img id="pp-about" src="/pp/avatar.png" />
+                        </div>
+                      </Draggable>
                     </div>
                   </>
                 ) : windowId === "portfolio-window" ? (
