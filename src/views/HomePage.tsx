@@ -1,5 +1,5 @@
-import React from "react";
-import  useWindowActions  from "../hooks/useWindowActions";
+import useWindowActions from "../hooks/useWindowActions";
+import Draggable from "react-draggable";
 
 import StartMenuHandler from "../components/StartMenuHandler";
 import Windows from "../components/Windows";
@@ -17,7 +17,7 @@ const Home: React.FC = () => {
   const initialX = (windowWidth - windowDimensions.width) / 2;
   const initialY = (windowHeight - windowDimensions.height) / 2;
 
-  const initialStateDesktop  = {
+  const initialStateDesktop = {
     "about-window": {
       x: initialX - 50,
       y: initialY - 50,
@@ -64,16 +64,16 @@ const Home: React.FC = () => {
       x: 0,
       y: 0,
       width: window.innerWidth,
-      height: window.innerHeight-95,
+      height: window.innerHeight - 95,
       minimized: false,
-      open: true,
+      open: false,
       zIndex: 10,
     },
     "skills-window": {
       x: 0,
       y: 0,
       width: window.innerWidth,
-      height: window.innerHeight-95,
+      height: window.innerHeight - 95,
       minimized: false,
       open: false,
       zIndex: 0,
@@ -82,7 +82,7 @@ const Home: React.FC = () => {
       x: 0,
       y: 0,
       width: window.innerWidth,
-      height: window.innerHeight-95,
+      height: window.innerHeight - 95,
       minimized: false,
       open: false,
       zIndex: 0,
@@ -91,16 +91,16 @@ const Home: React.FC = () => {
       x: 0,
       y: 0,
       width: window.innerWidth,
-      height: window.innerHeight-95,
+      height: window.innerHeight - 95,
       minimized: false,
       open: false,
       zIndex: 0,
     },
   };
-    
 
   // Sélection de l'état initial en fonction de la taille de l'écran
-  const initialState = windowWidth <= 500 ? initialStateMobile : initialStateDesktop;
+  const initialState =
+    windowWidth <= 500 ? initialStateMobile : initialStateDesktop;
 
   const {
     windowsState,
@@ -117,10 +117,14 @@ const Home: React.FC = () => {
     <section id="desktop">
       <StartMenuHandler />
       <img src="./images/wallpaper1.webp" id="wallpaper" alt="Wallpaper" />
-      <Taskbar handleClick={handleClick} bringToFront={bringToFront} handleCloseAll={handleCloseAll} />
+      <Taskbar
+        handleClick={handleClick}
+        bringToFront={bringToFront}
+        handleCloseAll={handleCloseAll}
+      />
 
       <IcoPdfCv />
-      <CurrentTime className="desktop"/>
+      <CurrentTime className="desktop" />
 
       {Object.keys(windowsState).map(
         (windowId) =>
@@ -138,17 +142,20 @@ const Home: React.FC = () => {
                   : "Me contacter"
               }
               contentId={
-                windowId === "contact-window" ? "contact-window-content" : undefined
+                windowId === "contact-window"
+                  ? "contact-window-content"
+                  : undefined
               }
               content={
-                windowId === "about-window" 
-                ? (
+                windowId === "about-window" ? (
                   <>
                     <div id="about-content">
                       <AboutContent />
-                      <div id="about-avatar">
-                        <img id="pp-about " src="/pp/avatar.png" />
-                      </div>
+                        <Draggable>
+                          <div id="about-avatar">
+                            <img id="pp-about" src="/pp/avatar.png" />
+                          </div>
+                        </Draggable>
                     </div>
                   </>
                 ) : windowId === "portfolio-window" ? (

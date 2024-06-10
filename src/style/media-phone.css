@@ -128,10 +128,14 @@
     background: none;
   }
 
-  img#pp-about\ {
-    top: 500px;
-    right: 59px;
-    width: 132px;
+
+
+  img#pp-about {
+    top: 385px;
+    right: 97px;
+    width: 125px;
+    border-radius: 100%;
+    position: absolute;
   }
 
   .portfolio-content {
