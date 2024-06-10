@@ -109,7 +109,7 @@ const ProjectPage: React.FC = () => {
               to={`/project/${prevProject.id}`}
               className="prev-project-button"
             >
-              {`← Projet précédent`}
+              {`<`}
             </NavLink>
           )}
         </div>
@@ -120,17 +120,15 @@ const ProjectPage: React.FC = () => {
               to={`/project/${nextProject.id}`}
               className="next-project-button"
             >
-              {`Projet suivant  →`}
+              {`>`}
             </NavLink>
           )}
         </div>
         </div>
-        <div className="back-arrow-container">
         {/* Lien de retour à la page d'accueil */}
-        <NavLink to="/home" id="back-arrow-footer">
-          Retour à l'accueil
+        <NavLink to="/home" id="home-button-project-page">
+          <img src="/icons/homeButton.png" id="home-button-project-page-img" alt="Retour à l'accueil"/>
         </NavLink>
-        </div>
 
         {/* Lien vers le code source du projet sur GitHub */}
       <div className="github-link">

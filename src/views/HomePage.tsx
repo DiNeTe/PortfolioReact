@@ -1,6 +1,5 @@
 import useWindowActions from "../hooks/useWindowActions";
 import Draggable from "react-draggable";
-
 import StartMenuHandler from "../components/StartMenuHandler";
 import Windows from "../components/Windows";
 import Taskbar from "../components/Taskbar";
@@ -27,7 +26,6 @@ const Home: React.FC = () => {
       open: true,
       zIndex: 1,
     },
-
     "skills-window": {
       x: initialX,
       y: initialY,
@@ -37,7 +35,6 @@ const Home: React.FC = () => {
       open: false,
       zIndex: 0,
     },
-
     "portfolio-window": {
       x: initialX + 50,
       y: initialY + 50,
@@ -47,7 +44,6 @@ const Home: React.FC = () => {
       open: false,
       zIndex: 0,
     },
-
     "contact-window": {
       x: initialX + 100,
       y: initialY + 100,
@@ -102,19 +98,20 @@ const Home: React.FC = () => {
   const initialState =
     windowWidth <= 500 ? initialStateMobile : initialStateDesktop;
 
-    const {
-      windowsState,
-      bringToFront,
-      handleClick: handleTaskbarClick,
-      handleClose,
-      handleMinimize,
-      updatePosition,
-      updateSize,
-      handleCloseAll,
-    } = useWindowActions(initialState);
+  const {
+    windowsState,
+    bringToFront,
+    handleClick: handleTaskbarClick,
+    handleClose,
+    handleMinimize,
+    updatePosition,
+    updateSize,
+    handleCloseAll,
+  } = useWindowActions(initialState);
 
   // Empêche le clic pendant le drag
   let drag = false;
+  let clickTimer: number;
 
   const handleDrag = () => {
     drag = true;
@@ -126,11 +123,19 @@ const Home: React.FC = () => {
     }, 0);
   };
 
-  const handlePdfClick = (e: React.MouseEvent) => {
+  const handlePdfClick = (e: React.MouseEvent | React.TouchEvent) => {
     if (drag) {
       e.preventDefault();
       e.stopPropagation();
+    } else {
+      clickTimer = window.setTimeout(() => {
+        window.open("/cv.pdf", "_blank");
+      }, 300);
     }
+  };
+
+  const cancelClick = () => {
+    clearTimeout(clickTimer);
   };
 
   return (
@@ -143,7 +148,11 @@ const Home: React.FC = () => {
         handleCloseAll={handleCloseAll}
       />
       <Draggable onDrag={handleDrag} onStop={handleStop}>
-        <div onClick={handlePdfClick}>
+        <div
+          onClick={handlePdfClick}
+          onTouchStart={handlePdfClick}
+          onTouchEnd={cancelClick}
+        >
           <IcoPdfCv />
         </div>
       </Draggable>
@@ -176,9 +185,8 @@ const Home: React.FC = () => {
                     <div id="about-content">
                       <AboutContent />
                       <Draggable>
-                        <div id="about-avatar">
-                          <img id="pp-about" src="/pp/avatar.png" />
-                        </div>
+                          
+                          <img id="pp-about" src="/pp/avatar.png" alt="Avatar" />
                       </Draggable>
                     </div>
                   </>

@@ -125,15 +125,9 @@
     color: #333;
   }
 
-  .typewriter::before {
-    background: none;
-  }
-
-
-
   img#pp-about {
-    top: -30px;
-    right: -2px;
+    top: 439px;
+    right: 47px;
     width: 125px;
     border-radius: 100%;
     position: absolute;
@@ -247,9 +241,12 @@
     text-shadow: none;
   }
 
+
+
   .typewriter-project-page {
     min-height: 90vw;
     max-height: auto;
+    padding:15px;
   }
 
   .typewriter-project-page span {
@@ -264,6 +261,11 @@
     background: rgba(232, 238, 248, 0.5); /* Fond semi-transparent */
     backdrop-filter: blur(5px);
     height: 70px;
+    position: fixed;
+  }
+
+  .project-footer a:hover {
+    background: none;
   }
 
   .github-link {
@@ -288,36 +290,35 @@
     flex-direction: row;
     display: flex;
     width: 100%;
+    height: 100%;
+    gap: 70px;
+    justify-content: center;
   }
 
   a.prev-project-button,
   a.next-project-button {
     padding: 2px 7px;
-
     border: none;
     background-color: #333;
     color: #f4f4f4;
-  }
-
-  .back-arrow-container {
-    display: flex;
+    background: none;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  #back-arrow-footer {
+    height: 70%;
+    font-size: 50px;
+    color: #333;
+    align-items: end;
+}
+  
+  #home-button-project-page {
     display: flex;
-    border: none;
-    padding: 2px 7px;
-    background-color: rgba(#232, 238, 248);
-    border-radius: 15px;
-    transition: transform 0.2s ease-in-out;
-  }
+      position: fixed;
+      width: 60px;
+      bottom: -3px;
 
-  #back-arrow-footer:hover {
-    transform: scale(1.2);
-    color: white;
-    background-color: #333;
+    }
+
+  #home-button-project-page img {
+    width: 75px;
+    display: flex
   }
 }

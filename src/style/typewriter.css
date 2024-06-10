@@ -5,10 +5,10 @@
   display: inline-block;
   position: relative;
   font-size: 23px;
-  border: 10px solid #333;
   overflow: hidden;
   z-index: 1;
   box-shadow: rgb(121, 121, 121) 7px px 10px;
+
 }
 
 .typewriter span {
@@ -55,7 +55,8 @@
   height: 100%;
   border-radius: 10px;
   background: rgb(122, 122, 122);
-  border: 10px ridge #0000008b;
+  padding: 35px;
+
 }
 
 @keyframes blink {
