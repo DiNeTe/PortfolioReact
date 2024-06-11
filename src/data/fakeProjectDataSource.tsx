@@ -1,6 +1,8 @@
 import { ProjectDataSource as ProjectDataSource } from "./ProjectDataSource.tsx";
 import data from "./projects.json";
-import { Project } from "./Project.tsx";
+import dataSkill from "./skills.json";
+
+import { Project, Skill } from "./Interfaces.tsx";
 
 const fakeProjectDataSource: ProjectDataSource = {
   async fetchMany(): Promise<Project[]> {
@@ -11,6 +13,11 @@ const fakeProjectDataSource: ProjectDataSource = {
     return data.find((project) => project.id === projectId);
   },
 
+  async fetchManySkill(): Promise<Skill[]> {
+    return dataSkill;
+  },
 };
+
+
 
 export default fakeProjectDataSource;

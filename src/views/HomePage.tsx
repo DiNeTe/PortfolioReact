@@ -8,6 +8,7 @@ import ContactForm from "../components/ContactForm";
 import AboutContent from "../components/AboutContent";
 import IcoPdfCv from "../components/IcoPdfCv";
 import CurrentTime from "../components/CurrentTime";
+import SkillsContent from "../components/SkillsContent";
 
 const Home: React.FC = () => {
   const windowWidth = window.innerWidth;
@@ -193,9 +194,16 @@ const heightWindowsMobile = window.innerHeight - 103
                       </Draggable>
                     </div>
                   </>
-                ) : windowId === "portfolio-window" ? (
+                ) : 
+                
+                windowId === "skills-window" ? (
+                  <SkillsContent/>
+                ) :
+                
+                windowId === "portfolio-window" ? (
                   <PortfolioContent />
-                ) : (
+                ) :
+                (
                   ""
                 )
               }

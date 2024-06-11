@@ -6,7 +6,7 @@ import Icon from "./Icons";
 import BitcoinPrice from "./BitcoinPrice";
 import CurrentTime from "./CurrentTime";
 import { useAppDependencies } from "../app/context";
-import { Project } from "../data/Project";
+import { Project } from "../data/Interfaces";
 
 interface TaskbarProps {
   handleClick: (id: string) => void;
@@ -14,7 +14,11 @@ interface TaskbarProps {
   handleCloseAll: () => void; // Ajout de handleCloseAll
 }
 
-const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleCloseAll }) => {
+const Taskbar: React.FC<TaskbarProps> = ({
+  handleClick,
+  bringToFront,
+  handleCloseAll,
+}) => {
   const [projects, setProjects] = useState<Project[]>([]);
   const { projectDataSource } = useAppDependencies();
 
@@ -61,7 +65,6 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleClos
       <div className="taskbar-center">
         <nav id="nav">
           <ul id="nav-list">
-            
             <Icon
               dataTitle="A propos de moi"
               imgSrc="/icons/about-icon.png"

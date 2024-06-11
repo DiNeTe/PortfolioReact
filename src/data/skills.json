@@ -1,0 +1,140 @@
+[
+      {
+        "id": "1",
+        "name": "HTML5",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+        "tags": ["balisage", "développement web", "frontend"]
+      },
+      {
+        "id": "2",
+        "name": "CSS3",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+        "tags": ["stylisation", "design web", "frontend"]
+      },
+      {
+        "id": "3",
+        "name": "JavaScript (ES6+)",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+        "tags": ["scripting", "développement web", "frontend", "backend"]
+      },
+      {
+        "id": "4",
+        "name": "TypeScript",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+        "tags": ["scripting", "développement web", "frontend", "backend"]
+      },
+      {
+        "id": "5",
+        "name": "React.js",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+        "tags": ["framework", "bibliothèque", "frontend"]
+      },
+      {
+        "id": "6",
+        "name": "MongoDB",
+        "image": "https://upload.wikimedia.org/wikipedia/fr/4/45/MongoDB-Logo.svg",
+        "tags": ["base de données", "NoSQL", "backend"]
+      },
+      {
+        "id": "7",
+        "name": "GitHub",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+        "tags": ["versioning", "collaboration", "outil"]
+      },
+      {
+        "id": "8",
+        "name": "Visual Studio Code",
+        "image": "./icons/vsc.png",
+        "tags": ["IDE", "éditeur de code", "outil"]
+      },
+      {
+        "id": "9",
+        "name": "Node.js",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+        "tags": ["runtime", "JavaScript", "backend"]
+      },
+      {
+        "id": "10",
+        "name": "Express.js",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+        "tags": ["framework", "backend", "Node.js"]
+      },
+      {
+        "id": "11",
+        "name": "RESTful API",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Restful-api-logo.png",
+        "tags": ["API", "REST", "backend"]
+      },
+      {
+        "id": "12",
+        "name": "Inversion of Control (IoC)",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/IoC_container.svg",
+        "tags": ["design pattern", "architecture", "backend"]
+      },
+      {
+        "id": "13",
+        "name": "Dependency Injection (DI)",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Dependency_Injection_diagram.svg",
+        "tags": ["design pattern", "architecture", "backend"]
+      },
+      {
+        "id": "14",
+        "name": "Agile Methodologies (Scrum, Kanban)",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Agile_project_management.svg",
+        "tags": ["agile", "gestion de projet", "Scrum", "Kanban"]
+      },
+      {
+        "id": "15",
+        "name": "Trello",
+        "image": "https://upload.wikimedia.org/wikipedia/en/8/8c/Trello_logo.svg",
+        "tags": ["gestion de projet", "outil", "collaboration"]
+      },
+      {
+        "id": "16",
+        "name": "Problem Solving",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Simple_problem_solving_illustration.svg",
+        "tags": ["résolution de problèmes", "soft skills"]
+      },
+      {
+        "id": "17",
+        "name": "Communication",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Communication-skills.svg",
+        "tags": ["communication", "soft skills"]
+      },
+      {
+        "id": "18",
+        "name": "Teamwork",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Teamwork_icon.svg",
+        "tags": ["travail en équipe", "soft skills"]
+      },
+      {
+        "id": "19",
+        "name": "Time Management",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Time_management_clock.svg",
+        "tags": ["gestion du temps", "soft skills"]
+      },
+      {
+        "id": "20",
+        "name": "Adaptability",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Adaptability.svg",
+        "tags": ["adaptabilité", "soft skills"]
+      },
+      {
+        "id": "21",
+        "name": "UX/UI Design",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/UX_Design.svg",
+        "tags": ["design", "UX", "UI"]
+      },
+      {
+        "id": "22",
+        "name": "SEO (Search Engine Optimization)",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/SEO_icon.svg",
+        "tags": ["SEO", "optimisation", "référencement"]
+      },
+      {
+        "id": "23",
+        "name": "Web Accessibility (WCAG)",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Web_accessibility_icon.svg",
+        "tags": ["accessibilité", "WCAG", "inclusion"]
+      }
+    ]

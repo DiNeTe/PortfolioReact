@@ -2,7 +2,7 @@ import { useParams, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
-import { Project } from "../data/Project";
+import { Project } from "../data/Interfaces";
 import { useAppDependencies } from "../app/context";
 import { useHapticFeedback } from "../hooks/usehandleHapticFeedback";
 
@@ -28,7 +28,7 @@ const ProjectPage: React.FC = () => {
   useEffect(() => {
     async function init() {
       setLoading(true);
-      
+
       // Récupère les données du projet spécifique
       const foundProject = await projectDataSource.fetchOne(id!);
       setProject(foundProject);
@@ -54,7 +54,8 @@ const ProjectPage: React.FC = () => {
 
   // Trouve les index du projet actuel, du projet précédent et du projet suivant
   const currentIndex = allProjects.findIndex((proj) => proj.id === id);
-  const prevProjectIndex = (currentIndex - 1 + allProjects.length) % allProjects.length;
+  const prevProjectIndex =
+    (currentIndex - 1 + allProjects.length) % allProjects.length;
   const nextProjectIndex = (currentIndex + 1) % allProjects.length;
 
   // Récupère les données des projets précédent et suivant
@@ -100,51 +101,59 @@ const ProjectPage: React.FC = () => {
           />
         </div>
       </div>
-      
+
       <div className="project-footer">
         <div className="nav-projects">
-        {/* Lien vers le projet précédent, s'il existe */}
-        <div className="prev-project-container">
-          {prevProject && (
-            <NavLink
-              to={`/project/${prevProject.id}`}
-              className="prev-project-button"
-              onClick={handleHapticFeedback}
-            >
-              {`<`}
-            </NavLink>
-          )}
-        </div>
-        {/* Lien vers le projet suivant, s'il existe */}
-        <div className="next-project-container">
-          {nextProject && (
-            <NavLink
-              to={`/project/${nextProject.id}`}
-              className="next-project-button"
-              onClick={handleHapticFeedback}
-            >
-              {`>`}
-            </NavLink>
-          )}
-        </div>
+          {/* Lien vers le projet précédent, s'il existe */}
+          <div className="prev-project-container">
+            {prevProject && (
+              <NavLink
+                to={`/project/${prevProject.id}`}
+                className="prev-project-button"
+                onClick={handleHapticFeedback}
+              >
+                {`<`}
+              </NavLink>
+            )}
+          </div>
+          {/* Lien vers le projet suivant, s'il existe */}
+          <div className="next-project-container">
+            {nextProject && (
+              <NavLink
+                to={`/project/${nextProject.id}`}
+                className="next-project-button"
+                onClick={handleHapticFeedback}
+              >
+                {`>`}
+              </NavLink>
+            )}
+          </div>
         </div>
         {/* Lien de retour à la page d'accueil */}
-        <NavLink to="/home" id="home-button-project-page" onClick={handleHapticFeedback}>
-          <img src="/icons/homeButton.png" id="home-button-project-page-img" alt="Retour à l'accueil"/>
+        <NavLink
+          to="/home"
+          id="home-button-project-page"
+          onClick={handleHapticFeedback}
+        >
+          <img
+            src="/icons/homeButton.png"
+            id="home-button-project-page-img"
+            alt="Retour à l'accueil"
+          />
         </NavLink>
 
         {/* Lien vers le code source du projet sur GitHub */}
-      <div className="github-link">
-        <Icon
-          dataTitle="code source"
-          imgSrc="/icons/github.png"
-          alt="Lien vers GitHub"
-          id="github-ico"
-          onClick={() => {
-            window.open(project.linkGH, "_blank");
-          }}
-        />
-      </div>
+        <div className="github-link">
+          <Icon
+            dataTitle="code source"
+            imgSrc="/icons/github.png"
+            alt="Lien vers GitHub"
+            id="github-ico"
+            onClick={() => {
+              window.open(project.linkGH, "_blank");
+            }}
+          />
+        </div>
       </div>
     </div>
   );

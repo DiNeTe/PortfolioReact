@@ -1,16 +1,16 @@
 import { useAppDependencies } from "../app/context";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Project } from "../data/Project";
+import { Project } from "../data/Interfaces";
 import Tag from "./Tag";
 
 const PortfolioContent: React.FC = () => {
   // État local pour stocker la liste des projets
   const [projects, setProjects] = useState<Project[]>([]);
-  
+
   // Récupération des dépendances de l'application, incluant la source de données des projets
   const { projectDataSource } = useAppDependencies();
-  
+
   // Hook de navigation pour rediriger l'utilisateur
   const navigate = useNavigate();
 
@@ -38,7 +38,11 @@ const PortfolioContent: React.FC = () => {
       <ul>
         {projects.map((project: Project) => (
           // Élément de la liste pour chaque projet
-          <li key={project.id} className="project-item" onClick={() => CoverClick(project.id)}>
+          <li
+            key={project.id}
+            className="project-item"
+            onClick={() => CoverClick(project.id)}
+          >
             <div className="project-container">
               <div className="portfolio-project-header">
                 <div className="project-title">
