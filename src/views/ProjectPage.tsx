@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import { Project } from "../data/Project";
 import { useAppDependencies } from "../app/context";
-import {useHapticFeedback} from "../hooks/usehandleHapticFeedback";;
+import { useHapticFeedback } from "../hooks/usehandleHapticFeedback";
 
 import Tag from "../components/Tag";
 import SlideShow from "../components/SlideShow";
@@ -15,14 +15,14 @@ import TypewriterEffect from "../components/TypewriterEffect";
 const ProjectPage: React.FC = () => {
   // Hook utilisé pour obtenir l'id du projet depuis les paramètres de l'URL.
   const { id } = useParams<{ id: string }>();
-  
   // Utilisation des dépendances de l'application pour récupérer les données du projet
   const { projectDataSource } = useAppDependencies();
-  
   // États locaux pour stocker les données du projet, l'état de chargement et la liste de tous les projets
   const [project, setProject] = useState<Project | undefined>(undefined);
   const [loading, setLoading] = useState(true);
   const [allProjects, setAllProjects] = useState<Project[]>([]);
+
+  const { handleHapticFeedback } = useHapticFeedback();
 
   // Effet pour charger les données du projet lorsque l'id change
   useEffect(() => {
@@ -60,8 +60,6 @@ const ProjectPage: React.FC = () => {
   // Récupère les données des projets précédent et suivant
   const prevProject = allProjects[prevProjectIndex];
   const nextProject = allProjects[nextProjectIndex];
-
-  const { handleHapticFeedback } = useHapticFeedback();
 
   return (
     <div className="project-page">
@@ -133,7 +131,6 @@ const ProjectPage: React.FC = () => {
         {/* Lien de retour à la page d'accueil */}
         <NavLink to="/home" id="home-button-project-page" onClick={handleHapticFeedback}>
           <img src="/icons/homeButton.png" id="home-button-project-page-img" alt="Retour à l'accueil"/>
-        
         </NavLink>
 
         {/* Lien vers le code source du projet sur GitHub */}
@@ -144,7 +141,6 @@ const ProjectPage: React.FC = () => {
           alt="Lien vers GitHub"
           id="github-ico"
           onClick={() => {
-            handleHapticFeedback();
             window.open(project.linkGH, "_blank");
           }}
         />
