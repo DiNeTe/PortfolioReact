@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useHapticFeedback } from "../hooks/usehandleHapticFeedback";
 
 import Icon from "./Icons";
 import BitcoinPrice from "./BitcoinPrice";
@@ -33,6 +34,8 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleClos
     initPage();
   }, [projectDataSource]);
 
+  const { handleHapticFeedback } = useHapticFeedback();
+
   return (
     <section id="taskbar">
       <div className="taskbar-left">
@@ -65,6 +68,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleClos
               alt="A propos"
               id="about-window-ico"
               onClick={() => {
+                handleHapticFeedback();
                 handleClick("about-window");
                 bringToFront("about-window");
               }}
@@ -75,6 +79,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleClos
               alt="Mes compétences"
               id="skill-window-ico"
               onClick={() => {
+                handleHapticFeedback();
                 handleClick("skills-window");
                 bringToFront("skills-window");
               }}
@@ -85,6 +90,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleClos
               alt="Close all windows"
               id="home-button"
               onClick={() => {
+                handleHapticFeedback();
                 handleCloseAll(); // Appel direct à handleCloseAll
               }}
             />
@@ -94,6 +100,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleClos
               alt="Projets"
               id="portfolio-window-ico"
               onClick={() => {
+                handleHapticFeedback();
                 handleClick("portfolio-window");
                 bringToFront("portfolio-window");
               }}
@@ -104,6 +111,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ handleClick, bringToFront, handleClos
               alt="Contact"
               id="contact-window-ico"
               onClick={() => {
+                handleHapticFeedback();
                 handleClick("contact-window");
                 bringToFront("contact-window");
               }}

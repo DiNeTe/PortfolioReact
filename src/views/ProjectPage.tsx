@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import { Project } from "../data/Project";
 import { useAppDependencies } from "../app/context";
+import {useHapticFeedback} from "../hooks/usehandleHapticFeedback";;
 
 import Tag from "../components/Tag";
 import SlideShow from "../components/SlideShow";
@@ -60,6 +61,8 @@ const ProjectPage: React.FC = () => {
   const prevProject = allProjects[prevProjectIndex];
   const nextProject = allProjects[nextProjectIndex];
 
+  const { handleHapticFeedback } = useHapticFeedback();
+
   return (
     <div className="project-page">
       <div className="project-header">
@@ -108,6 +111,7 @@ const ProjectPage: React.FC = () => {
             <NavLink
               to={`/project/${prevProject.id}`}
               className="prev-project-button"
+              onClick={handleHapticFeedback}
             >
               {`<`}
             </NavLink>
@@ -119,6 +123,7 @@ const ProjectPage: React.FC = () => {
             <NavLink
               to={`/project/${nextProject.id}`}
               className="next-project-button"
+              onClick={handleHapticFeedback}
             >
               {`>`}
             </NavLink>
@@ -126,8 +131,9 @@ const ProjectPage: React.FC = () => {
         </div>
         </div>
         {/* Lien de retour à la page d'accueil */}
-        <NavLink to="/home" id="home-button-project-page">
+        <NavLink to="/home" id="home-button-project-page" onClick={handleHapticFeedback}>
           <img src="/icons/homeButton.png" id="home-button-project-page-img" alt="Retour à l'accueil"/>
+        
         </NavLink>
 
         {/* Lien vers le code source du projet sur GitHub */}
@@ -138,6 +144,7 @@ const ProjectPage: React.FC = () => {
           alt="Lien vers GitHub"
           id="github-ico"
           onClick={() => {
+            handleHapticFeedback();
             window.open(project.linkGH, "_blank");
           }}
         />

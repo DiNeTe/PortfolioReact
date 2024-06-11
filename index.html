@@ -17,21 +17,11 @@
     <script type="module" src="/src/main.tsx"></script>
     <!-- retour haptique version mobile -->
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            // Sélectionne tous les éléments cliquables
-            const clickableElements = document.querySelectorAll('a, button, .cliquable');
-        
-            // Ajoute un écouteur d'événement de clic à chaque élément
-            clickableElements.forEach(element => {
-                element.addEventListener('click', () => {
-                    // Vérifie si l'API de vibration est supportée
-                    if (navigator.vibrate) {
-                        // Déclenche une vibration de 200 millisecondes
-                        navigator.vibrate(200);
-                    }
-                });
-            });
-        });
-    </script>
+      function handleHapticFeedback() {
+          if (navigator.vibrate) {
+              navigator.vibrate(200);
+          }
+      }
+  </script>
   </body>
 </html>
