@@ -153,8 +153,8 @@
   }
 
   img#pp-about {
-    top: 200px;
-    right: 50px;
+    top: 409px;
+    right: -7px;
     width: 100px;
   }
 
@@ -227,7 +227,7 @@
 
   .project-body {
     flex-direction: column;
-    margin: 25% 0 30%;
+    margin: 30% 0 30%;
     gap: 0;
   }
 
