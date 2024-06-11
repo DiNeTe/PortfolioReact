@@ -1,4 +1,18 @@
 @media only screen and (max-width: 500px) {
+  /* reset css */
+
+  a,
+  button,
+  .cliquable {
+    -webkit-tap-highlight-color: rgba(
+      0,
+      0,
+      0,
+      0
+    );
+    outline: none;
+  }
+
   #btc-price,
   #volume-control,
   #logo-win,
@@ -8,6 +22,7 @@
   .window-controls {
     display: none;
   }
+
   /* LoginPage */
 
   .loginScreenInsert {
@@ -58,6 +73,15 @@
   #taskbar {
     position: fixed;
     background: rgba(51, 51, 51, 0.75);
+    padding: 0;
+  }
+
+  #nav ul {
+    gap:3.5vw
+     }
+
+  #skill-window-ico {
+
   }
 
   #home-button {
@@ -74,7 +98,7 @@
   }
 
   #home-button:hover img,
-  #home-button-project-page:hover  {
+  #home-button-project-page:hover {
     box-shadow: rgb(255, 255, 255) 0px 0 15px 2px;
     border-radius: 50px;
   }
@@ -169,11 +193,6 @@
 
   .react-draggable {
     z-index: 1;
-  }
-
-  .react-draggable.react-draggable-dragged {
-    z-index: 1;
-    position: absolute;
   }
 
   /* ProjectsPage */
@@ -321,7 +340,8 @@
     align-items: end;
   }
 
-  a.prev-project-button:hover, a.next-project-button:hover {
+  a.prev-project-button:hover,
+  a.next-project-button:hover {
     text-shadow: rgb(255, 255, 255) 0 0 10px 0;
   }
 
