@@ -1,10 +1,11 @@
 interface TagProps {
   children: React.ReactNode;
+  className?: string; // Prop optionnelle pour className
 }
 
-const Tag: React.FC<TagProps> = ({ children }) => {
+const Tag: React.FC<TagProps> = ({ children, className }) => {
   return (
-    <span className="tag">{children}</span>
+    <span className={`tag ${className || ''}`.trim()}>{children}</span>
   );
 };
 
