@@ -8,10 +8,12 @@
 @import "style/windows.css";
 @import "style/form.css";
 @import "style/AppRouter.css";
-@import "style/portfolio-content.css";
+@import "style/portfolio-window.css";
 @import "style/notFoundPage.css";
 @import "style/slideshow.css";  
 @import "style/projectPage.css";
 @import "style/homePage.css";
 @import "style/typewriter.css";
 @import "style/media-phone.css";
+@import "style/skills-window.css";
+@import "style/media-tab.css";

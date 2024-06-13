@@ -1,14 +1,14 @@
 import useWindowActions from "../hooks/useWindowActions";
 import Draggable from "react-draggable";
-import StartMenuHandler from "../components/StartMenuHandler";
+import StartMenuHandler from "../components/StartMenu";
 import Windows from "../components/Windows";
 import Taskbar from "../components/Taskbar";
-import PortfolioContent from "../components/PortfolioContent";
+import PortfolioContent from "../components/PortfolioWindow";
 import ContactForm from "../components/ContactForm";
-import AboutContent from "../components/AboutContent";
+import AboutContent from "../components/AboutWindow";
 import IcoPdfCv from "../components/IcoPdfCv";
 import CurrentTime from "../components/CurrentTime";
-import SkillsContent from "../components/SkillsContent";
+import SkillsContent from "../components/SkillsWindow";
 
 const Home: React.FC = () => {
   const windowWidth = window.innerWidth;

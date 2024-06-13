@@ -13,7 +13,7 @@ const LoginScreen: React.FC = () => {
   const navigate = useNavigate();
 
   // Mot de passe correct stocké dans les variables d'environnement
-  const correctPassword = import.meta.env.VITE_CORRECT_PASSWORD;
+  const correctPassword = import.meta.env.VITE_MDPADMIN;
 
   // Effet pour vérifier le mot de passe et naviguer vers la page d'accueil si correct
   useEffect(() => {

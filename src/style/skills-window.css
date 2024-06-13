@@ -1,0 +1,42 @@
+/* window skill */
+#skills-window {
+  background-image: url("./images/skills.jpg");
+  background-size: cover; /* L'image couvrira toute la zone */
+  background-position: center; /* L'image sera centrée */
+  background-repeat: no-repeat;
+}
+.skill-logo-container {
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-img {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background: white;
+}
+
+.tags-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+}
+
+.skill-img img {
+  width: 112px;
+  position: relative;
+  top: 2px;
+  right: 0;
+}
+
+div#skills-container-window {
+  width: 100%;
+}
+
+.animated-text {
+  width: 100%;
+}
