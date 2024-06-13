@@ -22,24 +22,39 @@ const SkillsContent: React.FC = () => {
     initPage();
   }, [projectDataSource]);
 
-  return (
-    <div id="skills-container-window">
-      {skills.map((skill: Skill) => (
-        <div key={skill.id} className="skill-item">
-          <div className="skill-logo-container">
-            <div className="skill-img">
-              <img src={skill.image} alt={skill.name} />
+  return (<>
+    <img src="./images/skills.webp" id="skill-wallpaper" alt="Wallpaper de la fenêtre compétences" />
+
+    <div id="skills-container">
+      {skills.map((skill) => (
+        
+        <div key={skill.id} className="skill-card">
+          
+          <div className="skill-content">
+            
+            <div className="skill-header">
+              <div className="skill-logo">
+                <img src={skill.image} alt={skill.name} />
+              </div>
+              <div className="skill-info">
+                <p>{skill.description}</p>
+              </div>
             </div>
-          </div>
-          <div className="tags-container">
-            {skill.tags.map((tag, index) => (
-              <Tag key={index}>{tag}</Tag>
-            ))}
+            <div className="skill-tag">
+              {skill.tags.map((tag, index) => (
+                <Tag 
+                key={index}
+                className="skill-tag"
+                >{tag}</Tag>
+              ))}
+            </div>
           </div>
         </div>
       ))}
-    </div>
+
+                <img src="./images/skills.webp" id="skill-wallpaper" alt="Wallpaper de la fenêtre compétences" />
+
+    </div></>
   );
 };
-
 export default SkillsContent;

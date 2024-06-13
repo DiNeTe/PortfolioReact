@@ -14,4 +14,5 @@ export interface Skill {
   name: string;
   image: string;
   tags: string[];
+  description:string;
 }

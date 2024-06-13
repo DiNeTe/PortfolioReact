@@ -1,140 +1,163 @@
 [
-      {
-        "id": "1",
-        "name": "HTML5",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
-        "tags": ["balisage", "développement web", "frontend"]
-      },
-      {
-        "id": "2",
-        "name": "CSS3",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
-        "tags": ["stylisation", "design web", "frontend"]
-      },
-      {
-        "id": "3",
-        "name": "JavaScript (ES6+)",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-        "tags": ["scripting", "développement web", "frontend", "backend"]
-      },
-      {
-        "id": "4",
-        "name": "TypeScript",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-        "tags": ["scripting", "développement web", "frontend", "backend"]
-      },
-      {
-        "id": "5",
-        "name": "React.js",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-        "tags": ["framework", "bibliothèque", "frontend"]
-      },
-      {
-        "id": "6",
-        "name": "MongoDB",
-        "image": "https://upload.wikimedia.org/wikipedia/fr/4/45/MongoDB-Logo.svg",
-        "tags": ["base de données", "NoSQL", "backend"]
-      },
-      {
-        "id": "7",
-        "name": "GitHub",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
-        "tags": ["versioning", "collaboration", "outil"]
-      },
-      {
-        "id": "8",
-        "name": "Visual Studio Code",
-        "image": "./icons/vsc.png",
-        "tags": ["IDE", "éditeur de code", "outil"]
-      },
-      {
-        "id": "9",
-        "name": "Node.js",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
-        "tags": ["runtime", "JavaScript", "backend"]
-      },
-      {
-        "id": "10",
-        "name": "Express.js",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
-        "tags": ["framework", "backend", "Node.js"]
-      },
-      {
-        "id": "11",
-        "name": "RESTful API",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Restful-api-logo.png",
-        "tags": ["API", "REST", "backend"]
-      },
-      {
-        "id": "12",
-        "name": "Inversion of Control (IoC)",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/IoC_container.svg",
-        "tags": ["design pattern", "architecture", "backend"]
-      },
-      {
-        "id": "13",
-        "name": "Dependency Injection (DI)",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Dependency_Injection_diagram.svg",
-        "tags": ["design pattern", "architecture", "backend"]
-      },
-      {
-        "id": "14",
-        "name": "Agile Methodologies (Scrum, Kanban)",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Agile_project_management.svg",
-        "tags": ["agile", "gestion de projet", "Scrum", "Kanban"]
-      },
-      {
-        "id": "15",
-        "name": "Trello",
-        "image": "https://upload.wikimedia.org/wikipedia/en/8/8c/Trello_logo.svg",
-        "tags": ["gestion de projet", "outil", "collaboration"]
-      },
-      {
-        "id": "16",
-        "name": "Problem Solving",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/5/55/Simple_problem_solving_illustration.svg",
-        "tags": ["résolution de problèmes", "soft skills"]
-      },
-      {
-        "id": "17",
-        "name": "Communication",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/34/Communication-skills.svg",
-        "tags": ["communication", "soft skills"]
-      },
-      {
-        "id": "18",
-        "name": "Teamwork",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Teamwork_icon.svg",
-        "tags": ["travail en équipe", "soft skills"]
-      },
-      {
-        "id": "19",
-        "name": "Time Management",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/Time_management_clock.svg",
-        "tags": ["gestion du temps", "soft skills"]
-      },
-      {
-        "id": "20",
-        "name": "Adaptability",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Adaptability.svg",
-        "tags": ["adaptabilité", "soft skills"]
-      },
-      {
-        "id": "21",
-        "name": "UX/UI Design",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3d/UX_Design.svg",
-        "tags": ["design", "UX", "UI"]
-      },
-      {
-        "id": "22",
-        "name": "SEO (Search Engine Optimization)",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/SEO_icon.svg",
-        "tags": ["SEO", "optimisation", "référencement"]
-      },
-      {
-        "id": "23",
-        "name": "Web Accessibility (WCAG)",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Web_accessibility_icon.svg",
-        "tags": ["accessibilité", "WCAG", "inclusion"]
-      }
-    ]
+  {
+    "id": "1",
+    "name": "HTML5",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+    "tags": ["balisage", "développement web", "frontend"],
+    "description": "Durant ma formation, j'ai acquis une solide compréhension de HTML5, ce qui m'a permis de structurer des pages web de manière sémantique et accessible. J'ai utilisé HTML5 pour créer des sites web responsive et dynamiques, en intégrant des éléments multimédia et des formulaires interactifs."
+  },
+  {
+    "id": "2",
+    "name": "CSS3",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+    "tags": ["stylisation", "design web", "frontend"],
+    "description": "Avec CSS3, j'ai appris à styliser des pages web de manière professionnelle. J'ai utilisé des techniques avancées telles que Flexbox et Grid Layout pour créer des mises en page complexes et responsives. J'ai également appliqué des animations CSS pour améliorer l'expérience utilisateur."
+  },
+  {
+    "id": "3",
+    "name": "JavaScript (ES6+)",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+    "tags": ["scripting", "développement web", "frontend", "backend"],
+    "description": "J'ai développé des compétences en JavaScript moderne (ES6+), me permettant de rendre les sites web interactifs et dynamiques. J'ai manipulé le DOM, géré des événements utilisateurs et utilisé des APIs pour intégrer des fonctionnalités avancées."
+  },
+  {
+    "id": "4",
+    "name": "TypeScript",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+    "tags": ["scripting", "développement web", "frontend", "backend"],
+    "description": "En complément de JavaScript, j'ai appris TypeScript pour améliorer la qualité du code avec un typage statique. Cela m'a aidé à écrire du code plus robuste et maintenable, facilitant la collaboration dans des projets d'équipe."
+  },
+  {
+    "id": "5",
+    "name": "React.js",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+    "tags": ["framework", "bibliothèque", "frontend"],
+    "description": "J'ai utilisé React.js pour créer des interfaces utilisateur dynamiques et réactives. J'ai appris à gérer l'état de l'application avec Hooks et Redux, et à structurer les applications en composants réutilisables."
+  },
+  {
+    "id": "6",
+    "name": "MongoDB",
+    "image": "https://upload.wikimedia.org/wikipedia/fr/4/45/MongoDB-Logo.svg",
+    "tags": ["base de données", "NoSQL", "backend"],
+    "description": "J'ai acquis des compétences en MongoDB, une base de données NoSQL, pour gérer efficacement les données des applications web. J'ai appris à créer des schémas de données, à effectuer des opérations CRUD et à optimiser les requêtes."
+  },
+  {
+    "id": "7",
+    "name": "GitHub",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+    "tags": ["versioning", "collaboration", "outil"],
+    "description": "J'ai utilisé GitHub pour la gestion de versions et la collaboration sur des projets de développement. J'ai appris à cloner des dépôts, à gérer des branches et à résoudre des conflits de fusion."
+  },
+  {
+    "id": "8",
+    "name": "Visual Studio Code",
+    "image": "./skills_logo/vsc.png",
+    "tags": ["IDE", "éditeur de code", "outil"],
+    "description": "J'ai utilisé Visual Studio Code comme principal éditeur de code, profitant de ses nombreuses extensions et fonctionnalités pour améliorer ma productivité et faciliter le débogage."
+  },
+  {
+    "id": "9",
+    "name": "Node.js",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+    "tags": ["runtime", "JavaScript", "backend"],
+    "description": "Avec Node.js, j'ai développé des applications backend performantes. J'ai appris à utiliser des modules, à gérer des serveurs HTTP et à manipuler des bases de données."
+  },
+  {
+    "id": "10",
+    "name": "Express.js",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+    "tags": ["framework", "backend", "Node.js"],
+    "description": "J'ai utilisé Express.js pour construire des APIs RESTful. J'ai appris à gérer les routes, à middleware et à structurer des applications backend de manière modulaire."
+  },
+  {
+    "id": "11",
+    "name": "RESTful API",
+    "image": "./skills_logo/restapi.png",
+    "tags": ["API", "REST", "backend"],
+    "description": "J'ai créé et consommé des APIs RESTful pour permettre la communication entre le frontend et le backend de mes applications. J'ai appris à gérer l'authentification, les autorisations et à documenter les endpoints."
+  },
+  {
+    "id": "12",
+    "name": "Inversion of Control (IoC)",
+    "image": "./skills_logo/dip.png",
+    "tags": ["design pattern", "architecture", "backend"],
+    "description": "J'ai appliqué le principe de l'Inversion of Control (IoC) pour améliorer la modularité et la testabilité de mes applications backend. J'ai utilisé des conteneurs IoC pour gérer les dépendances."
+  },
+  {
+    "id": "13",
+    "name": "Dependency Injection (DI)",
+    "image": "./skills_logo/di.png",
+    "tags": ["design pattern", "architecture", "backend"],
+    "description": "J'ai mis en œuvre la Dependency Injection (DI) pour gérer les dépendances dans mes applications backend. Cela m'a aidé à écrire un code plus flexible et maintenable."
+  },
+  {
+    "id": "14",
+    "name": "Agile Methodologies (Scrum, Kanban)",
+    "image": "./skills_logo/agile.png",
+    "tags": ["agile", "gestion de projet", "Scrum", "Kanban"],
+    "description": "J'ai participé à des projets utilisant des méthodologies agiles comme Scrum et Kanban. J'ai appris à planifier des sprints, à organiser des stand-ups et à gérer les tâches dans des outils comme Jira et Trello."
+  },
+  {
+    "id": "15",
+    "name": "Trello",
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/8c/Trello_logo.svg",
+    "tags": ["gestion de projet", "outil", "collaboration"],
+    "description": "J'ai utilisé Trello pour la gestion de projets et la collaboration en équipe. J'ai appris à créer des tableaux de bord, à gérer des cartes et à suivre l'avancement des tâches."
+  },
+  {
+    "id": "16",
+    "name": "Problem Solving",
+    "image": "./skills_logo/problem.png",
+    "tags": ["résolution de problèmes", "soft skills"],
+    "description": "J'ai développé mes compétences en résolution de problèmes en travaillant sur des projets complexes. J'ai appris à identifier les causes des problèmes, à élaborer des solutions et à les mettre en œuvre efficacement."
+  },
+  {
+    "id": "17",
+    "name": "Communication",
+    "image": "./skills_logo/com.png",
+    "tags": ["communication", "soft skills"],
+    "description": "J'ai amélioré mes compétences en communication en travaillant en équipe et en participant à des présentations. J'ai appris à exprimer clairement mes idées, à écouter activement et à collaborer efficacement."
+  },
+  {
+    "id": "18",
+    "name": "Teamwork",
+    "image": "./skills_logo/team.png",
+    "tags": ["travail en équipe", "soft skills"],
+    "description": "J'ai appris à travailler en équipe, à collaborer avec d'autres développeurs et à contribuer à des projets communs. J'ai acquis des compétences en gestion des conflits et en négociation."
+  },
+  {
+    "id": "19",
+    "name": "Time Management",
+    "image": "./skills_logo/timemanagement.png",
+    "tags": ["gestion du temps", "soft skills"],
+    "description": "J'ai amélioré ma gestion du temps en planifiant mes tâches et en respectant les délais. J'ai appris à prioriser mes activités et à utiliser des outils de gestion du temps pour rester organisé."
+  },
+  {
+    "id": "20",
+    "name": "Adaptability",
+    "image": "./skills_logo/adaptability.png",
+    "tags": ["adaptabilité", "soft skills"],
+    "description": "J'ai développé ma capacité à m'adapter à de nouvelles situations et à apprendre rapidement de nouvelles technologies. J'ai appris à être flexible et à réagir efficacement aux changements."
+  },
+  {
+    "id": "21",
+    "name": "UX/UI Design",
+    "image": "./skills_logo/ui.png",
+    "tags": ["design", "UX", "UI"],
+    "description": "J'ai acquis des compétences en design UX/UI pour créer des interfaces utilisateur attrayantes et intuitives. J'ai appris à utiliser des outils de design et à appliquer les principes de base de l'expérience utilisateur."
+  },
+  {
+    "id": "22",
+    "name": "SEO (Search Engine Optimization)",
+    "image": "./skills_logo/seo.png",
+    "tags": ["SEO", "optimisation", "référencement"],
+    "description": "J'ai appris les bases du SEO pour améliorer la visibilité des sites web dans les moteurs de recherche. J'ai utilisé des techniques d'optimisation on-page et off-page pour augmenter le trafic organique."
+  },
+  {
+    "id": "23",
+    "name": "Web Accessibility (WCAG)",
+    "image": "./skills_logo/wcag.png",
+    "tags": ["accessibilité", "WCAG", "inclusion"],
+    "description": "J'ai appris à créer des sites web accessibles en respectant les normes WCAG. J'ai appliqué des techniques pour améliorer l'accessibilité des contenus pour les utilisateurs en situation de handicap."
+  }
+]
