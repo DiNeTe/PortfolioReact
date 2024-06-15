@@ -1,7 +1,9 @@
 #desktop {
   background-image: url("/images/wallpaper1.webp");
-  height: 100vh;
+  position: relative;
+  height: calc(100vh - env(safe-area-inset-bottom));
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  padding-bottom: env(safe-area-inset-bottom);
  }
