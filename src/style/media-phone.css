@@ -4,12 +4,7 @@
   a,
   button,
   .cliquable {
-    -webkit-tap-highlight-color: rgba(
-      0,
-      0,
-      0,
-      0
-    );
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     outline: none;
   }
 
@@ -77,8 +72,8 @@
   }
 
   #nav ul {
-    gap:3.5vw
-     }
+    gap: 3.5vw;
+  }
 
   #home-button {
     display: flex;
@@ -135,7 +130,8 @@
   }
 
   #about-content {
-overflow: hidden;
+    overflow: hidden;
+    margin: 0;
   }
 
   .typewriter-about {
@@ -181,9 +177,9 @@ overflow: hidden;
 
   #contact-window-content {
     margin: 0 10px;
-    padding: 0
-    ;
-
+    padding: 0;
+    overflow: hidden;
+    justify-content: flex-start;
   }
 
   .contact-form {
@@ -363,5 +359,5 @@ overflow: hidden;
 
   .contact-call-to-action {
     padding: 0;
-}
+  }
 }
