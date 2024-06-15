@@ -24,12 +24,6 @@ const SkillsContent: React.FC = () => {
 
   return (
     <>
-      <img
-        src="./images/skills.webp"
-        id="skill-wallpaper"
-        alt="Wallpaper de la fenêtre compétences"
-      />
-
       <div id="skills-container">
         {skills.map((skill) => (
           <div key={skill.id} className="skill-card">

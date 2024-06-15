@@ -1,8 +1,8 @@
 .portfolio-content {
-  display: flex;
   flex-direction: column;
   padding: 20px 10%;
   justify-content: center;
+  overflow: auto;
 }
 
 ul {

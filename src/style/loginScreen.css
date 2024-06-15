@@ -1,23 +1,13 @@
 .loginScreenPage {
-  position: relative;
-  width: 100vw;
+  background-image: url("images/loginScreen.webp");
   height: 100vh;
-  overflow: hidden;
-  color: black;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .content {
   height: 100%;
-}
-
-.wallpaper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
 }
 
 .loginScreenInsert {

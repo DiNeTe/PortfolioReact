@@ -5,7 +5,8 @@
 #about-content {
   display: flex;
   flex-direction: row;
-  margin-left: 20px;
+  margin: 20px;
+  overflow: auto;
 }
 
 @keyframes randomMove {

@@ -43,8 +43,6 @@
   max-width: 70%;
   width: 705px;
   min-height: 300px;
-  border: 10px ridge  #000000bb;
-  box-shadow: rgb(59, 59, 59) 5px 7px 10px;
 }
 
 .typewriter-project-page::before {

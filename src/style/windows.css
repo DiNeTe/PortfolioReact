@@ -42,14 +42,11 @@
 
 .window-content {
   height: 100%;
-  padding: 20px 0;
   margin: 0;
   box-sizing: border-box;
   max-height: calc(100% - 40px);
-  overflow: hidden;
   display: flex;
   justify-content: center;
-  overflow: auto;
   z-index: 15;
 }
 

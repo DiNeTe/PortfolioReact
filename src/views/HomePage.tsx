@@ -144,7 +144,6 @@ const heightWindowsMobile = window.innerHeight - 103
   return (
     <section id="desktop">
       <StartMenuHandler />
-      <img src="./images/wallpaper1.webp" id="wallpaper" alt="Wallpaper" />
       <Taskbar
         handleClick={handleTaskbarClick}
         bringToFront={bringToFront}

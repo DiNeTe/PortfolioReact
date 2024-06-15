@@ -2,10 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
-  padding: 20px;
-  overflow: hidden;
+  overflow: auto;
   flex-direction: column;
+  padding-top: 45px;
   }
   
   .contact-form {
@@ -103,7 +102,6 @@
   }
   
   .contact-call-to-action {
-    font-family: Indie Flower, cursive;
     padding: 20px 50px;
     font-size: 1em;
     background: #e8eef880;} 

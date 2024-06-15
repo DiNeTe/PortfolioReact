@@ -5,26 +5,18 @@ import WindowControls from "./WindowControls";
 
 type WindowsProps = {
   header: string;
-  children?: React.ReactNode;
   content?: React.ReactNode;
+  children?: React.ReactNode;
   id?: string;
   contentId?: string;
-  apiData?: any;
-  skills?: any;
   onClose: () => void;
   onDragStop: (e: any, d: any) => void;
-  onResizeStop: (
-    e: any,
-    direction: any,
-    ref: any,
-    delta: any,
-    position: any
-  ) => void;
+  onResizeStop: (e: any,direction: any,ref: any,delta: any,position: any) => void;
   onMinimize: () => void;
+  bringToFront: () => void;
   initialSize: { width: number; height: number };
   initialPosition: { x: number; y: number };
   zIndex: number;
-  bringToFront: () => void;
 };
 
 const Windows: React.FC<WindowsProps> = ({
@@ -33,16 +25,15 @@ const Windows: React.FC<WindowsProps> = ({
   content,
   id,
   contentId,
-  apiData,
-  skills,
   onClose,
   onDragStop,
   onResizeStop,
   onMinimize,
+  bringToFront,
   initialSize,
   initialPosition,
   zIndex,
-  bringToFront,
+
 }) => {
   // État pour gérer le mode plein écran
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -63,7 +54,7 @@ const Windows: React.FC<WindowsProps> = ({
       const newFullscreen = !prev;
       if (newFullscreen) {
         // Passe en mode plein écran
-        setSize({ width: window.innerWidth, height: window.innerHeight });
+        setSize({ width: window.innerWidth, height: window.innerHeight-90 });
         setPosition({ x: 0, y: 0 });
       } else {
         // Passe en mode normal
@@ -139,9 +130,7 @@ const Windows: React.FC<WindowsProps> = ({
         </div>
         {/* Contenu de la fenêtre */}
         <div className="window-content" id={contentId}>
-          {content && <div className="animated-text">{content}</div>}
-          {apiData && <div className="api-data">{JSON.stringify(apiData)}</div>}
-          {skills && <div className="skills">{skills}</div>}
+          {content}
           {children}
         </div>
       </div>

@@ -29,10 +29,10 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    margin-top: 5%;
     align-items: center;
     width: 100%;
     height: 100%;
+    padding-top: 5%;
   }
 
   .pp {
@@ -131,9 +131,11 @@
   }
 
   .window-content {
-    display: block;
     background: rgba(232, 238, 248, 0.5);
-    padding: 0 10px;
+  }
+
+  #about-content {
+overflow: hidden;
   }
 
   .typewriter-about {
@@ -159,7 +161,8 @@
   }
 
   .portfolio-content {
-    padding: 0;
+    padding: 0 10px;
+    overflow: auto;
   }
 
   .project-item {
@@ -354,4 +357,10 @@
     width: 75px;
     border-radius: 50px;
   }
+
+  .contact-call-to-action {
+    padding: 0;
+
+    margin-top:10px
+}
 }
