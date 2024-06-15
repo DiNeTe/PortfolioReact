@@ -47,7 +47,7 @@ const ContactForm: React.FC = () => {
         />
         <button type="submit">Envoyer</button>
       </form>
-      <span className="contact-call-to-action">Je suis impatient de discuter avec vous. Laissez-moi un message ✍️ et je vous répondrai dans les plus brefs délais ! 👨‍💻</span>
+      <span className="contact-call-to-action">Laissez-moi un message ✍️ et je vous répondrai dans les plus brefs délais !</span>
     </>
   );
 };

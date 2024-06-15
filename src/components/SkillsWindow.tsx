@@ -22,39 +22,38 @@ const SkillsContent: React.FC = () => {
     initPage();
   }, [projectDataSource]);
 
-  return (<>
-    <img src="./images/skills.webp" id="skill-wallpaper" alt="Wallpaper de la fenêtre compétences" />
+  return (
+    <>
+      <img
+        src="./images/skills.webp"
+        id="skill-wallpaper"
+        alt="Wallpaper de la fenêtre compétences"
+      />
 
-    <div id="skills-container">
-      {skills.map((skill) => (
-        
-        <div key={skill.id} className="skill-card">
-          
-          <div className="skill-content">
-            
-            <div className="skill-header">
-              <div className="skill-logo">
-                <img src={skill.image} alt={skill.name} />
+      <div id="skills-container">
+        {skills.map((skill) => (
+          <div key={skill.id} className="skill-card">
+            <div className="skill-content">
+              <div className="skill-header">
+                <div className="skill-logo">
+                  <img src={skill.image} alt={skill.name} />
+                </div>
+                <div className="skill-info">
+                  <p>{skill.description}</p>
+                </div>
               </div>
-              <div className="skill-info">
-                <p>{skill.description}</p>
+              <div className="skill-tag">
+                {skill.tags.map((tag, index) => (
+                  <Tag key={index} className="skill-tag">
+                    {tag}
+                  </Tag>
+                ))}
               </div>
-            </div>
-            <div className="skill-tag">
-              {skill.tags.map((tag, index) => (
-                <Tag 
-                key={index}
-                className="skill-tag"
-                >{tag}</Tag>
-              ))}
             </div>
           </div>
-        </div>
-      ))}
-
-                <img src="./images/skills.webp" id="skill-wallpaper" alt="Wallpaper de la fenêtre compétences" />
-
-    </div></>
+        ))}
+      </div>
+    </>
   );
 };
 export default SkillsContent;

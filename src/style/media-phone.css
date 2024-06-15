@@ -177,8 +177,8 @@
   }
 
   #contact-window-content {
-    align-items: start;
-    padding: 10px 0;
+    margin: 10px;
+    height: 75%;
   }
 
   .contact-form {
