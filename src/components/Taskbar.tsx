@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-// import { useHapticFeedback } from "../hooks/usehandleHapticFeedback";
+import { useHapticFeedback } from "../hooks/usehandleHapticFeedback";
 
 import Icon from "./Icons";
 import BitcoinPrice from "./BitcoinPrice";
@@ -38,7 +38,7 @@ const Taskbar: React.FC<TaskbarProps> = ({
     initPage();
   }, [projectDataSource]);
 
-  // const { handleHapticFeedback } = useHapticFeedback();
+  const { handleHapticFeedback } = useHapticFeedback();
 
   return (
     <section id="taskbar">
@@ -71,7 +71,7 @@ const Taskbar: React.FC<TaskbarProps> = ({
               alt="A propos"
               id="about-window-ico"
               onClick={() => {
-                // handleHapticFeedback();
+                handleHapticFeedback();
                 handleClick("about-window");
                 bringToFront("about-window");
               }}
@@ -82,7 +82,7 @@ const Taskbar: React.FC<TaskbarProps> = ({
               alt="Mes compétences"
               id="skill-window-ico"
               onClick={() => {
-                // handleHapticFeedback();
+                handleHapticFeedback();
                 handleClick("skills-window");
                 bringToFront("skills-window");
               }}
@@ -93,7 +93,7 @@ const Taskbar: React.FC<TaskbarProps> = ({
               alt="Close all windows"
               id="home-button"
               onClick={() => {
-                // handleHapticFeedback();
+                handleHapticFeedback();
                 handleCloseAll(); // Appel direct à handleCloseAll
               }}
             />
@@ -103,7 +103,7 @@ const Taskbar: React.FC<TaskbarProps> = ({
               alt="Projets"
               id="portfolio-window-ico"
               onClick={() => {
-                // handleHapticFeedback();
+                handleHapticFeedback();
                 handleClick("portfolio-window");
                 bringToFront("portfolio-window");
               }}
@@ -114,7 +114,7 @@ const Taskbar: React.FC<TaskbarProps> = ({
               alt="Contact"
               id="contact-window-ico"
               onClick={() => {
-                // handleHapticFeedback();
+                handleHapticFeedback();
                 handleClick("contact-window");
                 bringToFront("contact-window");
               }}

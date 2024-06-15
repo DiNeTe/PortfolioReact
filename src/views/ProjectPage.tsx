@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import { Project } from "../data/Interfaces";
 import { useAppDependencies } from "../app/context";
-// import { useHapticFeedback } from "../hooks/usehandleHapticFeedback";
+import { useHapticFeedback } from "../hooks/usehandleHapticFeedback";
 
 import Tag from "../components/Tag";
 import SlideShow from "../components/SlideShow";
@@ -22,7 +22,7 @@ const ProjectPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [allProjects, setAllProjects] = useState<Project[]>([]);
 
-  // const { handleHapticFeedback } = useHapticFeedback();
+  const { handleHapticFeedback } = useHapticFeedback();
 
   // Effet pour charger les données du projet lorsque l'id change
   useEffect(() => {
@@ -110,7 +110,7 @@ const ProjectPage: React.FC = () => {
               <NavLink
                 to={`/project/${prevProject.id}`}
                 className="prev-project-button"
-                // onClick={handleHapticFeedback}
+                onClick={handleHapticFeedback}
               >
                 {`<`}
               </NavLink>
@@ -122,7 +122,7 @@ const ProjectPage: React.FC = () => {
               <NavLink
                 to={`/project/${nextProject.id}`}
                 className="next-project-button"
-                // onClick={handleHapticFeedback}
+                onClick={handleHapticFeedback}
               >
                 {`>`}
               </NavLink>
@@ -133,7 +133,7 @@ const ProjectPage: React.FC = () => {
         <NavLink
           to="/home"
           id="home-button-project-page"
-          // onClick={handleHapticFeedback}
+          onClick={handleHapticFeedback}
         >
           <img
             src="/icons/homeButton.png"

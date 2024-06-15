@@ -6,4 +6,5 @@
   background-position: center;
   background-attachment: fixed;
   padding-bottom: env(safe-area-inset-bottom);
+  overflow: hidden;
  }

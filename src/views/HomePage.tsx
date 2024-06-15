@@ -1,106 +1,21 @@
-import useWindowActions from "../hooks/useWindowActions";
+import React, { useRef } from "react";
 import Draggable from "react-draggable";
-import StartMenuHandler from "../components/StartMenu";
+
+import useWindowActions from "../hooks/useWindowActions";
+import { useInitialState, WindowId } from "../hooks/useInitialState";
+
 import Windows from "../components/Windows";
-import Taskbar from "../components/Taskbar";
-import PortfolioContent from "../components/PortfolioWindow";
-import ContactForm from "../components/ContactForm";
-import AboutContent from "../components/AboutWindow";
 import IcoPdfCv from "../components/IcoPdfCv";
+import StartMenu from "../components/StartMenu";
+import Taskbar from "../components/Taskbar";
 import CurrentTime from "../components/CurrentTime";
+import AboutContent from "../components/AboutWindow";
+import PortfolioContent from "../components/PortfolioWindow";
 import SkillsContent from "../components/SkillsWindow";
+import ContactForm from "../components/ContactForm";
 
 const Home: React.FC = () => {
-  const windowWidth = window.innerWidth;
-  const windowHeight = window.innerHeight;
-  const windowDimensions = { width: 800, height: 450 };
-  const initialX = (windowWidth - windowDimensions.width) / 2;
-  const initialY = (windowHeight - windowDimensions.height) / 2;
-
-  const initialStateDesktop = {
-    "about-window": {
-      x: initialX - 50,
-      y: initialY - 50,
-      width: windowDimensions.width,
-      height: windowDimensions.height,
-      minimized: false,
-      open: true,
-      zIndex: 1,
-    },
-    "skills-window": {
-      x: initialX,
-      y: initialY,
-      width: windowDimensions.width,
-      height: windowDimensions.height,
-      minimized: false,
-      open: false,
-      zIndex: 0,
-    },
-    "portfolio-window": {
-      x: initialX + 50,
-      y: initialY + 50,
-      width: windowDimensions.width,
-      height: windowDimensions.height,
-      minimized: false,
-      open: false,
-      zIndex: 0,
-    },
-    "contact-window": {
-      x: initialX + 100,
-      y: initialY + 100,
-      width: windowDimensions.width,
-      height: windowDimensions.height,
-      minimized: false,
-      open: false,
-      zIndex: 0,
-    },
-  };
-
-const heightWindowsMobile = window.innerHeight - 103
-
-  const initialStateMobile = {
-    "about-window": {
-      x: 0,
-      y: 0,
-      width: window.innerWidth,
-      height: heightWindowsMobile,
-      minimized: false,
-      open: false,
-      zIndex: 10,
-    },
-    "skills-window": {
-      x: 0,
-      y: 0,
-      width: window.innerWidth,
-      height: heightWindowsMobile,
-      minimized: false,
-      open: false,
-      zIndex: 0,
-    },
-    "portfolio-window": {
-      x: 0,
-      y: 0,
-      width: window.innerWidth,
-      height: heightWindowsMobile,
-      minimized: false,
-      open: false,
-      zIndex: 0,
-    },
-    "contact-window": {
-      x: 0,
-      y: 0,
-      width: window.innerWidth,
-      height: heightWindowsMobile,
-      minimized: false,
-      open: false,
-      zIndex: 0,
-    },
-  };
-
-  // Sélection de l'état initial en fonction de la taille de l'écran
-  const initialState =
-    windowWidth <= 500 ? initialStateMobile : initialStateDesktop;
-
+  const initialState = useInitialState();
   const {
     windowsState,
     bringToFront,
@@ -111,50 +26,35 @@ const heightWindowsMobile = window.innerHeight - 103
     updateSize,
     handleCloseAll,
   } = useWindowActions(initialState);
-
-  // Empêche le clic pendant le drag
-  let drag = false;
-  let clickTimer: number;
-
-  const handleDrag = () => {
-    drag = true;
-  };
-
-  const handleStop = () => {
-    setTimeout(() => {
-      drag = false;
-    }, 0);
-  };
-
-  const handlePdfClick = (e: React.MouseEvent | React.TouchEvent) => {
-    if (drag) {
-      e.preventDefault();
-      e.stopPropagation();
-    } else {
-      clickTimer = window.setTimeout(() => {
-        window.open("/cv.pdf", "_blank");
-      }, 300);
+  const handleWindowClick = (windowId: WindowId) => {
+    if (window.innerWidth <= 500) {
+      // Ferme toutes les autres fenêtres en mode mobile
+      Object.keys(windowsState).forEach((id) => {
+        if (id !== windowId) {
+          handleClose(id as WindowId);
+        }
+      });
     }
+    bringToFront(windowId);
   };
 
-  const cancelClick = () => {
-    clearTimeout(clickTimer);
+  const handlePdfClick = () => {
+    window.open("/cv.pdf", "_blank");
   };
+
+  const draggableRef = useRef(null);
 
   return (
     <section id="desktop">
-      <StartMenuHandler />
+      <StartMenu />
+
       <Taskbar
         handleClick={handleTaskbarClick}
         bringToFront={bringToFront}
-        handleCloseAll={handleCloseAll}
-      />
-      <Draggable onDrag={handleDrag} onStop={handleStop}>
-        <div
-          onClick={handlePdfClick}
-          onTouchStart={handlePdfClick}
-          onTouchEnd={cancelClick}
-        >
+        handleCloseAll={handleCloseAll}/>
+
+      <Draggable nodeRef={draggableRef}>
+        <div ref={draggableRef} onClick={handlePdfClick}>
           <IcoPdfCv />
         </div>
       </Draggable>
@@ -163,7 +63,7 @@ const heightWindowsMobile = window.innerHeight - 103
 
       {Object.keys(windowsState).map(
         (windowId) =>
-          windowsState[windowId].open && (
+          windowsState[windowId as WindowId].open && (
             <Windows
               key={windowId}
               id={windowId}
@@ -181,52 +81,32 @@ const heightWindowsMobile = window.innerHeight - 103
                   ? "contact-window-content"
                   : undefined
               }
-              content={
-                windowId === "about-window" ? (
-                  <>
-                    <div id="about-content">
-                      <AboutContent />
-                      <Draggable>
-                          <div>
-                          <img id="pp-about" src="/pp/avatar.png" alt="Avatar" />
-                          </div>
-                      </Draggable>
-                    </div>
-                  </>
-                ) : 
-                
-                windowId === "skills-window" ? (
-                  <SkillsContent/>
-                ) :
-                
-                windowId === "portfolio-window" ? (
-                  <PortfolioContent />
-                ) :
-                (
-                  ""
-                )
+              onClose={() => handleClose(windowId as WindowId)}
+              onMinimize={() => handleMinimize(windowId as WindowId)}
+              onDragStop={(_e, d) =>
+                updatePosition(windowId as WindowId, d.x, d.y)
               }
-              onClose={() => handleClose(windowId)}
-              onMinimize={() => handleMinimize(windowId)}
-              onDragStop={(_e, d) => updatePosition(windowId, d.x, d.y)}
               onResizeStop={(_e, _direction, ref, _delta) =>
                 updateSize(
-                  windowId,
+                  windowId as WindowId,
                   parseInt(ref.style.width, 10),
                   parseInt(ref.style.height, 10)
                 )
               }
               initialSize={{
-                width: windowsState[windowId].width,
-                height: windowsState[windowId].height,
+                width: windowsState[windowId as WindowId].width,
+                height: windowsState[windowId as WindowId].height,
               }}
               initialPosition={{
-                x: windowsState[windowId].x,
-                y: windowsState[windowId].y,
+                x: windowsState[windowId as WindowId].x,
+                y: windowsState[windowId as WindowId].y,
               }}
-              zIndex={windowsState[windowId].zIndex}
-              bringToFront={() => bringToFront(windowId)}
+              zIndex={windowsState[windowId as WindowId].zIndex}
+              bringToFront={() => handleWindowClick(windowId as WindowId)}
             >
+              {windowId === "about-window" && <AboutContent />}
+              {windowId === "skills-window" && <SkillsContent />}
+              {windowId === "portfolio-window" && <PortfolioContent />}
               {windowId === "contact-window" && <ContactForm />}
             </Windows>
           )

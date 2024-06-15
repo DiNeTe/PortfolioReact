@@ -130,7 +130,8 @@
   }
 
   #about-content {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow: auto;
     margin: 0;
   }
 
@@ -150,11 +151,12 @@
     color: #333;
   }
 
-  img#pp-about {
-    top: 409px;
-    right: -7px;
-    width: 100px;
-  }
+/* Styles de base pour l'image */
+img#pp-about {
+ top: 410px;
+  right: 10px;
+  width: 75px;
+}
 
   .portfolio-content {
     padding: 0 10px;

@@ -1,0 +1,28 @@
+User-agent: *
+Disallow: /node_modules/
+Disallow: /@vite/
+Disallow: /@react-refresh/
+Disallow: /deps/
+Disallow: /localhost:5173/
+Disallow: /@vite/client
+Disallow: /src/views/
+Disallow: /src/components/
+
+# Pages critiques autorisées
+Allow: /home
+Allow: /project/
+Allow: /
+
+# URL de développement bloquée
+Disallow: /localhost/
+
+# fichiers bloqués
+Disallow: /src/main.css
+Disallow: /src/main.tsx
+Disallow: /src/data/
+
+# Autoriser l'accès à toutes les autres pages
+Allow: /
+
+# Emplacement du site
+Sitemap: https://web-pierre-portfolio.vercel.app/
