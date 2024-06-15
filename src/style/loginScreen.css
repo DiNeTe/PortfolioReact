@@ -1,5 +1,5 @@
 .loginScreenPage {
-  background-image: url("images/loginScreen.webp");
+  background-image: url("/images/loginScreen.webp");
   height: 100vh;
   background-size: cover;
   background-position: center;

@@ -1,5 +1,5 @@
 #skills-container {
-  background-image: url('public/images/skills.webp');
+  background-image: url('/images/skills.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -133,7 +133,7 @@ span.tag.skill-tag {
   /* reset css */
 
   #skills-container {
-    background-image: url("./images/skills_small.webp");
+    background-image: url("/images/skills_small.webp");
   }
 
   .skill-header {

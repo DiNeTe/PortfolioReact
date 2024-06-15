@@ -51,7 +51,6 @@ const LoginScreen: React.FC = () => {
   return (
     <div className="loginScreenPage">
       <div className={`content ${isLoading ? "blur" : ""}`}>
-        {/* Affiche le fond d'écran de la page de connexion */}
         <div className="loginScreenInsert">
         <h3 className="login-screen-infos-txt" id="portfolio"> portfolio </h3>
 
