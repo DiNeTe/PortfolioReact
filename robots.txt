@@ -13,4 +13,4 @@ Disallow: /src/data/
 
 Allow: /
 
-Sitemap: https://web-pierre-portfolio.vercel.app/sitemap.xml
+Sitemap: https://web-pierre-portfolio.vercel.app
