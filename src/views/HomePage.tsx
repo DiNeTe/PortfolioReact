@@ -9,10 +9,10 @@ import IcoPdfCv from "../components/IcoPdfCv";
 import StartMenu from "../components/StartMenu";
 import Taskbar from "../components/Taskbar";
 import CurrentTime from "../components/CurrentTime";
-import AboutContent from "../components/AboutWindow";
-import PortfolioContent from "../components/PortfolioWindow";
-import SkillsContent from "../components/SkillsWindow";
-import ContactForm from "../components/ContactForm";
+import AboutContent from "../components/WindowAbout";
+import PortfolioContent from "../components/WindowPortfolio";
+import SkillsContent from "../components/WindowSkills";
+import ContactForm from "../components/WindowContact";
 
 const Home: React.FC = () => {
   const initialState = useInitialState();

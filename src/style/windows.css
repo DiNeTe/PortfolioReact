@@ -48,8 +48,8 @@
   display: flex;
   justify-content: center;
   z-index: 15;
-  overflow: auto;
-}
+  overflow-y: auto;
+  overflow-x: hidden;}
 
 @keyframes closeWindow {
   from {

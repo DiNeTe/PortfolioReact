@@ -19,34 +19,34 @@ const ContactForm: React.FC = () => {
   return (
     <>
       <form className="contact-form" onSubmit={handleSubmit}>
-        {/* Label pour le champ Nom */}
-        <label htmlFor="name">Nom:</label>
-        {/* Champ de saisie pour le Nom avec les attributs id et name */}
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          placeholder="Nom et prénom"
-          autoComplete="name"
-        />
+        <div className="sender-info">
+          <label htmlFor="name"></label>
+          {/* Champ de saisie pour le Nom avec les attributs id et name */}
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+            placeholder="Votre nom..."
+            autoComplete="name"
+          />
 
-        {/* Label pour le champ Email */}
-        <label htmlFor="email">Email:</label>
-        {/* Champ de saisie pour l'Email avec les attributs id et name */}
-        <input
-          type="email"
-          placeholder="Adresse Email de contact"
-          id="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          autoComplete="email"
-        />
-
+          {/* Label pour le champ Email */}
+          <label htmlFor="email"></label>
+          {/* Champ de saisie pour l'Email avec les attributs id et name */}
+          <input
+            type="email"
+            placeholder="Votre Email..."
+            id="email"
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            autoComplete="email"
+          />
+        </div>
         {/* Label pour le champ Message */}
         <label htmlFor="message">Message:</label>
         {/* Champ de saisie pour le Message avec les attributs id et name */}

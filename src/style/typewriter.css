@@ -8,7 +8,6 @@
   overflow: hidden;
   z-index: 1;
   box-shadow: rgb(121, 121, 121) 7px px 10px;
-
 }
 
 .typewriter span {
@@ -39,6 +38,7 @@
 }
 
 .typewriter-about {
+  margin: 20px;
   min-width: 70%;
   max-width: 70%;
   width: 705px;
@@ -46,7 +46,11 @@
 }
 
 .typewriter-project-page::before {
-  background: linear-gradient(320deg, rgba(255, 255, 255, 0.283), rgba(0, 0, 0, 1));
+  background: linear-gradient(
+    320deg,
+    rgba(255, 255, 255, 0.283),
+    rgba(0, 0, 0, 1)
+  );
 }
 
 .typewriter-project-page {
@@ -54,7 +58,6 @@
   border-radius: 10px;
   background: rgb(122, 122, 122);
   padding: 35px;
-
 }
 
 @keyframes blink {
@@ -64,9 +67,9 @@
   }
   50% {
     visibility: hidden;
-  }}
+  }
+}
 
-  
 /* @media only screen and (max-width: 430px) {
   .typewriter-about {
     width: 100%;
