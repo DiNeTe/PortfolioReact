@@ -1,47 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/pp/avatar.png" />
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <title>Mon portfolio</title>
-    
-    <meta name="description" content="Découvrez le portfolio de Pierre Weber, développeur web spécialisé en front-end et back-end. Explorez mes projets, compétences et expériences professionnelles.">
-    <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="L4-WZBe0WEtXQ-6xrW9GBuu9EAAVLV2vi58r9Otx90w" />
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" sizes="192x192" href="/pp/avatar192.png">
-    <link rel="icon" sizes="512x512" href="/pp/avatar512.png">
-    <meta name="theme-color" content="#f4f4f4">
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0"
+    />
+    <title>Portfolio de développeur Web - WEBER Pierre</title>
 
-    <!-- Précharger la police critique -->
-    <link rel="preload" href="https://fonts.cdnfonts.com/css/segoe-ui-variable" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <meta
+      name="description"
+      content="Découvrez le portfolio de Pierre Weber, développeur web spécialisé en front-end et back-end. Explorez mes projets, compétences et expériences professionnelles."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="google-site-verification"
+      content="L4-WZBe0WEtXQ-6xrW9GBuu9EAAVLV2vi58r9Otx90w"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" sizes="192x192" href="/pp/avatar192.png" />
+    <link rel="icon" sizes="512x512" href="/pp/avatar512.png" />
+    <meta name="theme-color" content="#f4f4f4" />
+
+    <link rel="preconnect" href="https://coingecko.com" />
+    <link rel="preconnect" href="https://api.coingecko.com" />
+    <link rel="preconnect" href="https://cdnfonts.com" />
+    <link rel="preconnect" href="https://fonts.cdnfonts.com" />
+
+    <link
+      rel="preload"
+      href="https://fonts.cdnfonts.com/css/segoe-ui-variable"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
     <noscript>
-      <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/segoe-ui-variable">
+      <link
+        rel="stylesheet"
+        href="https://fonts.cdnfonts.com/css/segoe-ui-variable"
+      />
     </noscript>
-
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- retour haptique version mobile -->
+    <!-- Lazy loading for images -->
     <script>
-      function handleHapticFeedback() {
-          if (navigator.vibrate) {
-              navigator.vibrate(10);
-          }
-      }
-    </script>
-    <script>
-      // Lazy loading for images
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         const images = document.querySelectorAll("img");
-        images.forEach(img => {
+        images.forEach((img) => {
           if (!img.hasAttribute("loading")) {
             img.setAttribute("loading", "lazy");
           }
         });
       });
+    </script>
+    <!-- Haptic feedback for mobile -->
+    <script>
+      function handleHapticFeedback() {
+        if (navigator.vibrate) {
+          navigator.vibrate(10);
+        }
+      }
     </script>
   </body>
 </html>
