@@ -1,17 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface CurrentTimeProps {
   className?: string;
 }
 
-const CurrentTime: React.FC<CurrentTimeProps> = ({className= ""}) => {
-  const [currentTime, setCurrentTime] = useState<string>(() => 
-    new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+const CurrentTime: React.FC<CurrentTimeProps> = ({ className = "" }) => {
+  const [currentTime, setCurrentTime] = useState<string>(() =>
+    new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
   );
 
   useEffect(() => {
     const update = () => {
-      setCurrentTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+      setCurrentTime(
+        new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+        })
+      );
     };
     const intervalId = setInterval(update, 1000);
 
@@ -19,7 +24,7 @@ const CurrentTime: React.FC<CurrentTimeProps> = ({className= ""}) => {
   }, []);
 
   return (
-    <div className={`time${className}`}>
+    <div className={`time${className ? `-${className}` : ""}`}>
       {currentTime}
     </div>
   );

@@ -26,6 +26,7 @@ const Home: React.FC = () => {
     updateSize,
     handleCloseAll,
   } = useWindowActions(initialState);
+
   const handleWindowClick = (windowId: WindowId) => {
     if (window.innerWidth <= 500) {
       // Ferme toutes les autres fenêtres en mode mobile
@@ -51,10 +52,16 @@ const Home: React.FC = () => {
       <Taskbar
         handleClick={handleTaskbarClick}
         bringToFront={bringToFront}
-        handleCloseAll={handleCloseAll}/>
+        handleCloseAll={handleCloseAll}
+      />
 
       <Draggable nodeRef={draggableRef}>
-        <div ref={draggableRef} onClick={handlePdfClick}>
+        <div
+          ref={draggableRef}
+          onClick={handlePdfClick}
+          onTouchStart={handlePdfClick}
+          className="pdf-icon"
+        >
           <IcoPdfCv />
         </div>
       </Draggable>

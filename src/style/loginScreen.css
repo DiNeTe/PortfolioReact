@@ -13,38 +13,37 @@
 .loginScreenInsert {
   display: flex;
   flex-direction: column;
-  justify-content: start;
   align-items: center;
   width: 100%;
   height: 100%;
 }
 
 #portfolio {
-  margin-top: 3%;
+  top: 0;
+  position: absolute;
 }
 
 .pp {
   border-radius: 100%;
-  width: 100px;
-  margin: 2%;
   border: 2px solid white;
+  margin: 12% 0 1%;
 }
 
 .fullName {
   color: white;
-  font-size: 1rem;
+  font-size: 3rem;
   margin: 0;
 }
 
 #job {
-  margin: 0 0 2%;
+  margin-bottom: 2%;
 }
 
 .password {
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
   font-size: 1.3rem;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   width: 15%;
   height: 40px;
   border: none;
