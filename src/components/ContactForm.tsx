@@ -19,7 +19,9 @@ const ContactForm: React.FC = () => {
   return (
     <>
       <form className="contact-form" onSubmit={handleSubmit}>
+        {/* Label pour le champ Nom */}
         <label htmlFor="name">Nom:</label>
+        {/* Champ de saisie pour le Nom avec les attributs id et name */}
         <input
           type="text"
           id="name"
@@ -27,27 +29,44 @@ const ContactForm: React.FC = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+          placeholder="Nom et prénom"
+          autoComplete="name"
         />
+
+        {/* Label pour le champ Email */}
         <label htmlFor="email">Email:</label>
+        {/* Champ de saisie pour l'Email avec les attributs id et name */}
         <input
           type="email"
+          placeholder="Adresse Email de contact"
           id="email"
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          autoComplete="email"
         />
+
+        {/* Label pour le champ Message */}
         <label htmlFor="message">Message:</label>
+        {/* Champ de saisie pour le Message avec les attributs id et name */}
         <textarea
           id="message"
           name="message"
+          placeholder="Votre message..."
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
+          autoComplete="off"
         />
+
+        {/* Bouton de soumission du formulaire */}
         <button type="submit">Envoyer</button>
-      </form>
-      <span className="contact-call-to-action">Laissez-moi un message ✍️ et je vous répondrai dans les plus brefs délais !</span>
+      </form>{" "}
+      <span className="contact-call-to-action">
+        Laissez-moi un message ✍️ et je vous répondrai dans les plus brefs
+        délais !
+      </span>
     </>
   );
 };
