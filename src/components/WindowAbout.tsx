@@ -13,7 +13,7 @@ const AboutContent: React.FC = () => {
       />
       <Draggable nodeRef={draggableRef}>
         <div ref={draggableRef}>
-          <img id="pp-about" src="/pp/avatar.png" alt="Avatar" />
+          <img id="pp-about" src="/pp/avatar_clear.png" alt="Avatar" />
         </div>
       </Draggable>
     </>

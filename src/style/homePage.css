@@ -49,6 +49,7 @@ div#about-avatar {
 }
 
 img#pp-about {
+  width: 150px;
   border-radius: 100%;
   position: absolute;
   right: -37px;

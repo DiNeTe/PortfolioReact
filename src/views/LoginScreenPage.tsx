@@ -55,7 +55,7 @@ const LoginScreen: React.FC = () => {
         <h3 className="login-screen-infos-txt" id="portfolio"> portfolio </h3>
 
           {/* Affiche l'avatar et le nom complet */}
-          <img src="pp/avatar.png" className="pp" alt="Avatar" />
+          <img src="pp/avatar_clear.png" className="pp" alt="Avatar" />
           <h1 className="fullName">Pierre Weber </h1>
           <h2 className="login-screen-infos-txt" id="job"> Développeur Web </h2>
 

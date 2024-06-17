@@ -3,7 +3,8 @@
 
   a,
   button,
-  .cliquable, :hover {
+  .cliquable,
+  :hover {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     outline: none;
   }
@@ -19,6 +20,9 @@
   }
 
   /* LoginPage */
+  .loginScreenPage {
+    background-image: url("/images/loginScreen_small.webp");
+  }
 
   .loginScreenInsert {
     display: flex;
@@ -26,13 +30,13 @@
 
   #job {
     margin: 5%;
-}
+  }
 
   .pp {
     border-radius: 100%;
     width: 25%;
     border: 2px solid white;
-    margin: 40% 0 10%;  
+    margin: 40% 0 10%;
   }
 
   .password {
@@ -92,7 +96,7 @@
     border-radius: 50px;
   }
 
-  #home-button:hover img::after img{
+  #home-button:hover img::after img {
     box-shadow: none;
   }
 
@@ -153,12 +157,12 @@
     color: #333;
   }
 
-/* Styles de base pour l'image */
-img#pp-about {
- top: 410px;
-  right: 10px;
-  width: 75px;
-}
+  /* Styles de base pour l'image */
+  img#pp-about {
+    top: 410px;
+    right: 10px;
+    width: 75px;
+  }
 
   .portfolio-content {
     padding: 0 10px;
