@@ -89,7 +89,7 @@ const getInitialState = () => {
     },
   };
 
-  return windowWidth <= 500 ? initialStateMobile : initialStateDesktop;
+  return windowWidth <= 800 ? initialStateMobile : initialStateDesktop;
 };
 
 export const useInitialState = () => {

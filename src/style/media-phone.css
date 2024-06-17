@@ -157,7 +157,6 @@
     color: #333;
   }
 
-  /* Styles de base pour l'image */
   img#pp-about {
     top: 410px;
     right: 10px;
@@ -308,8 +307,8 @@
   .github-link {
     position: fixed;
     width: 50px;
-    right: 6%;
-    bottom: 895%;
+    right: 6px;
+    top: 15px;
     cursor: pointer;
     border-radius: 50px;
   }

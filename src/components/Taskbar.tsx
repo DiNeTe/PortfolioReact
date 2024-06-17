@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useHapticFeedback } from "../hooks/usehandleHapticFeedback";
+import { useHapticFeedback } from "../hooks/useHapticFeedback";
 
 import Icon from "./Icons";
 import BitcoinPrice from "./BitcoinPrice";

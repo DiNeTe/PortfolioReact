@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import { Project } from "../data/Interfaces";
 import { useAppDependencies } from "../app/context";
-import { useHapticFeedback } from "../hooks/usehandleHapticFeedback";
+import { useHapticFeedback } from "../hooks/useHapticFeedback";
 
 import Tag from "../components/Tag";
 import SlideShow from "../components/SlideShow";
@@ -104,7 +104,6 @@ const ProjectPage: React.FC = () => {
 
       <div className="project-footer">
         <div className="nav-projects">
-          {/* Lien vers le projet précédent, s'il existe */}
           <div className="prev-project-container">
             {prevProject && (
               <NavLink
@@ -116,7 +115,6 @@ const ProjectPage: React.FC = () => {
               </NavLink>
             )}
           </div>
-          {/* Lien vers le projet suivant, s'il existe */}
           <div className="next-project-container">
             {nextProject && (
               <NavLink
@@ -143,7 +141,9 @@ const ProjectPage: React.FC = () => {
         </NavLink>
 
         {/* Lien vers le code source du projet sur GitHub */}
-        <div className="github-link">
+        
+      </div>
+      <div className="github-link">
           <Icon
             dataTitle="code source"
             imgSrc="/icons/github.png"
@@ -154,7 +154,6 @@ const ProjectPage: React.FC = () => {
             }}
           />
         </div>
-      </div>
     </div>
   );
 };
