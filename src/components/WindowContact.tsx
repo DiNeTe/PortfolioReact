@@ -47,9 +47,7 @@ const ContactForm: React.FC = () => {
             autoComplete="email"
           />
         </div>
-        {/* Label pour le champ Message */}
         <label htmlFor="message">Message:</label>
-        {/* Champ de saisie pour le Message avec les attributs id et name */}
         <textarea
           id="message"
           name="message"
@@ -60,11 +58,10 @@ const ContactForm: React.FC = () => {
           autoComplete="off"
         />
 
-        {/* Bouton de soumission du formulaire */}
         <button type="submit">Envoyer</button>
       </form>{" "}
       <span className="contact-call-to-action">
-        Laissez-moi un message ✍️ et je vous répondrai dans les plus brefs
+        Laissez-moi un message ✍️ <br /> je vous répondrai dans les plus brefs
         délais !
       </span>
     </>

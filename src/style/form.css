@@ -125,4 +125,6 @@ input#email {
   .contact-call-to-action {
     padding: 20px 50px;
     font-size: 1em;
-    background: #e8eef880;} 
+    background: #e8eef880;
+    text-align: center;
+  } 

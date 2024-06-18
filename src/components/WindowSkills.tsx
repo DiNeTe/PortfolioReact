@@ -22,6 +22,36 @@ const SkillsContent: React.FC = () => {
     initPage();
   }, [projectDataSource]);
 
+  useEffect(() => {
+    const skillsContainer = document.getElementById('skills-container');
+
+    const handleScroll = () => {
+      const skillContents = document.querySelectorAll('.skill-content');
+      skillContents.forEach((content) => {
+        const contentTop = content.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (contentTop < windowHeight - 100 && contentTop > -100) {
+          content.classList.add('visible');
+        } else {
+          content.classList.remove('visible');
+        }
+      });
+    };
+
+    if (skillsContainer) {
+      skillsContainer.addEventListener('scroll', handleScroll);
+      console.log("Scroll event listener added");
+
+      handleScroll();
+
+      return () => {
+        skillsContainer.removeEventListener('scroll', handleScroll);
+        console.log("Scroll event listener removed");
+      };
+    }
+  }, []);
+
   return (
     <>
       <div id="skills-container">
