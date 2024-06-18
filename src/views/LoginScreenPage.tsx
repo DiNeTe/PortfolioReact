@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Helmet } from 'react-helmet';
 import { useNavigate } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner";
 
@@ -50,6 +51,15 @@ const LoginScreen: React.FC = () => {
 
   return (
     <div className="loginScreenPage">
+      <Helmet>
+        <title>Portfolio Pierre Weber - Développeur Web Full Stack</title>
+        <meta
+          name="description"
+          content="Découvrez le portfolio de Pierre Weber, développeur web spécialisé en front-end et back-end. Explorez mes projets, compétences et expériences professionnelles."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="google-site-verification" content="L4-WZBe0WEtXQ-6xrW9GBuu9EAAVLV2vi58r9Otx90w" />
+      </Helmet>
       <div className={`content ${isLoading ? "blur" : ""}`}>
         <div className="loginScreenInsert">
         <h3 className="login-screen-infos-txt" id="portfolio"> portfolio </h3>
