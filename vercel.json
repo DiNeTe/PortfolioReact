@@ -2,9 +2,9 @@
   "version": 2,
   "routes": [
     { "handle": "filesystem" },
-
     { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
     { "src": "/robots.txt", "dest": "/robots.txt" },
+    { "src": "/site.webmanifest", "dest": "/site.webmanifest" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
