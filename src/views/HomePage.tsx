@@ -61,10 +61,15 @@ const Home: React.FC = () => {
           onClick={handlePdfClick}
           onTouchStart={handlePdfClick}
           className="pdf-icon"
+          role="button"
+          tabIndex={0}
+          aria-label="Télécharger mon CV en PDF"
         >
           <IcoPdfCv />
         </div>
       </Draggable>
+      <span className="sr-only">Télécharger mon CV en PDF</span>
+
 
       <CurrentTime className="desktop" />
 

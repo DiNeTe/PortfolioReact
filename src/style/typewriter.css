@@ -39,10 +39,8 @@
 
 .typewriter-about {
   margin: 20px;
-  min-width: 70%;
-  max-width: 70%;
-  width: 705px;
-  min-height: 300px;
+  width: 70%;
+  height: 80%;
 }
 
 .typewriter-project-page::before {

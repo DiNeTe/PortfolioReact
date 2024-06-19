@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Rnd } from 'react-rnd';
 import { useWindowLifecycle } from '../hooks/useWindowLifecycle';
 import WindowControls from './WindowControls';
@@ -35,6 +35,7 @@ const Windows: React.FC<WindowsProps> = ({
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [size, setSize] = useState({ width: initialSize.width, height: initialSize.height });
   const [position, setPosition] = useState(initialPosition);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 500);
 
   const { isHidden, isClosing, isMinimizing, handleClose, handleMinimize } = 
     useWindowLifecycle(onClose, onMinimize);
@@ -59,6 +60,14 @@ const Windows: React.FC<WindowsProps> = ({
     });
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 500);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Rnd
       size={{ width: size.width, height: size.height }}
@@ -68,20 +77,24 @@ const Windows: React.FC<WindowsProps> = ({
       dragHandleClassName="window-header"
       onDragStart={() => bringToFront()}
       onDragStop={(e, d) => {
-        setPosition({ x: d.x, y: d.y });
-        onDragStop(e, d);
+        if (!isMobile) {
+          setPosition({ x: d.x, y: d.y });
+          onDragStop(e, d);
+        }
       }}
       onResizeStop={(e, direction, ref, delta, position) => {
-        const newSize = {
-          width: parseInt(ref.style.width, 10),
-          height: parseInt(ref.style.height, 10),
-        };
-        setSize(newSize);
-        setPosition(position);
-        onResizeStop(e, direction, ref, delta, position);
+        if (!isMobile) {
+          const newSize = {
+            width: parseInt(ref.style.width, 10),
+            height: parseInt(ref.style.height, 10),
+          };
+          setSize(newSize);
+          setPosition(position);
+          onResizeStop(e, direction, ref, delta, position);
+        }
       }}
       style={{ zIndex: zIndex }}
-      enableResizing={{
+      enableResizing={isMobile ? false : {
         bottom: true,
         bottomRight: true,
         bottomLeft: true,
@@ -91,6 +104,7 @@ const Windows: React.FC<WindowsProps> = ({
         left: true,
         right: true,
       }}
+      disableDragging={isMobile}
     >
       <div
         ref={windowRef}

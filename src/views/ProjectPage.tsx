@@ -62,6 +62,8 @@ const ProjectPage: React.FC = () => {
   const prevProject = allProjects[prevProjectIndex];
   const nextProject = allProjects[nextProjectIndex];
 
+
+  
   return (
     <div className="project-page">
       <div className="project-header">

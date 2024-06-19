@@ -76,14 +76,11 @@ a.title-project:hover {
 }
 
 .github-link {
-  cursor: pointer;
   z-index: 100;
   position: fixed;
-  bottom: 25px;
+  bottom: 34px;
   right: 50px;
 }
-
-
 
 a#github-ico {
   border: none;
@@ -95,7 +92,6 @@ a#github-ico:hover {
 
 #github-ico img {
   width: 50px;
-  cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -148,11 +144,12 @@ a#github-ico:hover {
   display: flex;
   position: fixed;
   bottom: 0;
-  z-index: 110;
+  z-index: 99;
   width: 100%;
   margin: 0 20px;
   padding: 20px;
   background: transparent;
+  height: 9%;
 }
 
 .project-footer a {
@@ -175,11 +172,10 @@ a#github-ico:hover {
 }
 
 .nav-projects {
-  flex-direction: row;
   display: flex;
-  width: 70%;
-  padding: 0;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: center;
+  gap: 15%;
 }
 
 a.prev-project-button,

@@ -32,7 +32,7 @@ const LoginScreen: React.FC = () => {
       if (password !== correctPassword) {
         // Si le mot de passe est incorrect, déclenche l'animation de secousse et affiche une erreur
         setShake(true);
-        setTimeout(() => setShake(false), 500);
+        setTimeout(() => setShake(false), 750);
         setIsError(true);
 
         // Enlève le focus de l'input pour réinitialiser l'état de l'erreur
@@ -55,7 +55,7 @@ const LoginScreen: React.FC = () => {
         <title>Portfolio Pierre Weber - Développeur Web Full Stack</title>
         <meta
           name="description"
-          content="Découvrez le portfolio de Pierre Weber, développeur web spécialisé en front-end et back-end. Explorez mes projets, compétences et expériences professionnelles."
+          content="Découvrez le portfolio de Pierre Weber, développeur web front-end et back-end. Explorez mes projets, compétences et expériences professionnelles."
         />
         <meta name="robots" content="index, follow" />
         <meta name="google-site-verification" content="L4-WZBe0WEtXQ-6xrW9GBuu9EAAVLV2vi58r9Otx90w" />
@@ -75,17 +75,18 @@ const LoginScreen: React.FC = () => {
           <h2 className="login-screen-infos-txt" id="job"> Développeur Web </h2>
 
           {/* Champ de saisie pour le mot de passe avec gestion des erreurs et animations */}
+          <label htmlFor="password-input" className="password-label">
+            Mot de passe
+          </label>
           <input
-            className={`password ${isError ? "error" : ""} ${
-              shake ? "shake" : ""
-            }`}
+            id="password-input"
+            className={`password ${isError ? "error" : ""} ${shake ? "shake" : ""}`}
             type="password"
             placeholder={isError ? "Code incorrect" : "Code confidentiel"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             onKeyDown={handleKeyDown}
           />
-
           {/* Bouton pour se connecter en tant qu'invité */}
           <button
             className="loginLink"
