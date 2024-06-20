@@ -83,6 +83,17 @@ const ProjectPage: React.FC = () => {
             alt="Lien vers le projet"
           />
         </a>
+        <div className="github-link">
+          <Icon
+            dataTitle="code source"
+            imgSrc="/icons/github.png"
+            alt="Lien vers GitHub"
+            id="github-ico"
+            onClick={() => {
+              window.open(project.linkGH, "_blank");
+            }}
+          />
+        </div>
         <div id="tag-container">
           {project.tags.map((tag, index) => (
             <Tag key={index}>{tag}</Tag>
@@ -139,18 +150,7 @@ const ProjectPage: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="github-link">
-          <Icon
-            dataTitle="code source"
-            imgSrc="/icons/github.png"
-            alt="Lien vers GitHub"
-            id="github-ico"
-            onClick={() => {
-              window.open(project.linkGH, "_blank");
-            }}
-          />
-        </div>
-    </div>
+          </div>
   );
 };
 

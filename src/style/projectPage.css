@@ -52,10 +52,6 @@ a.title-project {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  margin: 0;
-  color: black;
-  text-decoration: none;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -72,16 +68,12 @@ a.title-project:hover {
 .link-ico {
   width: 4%;
   margin: 1%;
-  cursor: pointer;
 }
 
 .github-link {
-  position: absolute;
-  right: 20px;
-  bottom: 35px;
-  cursor: pointer;
   border-radius: 50px;
   z-index: 100;
+  padding-right: 50px;
 }
 
 a#github-ico {
