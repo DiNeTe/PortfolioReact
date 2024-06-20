@@ -67,11 +67,9 @@ const ProjectPage: React.FC = () => {
   return (
     <div className="project-page">
       <div className="project-header">
-        {/* Lien de retour à la page d'accueil */}
         <NavLink to="/home" className="back-arrow">
           ← Retour à l'accueil
         </NavLink>
-        {/* Lien vers le projet, avec une icône */}
         <a
           href={project.link}
           target="_blank"
@@ -85,7 +83,6 @@ const ProjectPage: React.FC = () => {
             alt="Lien vers le projet"
           />
         </a>
-        {/* Affichage des tags du projet */}
         <div id="tag-container">
           {project.tags.map((tag, index) => (
             <Tag key={index}>{tag}</Tag>
@@ -93,7 +90,6 @@ const ProjectPage: React.FC = () => {
         </div>
       </div>
       <div className="project-body">
-        {/* Diaporama des images du projet */}
         <SlideShow images={project.pictures} />
         {/* Description du projet avec effet machine à écrire */}
         <div className="description-container">
@@ -113,23 +109,11 @@ const ProjectPage: React.FC = () => {
                 className="prev-project-button"
                 onClick={handleHapticFeedback}
               >
-                {`<`}
+                <span>{`<`}</span>
               </NavLink>
             )}
           </div>
-          <div className="next-project-container">
-            {nextProject && (
-              <NavLink
-                to={`/project/${nextProject.id}`}
-                className="next-project-button"
-                onClick={handleHapticFeedback}
-              >
-                {`>`}
-              </NavLink>
-            )}
-          </div>
-        </div>
-        {/* Lien de retour à la page d'accueil */}
+
         <NavLink
           to="/home"
           id="home-button-project-page"
@@ -142,8 +126,18 @@ const ProjectPage: React.FC = () => {
           />
         </NavLink>
 
-        {/* Lien vers le code source du projet sur GitHub */}
-        
+          <div className="next-project-container">
+            {nextProject && (
+              <NavLink
+                to={`/project/${nextProject.id}`}
+                className="next-project-button"
+                onClick={handleHapticFeedback}
+              >
+                <span>{`>`}</span>
+              </NavLink>
+            )}
+          </div>
+        </div>
       </div>
       <div className="github-link">
           <Icon

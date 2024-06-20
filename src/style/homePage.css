@@ -59,8 +59,6 @@ img#pp-about {
   right: -77px;
   top: 64px;
   border: 1px solid black;
-  z-index: 20000;
-  box-shadow: rgb(59, 59, 59) 5px 7px 10px;
   animation: randomMove 45s ease-in-out infinite;
   background-color: rgba(232, 238, 248, 0.6);
   backdrop-filter: blur(1px);
@@ -69,22 +67,18 @@ img#pp-about {
 .pdf-link {
   position: fixed;
   top: 150px;
-  left: 50px;
-  transform: translate(-50%, -50%);
+  left: 25px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-decoration: none;
   color: white;
 }
 
 #pdf-ico {
   width: 50px;
-  height: auto;
 }
 
 .pdf-text {
-  margin-top: 8px;
+  margin-top: 3px;
   font-size: 14px;
   text-align: center;
 }

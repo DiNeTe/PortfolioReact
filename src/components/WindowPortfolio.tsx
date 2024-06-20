@@ -34,7 +34,6 @@ const PortfolioContent: React.FC = () => {
 
   return (
     <div className="portfolio-content">
-      {/* Liste des projets */}
       <ul>
         {projects.map((project: Project) => (
           // Élément de la liste pour chaque projet
@@ -46,22 +45,18 @@ const PortfolioContent: React.FC = () => {
             <div className="project-container">
               <div className="portfolio-project-header">
                 <div className="project-title">
-                  {/* Conteneur des tags du projet */}
                   <div id="tag-container-window">
                     {project.tags.map((tag, index) => (
-                      // Composant Tag pour chaque tag du projet
                       <Tag key={index}>{tag}</Tag>
                     ))}
                   </div>
                 </div>
               </div>
-              {/* Image de couverture du projet */}
               <img
                 className="cover-project"
                 src={project.cover}
                 alt={project.title}
               />
-              {/* Superposition avec le titre du projet */}
               <div className="project-overlay">
                 <h2>{project.title}</h2>
               </div>

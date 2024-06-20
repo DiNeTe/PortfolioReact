@@ -21,7 +21,6 @@ const ContactForm: React.FC = () => {
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="sender-info">
           <label htmlFor="name"></label>
-          {/* Champ de saisie pour le Nom avec les attributs id et name */}
           <input
             type="text"
             id="name"
@@ -33,12 +32,10 @@ const ContactForm: React.FC = () => {
             autoComplete="name"
           />
 
-          {/* Label pour le champ Email */}
           <label htmlFor="email"></label>
-          {/* Champ de saisie pour l'Email avec les attributs id et name */}
           <input
             type="email"
-            placeholder="Votre Email..."
+            placeholder="Votre email..."
             id="email"
             name="email"
             value={email}
@@ -62,7 +59,7 @@ const ContactForm: React.FC = () => {
       </form>{" "}
       <span className="contact-call-to-action">
         Laissez-moi un message ✍️ <br /> je vous répondrai dans les plus brefs
-        délais !
+        délais
       </span>
     </>
   );

@@ -12,7 +12,6 @@
   #btc-price,
   #volume-control,
   #logo-win,
-  .loadingContainer,
   .time,
   .back-arrow,
   .window-controls {
@@ -80,6 +79,7 @@
   #home-button {
     display: flex;
     width: 75px;
+    justify-content: center;
   }
 
   #home-button img {
@@ -144,10 +144,9 @@
   }
 
   .typewriter-about {
-    max-width: 100vh;
-    height: 100vh;
-    border: none;
-    box-shadow: none;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
   }
 
   .typewriter-about::before {
@@ -155,7 +154,7 @@
   }
 
   .typewriter-about span {
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: #333;
   }
 
@@ -212,7 +211,7 @@
   .project-header {
     flex-direction: column;
     padding: 0;
-    background: rgba(232, 238, 248, 0.5); /* Fond semi-transparent */
+    background: rgba(232, 238, 248, 0.5);
     backdrop-filter: blur(5px);
     padding-bottom: 10px;
     height: 70px;
@@ -238,7 +237,7 @@
 
   .project-body {
     flex-direction: column;
-    margin: 30% 0 30%;
+    margin: 30% 0 35%;
     gap: 0;
   }
 
@@ -288,18 +287,22 @@
   }
 
   .typewriter-project-page span {
-    font-size: 5vw;
+    font-size: 0.8em;
   }
 
   .project-footer {
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    gap: 20px;
-    background: rgba(232, 238, 248, 0.5); /* Fond semi-transparent */
+    background: rgba(232, 238, 248, 0.5);
     backdrop-filter: blur(5px);
     height: 70px;
     position: fixed;
+    margin: 10px;
+    padding: 0;
+  }
+
+  .project-footer a {
+    padding: 0;
   }
 
   .project-footer a:hover {
@@ -326,45 +329,38 @@
   }
 
   .nav-projects {
-    flex-direction: row;
     display: flex;
-    width: 100%;
     height: 100%;
-    gap: 70px;
-    justify-content: center;
+    gap: 0;
   }
 
   a.prev-project-button,
   a.next-project-button {
-    padding: 2px 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     border: none;
     background-color: #333;
-    color: #f4f4f4;
     background: none;
-    justify-content: center;
-    height: 70%;
-    font-size: 45px;
-    color: #333;
-    align-items: end;
   }
 
-  a.prev-project-button:hover,
-  a.next-project-button:hover {
-    text-shadow: rgb(255, 255, 255) 0 0 10px 0;
+  a.prev-project-button span,
+  a.next-project-button span {
+    font-size: 5em;
+    align-items: center;
+    margin-bottom: 14px;
   }
 
   #home-button-project-page {
     display: flex;
-    width: 75px;
-    bottom: 7.5px;
-    position: fixed;
     padding: 0;
-    margin: 0;
   }
 
   #home-button-project-page img {
     width: 75px;
     border-radius: 50px;
+    margin: 0 10px;
   }
 
   .contact-call-to-action {

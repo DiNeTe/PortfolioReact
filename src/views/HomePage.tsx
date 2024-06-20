@@ -68,8 +68,6 @@ const Home: React.FC = () => {
           <IcoPdfCv />
         </div>
       </Draggable>
-      <span className="sr-only">Télécharger mon CV en PDF</span>
-
 
       <CurrentTime className="desktop" />
 

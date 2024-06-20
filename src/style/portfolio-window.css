@@ -13,10 +13,10 @@ ul {
 
 .project-item {
   position: relative;
-  margin-bottom: 40px; /* Increased gap between projects */
+  margin-bottom: 40px;
   cursor: pointer;
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .project-container {
@@ -41,8 +41,6 @@ justify-content: center;
   border-radius: 10px;
 }
 
-
-
 .project-overlay {
   position: absolute;
   top: 50%;
@@ -54,24 +52,21 @@ justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
   text-align: center;
-
 }
 
 .project-item:hover .cover-project {
-  filter: blur(5px) brightness(50%); /* Added brightness for darkening effect */
-  transform: scale(1.03); /* Optional: slight zoom effect */
+  filter: blur(5px) brightness(50%);
+  transform: scale(1.03);
 }
 
 .project-item:hover .project-overlay {
   opacity: 1;
-
 }
 
 .portfolio-project-header {
   margin: 10px;
   background: rgba(232, 238, 248, 0.5);
   backdrop-filter: blur(5px);
-
 }
 
 #tag-container Tag {
@@ -107,5 +102,5 @@ justify-content: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;  
+  font-size: 1rem;
 }

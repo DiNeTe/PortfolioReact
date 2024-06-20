@@ -38,9 +38,9 @@
 }
 
 .typewriter-about {
-  margin: 20px;
   width: 70%;
   height: 80%;
+  margin: 20px;
 }
 
 .typewriter-project-page::before {
@@ -67,10 +67,3 @@
     visibility: hidden;
   }
 }
-
-/* @media only screen and (max-width: 430px) {
-  .typewriter-about {
-    width: 100%;
-    margin:0 ;
-  }
-} */

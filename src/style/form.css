@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     width: 45%;
-    height: 100%; /* Prendre toute la hauteur disponible */
+    height: 100%;
     padding: 20px;
     background: #f9f9f9;
     border-radius: 8px;
@@ -77,35 +77,20 @@ input#email {
     display: inline-flex;
     height: 48px;
     justify-content: center;
-    line-height: 1;
-    list-style: none;
-    overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
-    position: relative;
-    text-align: left;
-    text-decoration: none;
     transition: box-shadow .15s,transform .15s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
     will-change: box-shadow,transform;
     font-size: 18px;
-    width: 100%;
-    align-items: center;
   }
   
   .contact-form button:hover {
     box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
     transform: translateY(-2px);
     background-image: radial-gradient(100% 100% at 100% 0, #007bff 0, #005fc5c4 100%);
-
   }
   
   textarea#message {
     resize: none;
-    flex-grow: 1; /* Pour prendre l'espace restant */
+    flex-grow: 1;
   }
   
   .contact-form button:focus {
@@ -123,8 +108,6 @@ input#email {
   }
   
   .contact-call-to-action {
-    padding: 20px 50px;
-    font-size: 1em;
-    background: #e8eef880;
+    padding: 10px 0 20px;
     text-align: center;
   } 

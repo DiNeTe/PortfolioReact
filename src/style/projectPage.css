@@ -26,7 +26,7 @@
 }
 
 .back-arrow {
-  visibility: hidden; /* Hide the original content */
+  visibility: hidden;
   position: absolute;
   left: 2%;
   text-decoration: none;
@@ -36,9 +36,9 @@
 }
 
 .back-arrow::before {
-  content: "← Retour à l'accueil"; /* Default content */
-  visibility: visible;}
-
+  content: "← Retour à l'accueil";
+  visibility: visible;
+}
 
 .back-arrow:hover {
   text-decoration: underline;
@@ -64,8 +64,8 @@ a.title-project:hover {
 }
 
 .title-project h1 {
-  display: inline-block; /* Permet d'aligner le titre à côté de l'icône */
-  margin: 5px; /* Ajoute un espace entre le titre et l'icône */
+  display: inline-block;
+  margin: 5px;
   color: #1e1e1e;
 }
 
@@ -76,10 +76,12 @@ a.title-project:hover {
 }
 
 .github-link {
+  position: absolute;
+  right: 20px;
+  bottom: 35px;
+  cursor: pointer;
+  border-radius: 50px;
   z-index: 100;
-  position: fixed;
-  bottom: 34px;
-  right: 50px;
 }
 
 a#github-ico {
@@ -132,7 +134,6 @@ a#github-ico:hover {
 
 .description-container {
   min-height: auto;
-  /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); */
   border-radius: 10px;
 }
 

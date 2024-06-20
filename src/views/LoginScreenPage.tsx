@@ -69,14 +69,11 @@ const LoginScreen: React.FC = () => {
         <div className="loginScreenInsert">
         <h3 className="login-screen-infos-txt" id="portfolio"> portfolio </h3>
 
-          {/* Affiche l'avatar et le nom complet */}
           <img src="pp/avatar_clear.png" className="pp" alt="Avatar" />
           <h1 className="fullName">Pierre Weber </h1>
           <h2 className="login-screen-infos-txt" id="job"> Développeur Web </h2>
 
-          {/* Champ de saisie pour le mot de passe avec gestion des erreurs et animations */}
           <label htmlFor="password-input" className="password-label">
-            Mot de passe
           </label>
           <input
             id="password-input"
@@ -87,7 +84,6 @@ const LoginScreen: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
             onKeyDown={handleKeyDown}
           />
-          {/* Bouton pour se connecter en tant qu'invité */}
           <button
             className="loginLink"
             onClick={() => {

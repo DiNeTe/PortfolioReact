@@ -20,8 +20,8 @@
   pointer-events: none;
   transition: opacity 0.3s;
   border: 1px solid rgb(0, 0, 0);
-  border-radius: 4px; /* Optionnel : pour arrondir les coins */
-  z-index: 1000; /* Assurez-vous que l'info-bulle est au-dessus d'autres éléments */
+  border-radius: 4px;
+  z-index: 1000;
 }
 
 .icon-link:hover::after {

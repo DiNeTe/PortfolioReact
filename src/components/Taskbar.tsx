@@ -11,7 +11,7 @@ import { Project } from "../data/Interfaces";
 interface TaskbarProps {
   handleClick: (id: string) => void;
   bringToFront: (id: string) => void;
-  handleCloseAll: () => void; // Ajout de handleCloseAll
+  handleCloseAll: () => void;
 }
 
 const Taskbar: React.FC<TaskbarProps> = ({

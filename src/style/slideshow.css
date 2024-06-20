@@ -46,7 +46,7 @@
 
 .prev-btn:hover,
 .next-btn:hover {
-  background: rgba(232, 238, 248, 0.25); /* Fond semi-transparent */
+  background: rgba(232, 238, 248, 0.25);
   backdrop-filter: blur(2.5px);}
 
 .counter {

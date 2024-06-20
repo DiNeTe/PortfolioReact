@@ -1,5 +1,5 @@
 :root {
-  --taskbar-height: 90px; /*  variable CSS / Défini la hauteur de la barre des tâches */
+  --taskbar-height: 90px; /*  Défini la hauteur de la barre des tâches */
 }
 
 #start-menu {
@@ -7,7 +7,7 @@
 }
 
 #taskbar {
-  height: var(--taskbar-height); /* Utilise la variable  */
+  height: var(--taskbar-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,7 +48,7 @@
 #logo-win:hover {
   transform: scale(1.2);
   box-shadow: white 0 0 10px 0;
-  transition: transform 0.3s ease; /* transition pour l'effet de survol */
+  transition: transform 0.3s ease;
 }
 
 .icons-list {
