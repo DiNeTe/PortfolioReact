@@ -10,6 +10,18 @@ import { AppDependenciesContext } from "./app/context.ts";
 
 import App from "./App.tsx";
 
+// Enregistrer le Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(registration => {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, err => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  });
+}
+
 const appDependencies: AppDependencies = {
   projectDataSource: fakeProjectDataSource,
 };
