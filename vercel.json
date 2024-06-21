@@ -7,5 +7,16 @@
     { "src": "/site.webmanifest", "dest": "/site.webmanifest" },
     { "src": "/(.*)", "dest": "/index.html" },
     { "src": "/.*", "status": 404, "dest": "/404.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://trustedscripts.example.com; style-src 'self' https://trustedstyles.example.com; img-src 'self' data:; connect-src 'self'; font-src 'self' https://trustedfonts.example.com; object-src 'none';"
+        }
+      ]
+    }
   ]
 }
