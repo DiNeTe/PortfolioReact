@@ -9,15 +9,29 @@ inject();
 const App: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [showInstallPromotion, setShowInstallPromotion] = useState<boolean>(false);
+  const [animationClass, setAnimationClass] = useState<string>('');
 
   useEffect(() => {
+    if (location.pathname === '/Home') {
+      console.log(location.pathname)
     const handleBeforeInstallPrompt = (e: any) => {
-      // Prevent the mini-infobar from appearing on mobile
       e.preventDefault();
-      // Stash the event so it can be triggered later.
       setDeferredPrompt(e);
-      // Update UI notify the user they can install the PWA
-      setShowInstallPromotion(true);
+
+      // Show the install promotion after 2 seconds
+      setTimeout(() => {
+        setAnimationClass('show');
+        setShowInstallPromotion(true);
+
+        // Hide the install promotion after 5 seconds with fade out effect
+        setTimeout(() => {
+          setAnimationClass('hide');
+          setTimeout(() => {
+            setShowInstallPromotion(false);
+            setAnimationClass(''); // Reset animation class for next time
+          }, 1000); // Match the duration of the CSS transition
+        }, 5000);
+      }, 2000);
     };
 
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
@@ -25,7 +39,8 @@ const App: React.FC = () => {
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     };
-  }, []);
+  }
+  }, [location.pathname]);
 
   const handleInstallClick = () => {
     if (deferredPrompt) {
@@ -48,7 +63,7 @@ const App: React.FC = () => {
         <AppRouter />
         <SpeedInsights />
         {showInstallPromotion && (
-          <div className="install-banner">
+          <div className={`install-banner ${animationClass}`}>
             <p>Installer l'application ?</p>
             <button onClick={handleInstallClick}>Installer</button>
           </div>

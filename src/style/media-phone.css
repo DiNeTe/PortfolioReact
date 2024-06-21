@@ -378,10 +378,10 @@
 
   .install-banner {
     position: fixed;
-    bottom: 10px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #333;
+    background-color: rgb(51, 51, 51, 0.75);
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -389,19 +389,53 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+  
+  .install-banner.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY();
+  }
+  
+  .install-banner.hide {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30px);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
   }
   
   .install-banner p {
     margin: 0;
     margin-right: 10px;
-  }
+  }  
   
   .install-banner button {
-    background-color: #ff6600;
+    background-color: #2f4677;
     color: white;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-  }
+  }  
 }
