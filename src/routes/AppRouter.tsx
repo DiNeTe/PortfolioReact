@@ -25,7 +25,7 @@ const AppRouter: React.FC = () => {
 
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
       <SwitchTransition>
         <CSSTransition
           key={currentKey}
