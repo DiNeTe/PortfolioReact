@@ -1,13 +1,5 @@
 {
   "version": 2,
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
-    { "src": "/robots.txt", "dest": "/robots.txt" },
-    { "src": "/site.webmanifest", "dest": "/site.webmanifest" },
-    { "src": "/(.*)", "dest": "/index.html" },
-    { "src": "/.*", "status": 404, "dest": "/404.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -18,5 +10,14 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/site.webmanifest", "destination": "/site.webmanifest" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "redirects": [
+    { "source": "/(.*)", "destination": "/404.html", "statusCode": 404 }
   ]
 }
