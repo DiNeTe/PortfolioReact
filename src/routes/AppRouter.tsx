@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -23,26 +24,23 @@ const AppRouter: React.FC = () => {
   const currentKey = routeKeys[location.pathname] || 'default';
 
   return (
-    <>
-      {/* <Navigation /> */}
-      <SwitchTransition>
-        <CSSTransition
-          key={currentKey}
-          timeout={300}
-          classNames="fade"
-          nodeRef={nodeRef} // Passez la référence à CSSTransition
-        >
-          <div ref={nodeRef}>
-            <Routes location={location}>
-              <Route path="/" element={<LoginScreen />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/project/:id" element={<Project />} />
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </div>
-        </CSSTransition>
-      </SwitchTransition>
-    </>
+    <SwitchTransition>
+      <CSSTransition
+        key={currentKey}
+        timeout={300}
+        classNames="fade"
+        nodeRef={nodeRef} // Passez la référence à CSSTransition
+      >
+        <div ref={nodeRef}>
+          <Routes location={location}>
+            <Route path="/" element={<LoginScreen />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/project/:id" element={<Project />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </div>
+      </CSSTransition>
+    </SwitchTransition>
   );
 };
 
