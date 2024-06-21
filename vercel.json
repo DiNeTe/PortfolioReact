@@ -5,7 +5,6 @@
     { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
     { "src": "/robots.txt", "dest": "/robots.txt" },
     { "src": "/site.webmanifest", "dest": "/site.webmanifest" },
-    { "src": "/(.*)", "dest": "/index.html" },
-    { "src": "/.*", "status": 404, "dest": "/404.html" }
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
