@@ -55,6 +55,14 @@
     bottom: 7vw;
   }
 
+  .welcomeMessage {
+    top:-60px;
+  }
+
+  .loading {
+    top: 30px;
+  }
+
   /* HomePage */
   #wallpaper {
     object-fit: cover;
