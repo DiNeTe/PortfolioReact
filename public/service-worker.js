@@ -3,11 +3,17 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
       caches.open('static-v1').then((cache) => {
         return cache.addAll([
-          './',
-          './index.html',
-          './manifest.json',
-          './public/pp/avatar192.png',
-          './public/pp/avatar512.png'
+        './',
+        './index.html',
+        './manifest.json',
+        './robots.txt',
+        './favicon.ico',
+        './android-chrome-192x192.png',
+        './android-chrome-512x512.png',
+        './apple-touch-icon.png',
+        './site.webmanifest',
+        './public/pp/avatar192.png',
+        './public/pp/avatar512.png'
         ]);
       })
     );
