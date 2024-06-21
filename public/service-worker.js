@@ -3,9 +3,8 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
       caches.open('static-v1').then((cache) => {
         return cache.addAll([
-        './',
+          './',
         './index.html',
-        './manifest.json',
         './robots.txt',
         './favicon.ico',
         './android-chrome-192x192.png',
