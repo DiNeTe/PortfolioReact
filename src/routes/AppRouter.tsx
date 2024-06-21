@@ -7,7 +7,6 @@ import Home from '../views/HomePage';
 import Project from '../views/ProjectPage'; 
 import LoginScreen from '../views/LoginScreenPage';
 import NotFoundPage from '../views/NotFoundPage';
-import Navigation from '../components/Navigation';
 
 const AppRouter: React.FC = () => {
   const location = useLocation();
