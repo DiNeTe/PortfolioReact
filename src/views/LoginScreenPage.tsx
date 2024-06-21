@@ -59,7 +59,7 @@ const LoginScreen: React.FC = () => {
         />
         <meta name="robots" content="index, follow" />
         <meta name="google-site-verification" content="L4-WZBe0WEtXQ-6xrW9GBuu9EAAVLV2vi58r9Otx90w" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
         <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
