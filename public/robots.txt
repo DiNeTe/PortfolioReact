@@ -1,4 +1,4 @@
 User-agent: *
 allow: /
 
-Sitemap: https://web-pierre-portfolio.vercel.app/sitemap.xml
+Sitemap: https://web-dev-pierre/sitemap.xml
