@@ -146,7 +146,7 @@
   .typewriter-about {
     width: 100%;
     height: 100%;
-    margin: 20px;
+    margin: 0;
   }
 
   .typewriter-about::before {
@@ -239,6 +239,10 @@
     flex-direction: column;
     margin: 100px 0 100px;
     gap: 0;
+  }
+
+  .project-body .description-container {
+    margin-bottom: 100px;
   }
 
   .slideshow-container {
