@@ -38,11 +38,13 @@
 }
 
 .skill-content.visible .skill-header {
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(05px);
 }
 
 .skill-header-blur-off {
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  transition: backdrop-filter 5s ease-out;
+
 }
 
 .skill-logo {
@@ -141,7 +143,8 @@
 
 span.tag.skill-tag {
   background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  transition: backdrop-filter 5s ease-in;
 }
 
 .animated-text {
