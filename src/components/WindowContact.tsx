@@ -9,7 +9,7 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     const subject = `Message de ${name}`;
     const body = `Nom de l'expéditeur: ${name}\nEmail de contact: ${email}\n\nMessage:\n${message}`;
-    const mailto = `mailto:wbrp51@gmail.com?subject=${encodeURIComponent(
+    const mailto = `mailto:web.dev.pierre@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
 

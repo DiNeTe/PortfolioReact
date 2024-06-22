@@ -5,12 +5,12 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <url>
-    <loc>https://web-dev-pierre.fr/</loc>
-    <lastmod>2024-06-17T09:45:29+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+ <url>
+  <loc>https://www.web-dev-pierre.fr/</loc>
+  <lastmod>2024-06-17T09:45:29+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>1.0</priority>
+</url>
 
   <url>
     <loc>https://web-dev-pierre.fr/home</loc>

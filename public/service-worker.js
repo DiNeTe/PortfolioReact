@@ -8,11 +8,9 @@ self.addEventListener('install', (event) => {
         './robots.txt',
         './favicon.ico',
         './android-chrome-192x192.png',
-        './android-chrome-512x512.png',
+        './android-chrome-256x256.png',
         './apple-touch-icon.png',
         './site.webmanifest',
-        './public/pp/avatar192.png',
-        './public/pp/avatar512.png'
       ]);
     })
   );
