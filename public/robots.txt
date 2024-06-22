@@ -1,4 +1,4 @@
 User-agent: *
 allow: /
 
-Sitemap: https://web-dev-pierre.fr/sitemap.xml
+Sitemap: https://www.web-dev-pierre.fr/sitemap.xml
