@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import AppRouter from "./routes/AppRouter";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { inject } from '@vercel/analytics';
@@ -11,11 +11,7 @@ const App: React.FC = () => {
   const [showInstallPromotion, setShowInstallPromotion] = useState<boolean>(false);
   const [animationClass, setAnimationClass] = useState<string>('');
 
-  useEffect(() => {
-    // Vérifie si le chemin est '/Home'
-    if (location.pathname === '/Home') {
-      console.log(location.pathname);
-      
+  useEffect(() => {      
       // Gestionnaire pour l'événement 'beforeinstallprompt'
       const handleBeforeInstallPrompt = (e: any) => {
         e.preventDefault();
@@ -43,7 +39,7 @@ const App: React.FC = () => {
       return () => {
         window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
       };
-    }
+    
   }, [location.pathname]);
 
   // Fonction pour gérer le clic sur le bouton d'installation

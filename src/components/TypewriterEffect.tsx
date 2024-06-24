@@ -1,4 +1,3 @@
-import React from "react";
 import useTypewriter from "../hooks/useTypewriter";
 
 type TypewriterEffectProps = {

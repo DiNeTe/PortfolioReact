@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Rnd } from 'react-rnd';
 import { useWindowLifecycle } from '../hooks/useWindowLifecycle';
 import WindowControls from './WindowControls';

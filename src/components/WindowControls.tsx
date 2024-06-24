@@ -1,5 +1,3 @@
-import React from "react";
-
 interface WindowControlsProps {
   isFullscreen: boolean;
   toggleFullscreen: () => void;
