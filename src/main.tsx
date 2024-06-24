@@ -1,11 +1,13 @@
 import "./main.css";
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
+// Importation des dépendances de l'application
 import { AppDependencies } from "./app/dependencies.ts";
+ // Source de données des projets et skills
 import fakeProjectDataSource from "./data/fakeProjectDataSource.tsx";
+// Contexte des dépendances de l'application
 import { AppDependenciesContext } from "./app/context.ts";
 
 import App from "./App.tsx";
@@ -22,10 +24,12 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+// Initialisation des dépendances de l'application
 const appDependencies: AppDependencies = {
   projectDataSource: fakeProjectDataSource,
 };
 
+// Rendu de l'application React
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <AppDependenciesContext.Provider value={appDependencies}>

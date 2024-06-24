@@ -1,73 +1,90 @@
 [
   {
-      "id": "1",
-      "title": "Nina Carducci - Photographe",
-      "cover": "/images/projets/Nina/Nina_Carducci_Photographe.webp",
-      "pictures": [
-          "/images/projets/Nina/Nina_Carducci_gallerie.webp",
-          "/images/projets/Nina/Nina_Carducci_Photographe.webp"
-      ],
-      "tags": ["HTML", "CSS", "TypeScript", "SEO", "Performance"],
-      "description": "Optimisation SEO et performances du site de Nina Carducci, photographe. Audit des performances du site, optimisation des images, amélioration du code et de la structure HTML/CSS/JavaScript pour un meilleur chargement et accessibilité, et mise en place des bonnes pratiques SEO.",
-      "link": "https://dinete.github.io/nina-carducci/",
-      "linkGH": "https://github.com/DiNeTe/nina-carducci/tree/nina-carducci_prod"
+    "id": "1",
+    "title": "Nina Carducci - Photographe",
+    "cover": "/images/projets/Nina/Nina_Carducci_Photographe.webp",
+    "pictures": [
+      "/images/projets/Nina/Nina_Carducci_gallerie.webp",
+      "/images/projets/Nina/Nina_Carducci_gallerie_2.webp",
+      "/images/projets/Nina/Nina_Carducci_gallerie_3.webp",
+      "/images/projets/Nina/Nina_Carducci_Photographe.webp"
+    ],
+    "tags": ["HTML", "CSS", "jQuery", "SEO", "Performance"],
+    "description": "Lors de la refonte du site de Nina Carducci, photographe, j'ai rencontré plusieurs problématiques liées à l'optimisation des performances et au SEO. Le site était initialement développé en jQuery et présentait deux bugs mineurs : la persistance de l'effet de sélection des filtres de la galerie et la navigation d'une photo à l'autre. J'ai corrigé ces bugs en modifiant le code jQuery existant et le CSS concerné. De plus, j'ai opté pour un format d'image moderne WebP afin d'optimiser les performances et réduit la taille totale des images de 95.44%. J'ai ajouté des balises de métadonnées OpenGraph et des données structurées avec schema.org pour améliorer le référencement et la visibilité sur les réseaux sociaux. L'utilisation des balises preload et defer a considérablement amélioré le score de performance de l'audit Lighthouse. Ces optimisations ont permis de réduire les temps de chargement et d'améliorer l'expérience utilisateur ainsi que la visibilité en ligne.",
+    "link": "https://dinete.github.io/nina-carducci/",
+    "linkGH": "https://github.com/DiNeTe/nina-carducci/tree/nina-carducci_prod"
   },
   {
-      "id": "2",
-      "title": "Kasa",
-      "cover": "/images/projets/Kasa/kasa1.webp",
-      "pictures": [
-          "/images/projets/Kasa/kasa1.webp",
-          "/images/projets/Kasa/kasa2.webp",
-          "/images/projets/Kasa/kasa3.webp"
-      ],
-      "tags": ["React", "TypeScript", "CSS", "Sass", "DIP", "DI"],
-      "description": "Refonte complète du site Kasa, leader de la location d'appartements entre particuliers, en utilisant React pour le front-end et Node.js pour le back-end. Développement des composants React, mise en place de React Router, intégration des maquettes Figma, utilisation de Sass pour les styles, et implémentation de l'inversion et de l'injection de dépendances pour une architecture modulaire.",
-      "link": "https://kasa-location-immobiliere-iota.vercel.app/",
-      "linkGH": "https://github.com/DiNeTe/Kasa-location_immobiliere/tree/inversion-des-dependances"
+    "id": "2",
+    "title": "Kasa",
+    "cover": "/images/projets/Kasa/kasa1.webp",
+    "pictures": [
+      "/images/projets/Kasa/kasa1.webp",
+      "/images/projets/Kasa/kasa2.webp",
+      "/images/projets/Kasa/kasa3.webp"
+    ],
+    "tags": ["React", "TypeScript", "CSS", "Sass", "DIP", "DI"],
+    "description": "Pour la refonte du site Kasa, spécialisé dans la location d'appartements entre particuliers, j'ai dû relever des défis importants en matière de modularité et de gestion des dépendances. En utilisant React pour le front-end, j'ai développé des composants réutilisables et mis en place React Router pour une navigation fluide. J'ai également intégré les maquettes Figma en utilisant Sass pour les styles. Un des principaux défis était d'implémenter l'inversion et l'injection de dépendances pour assurer une architecture modulaire et maintenable. Ces solutions ont permis de créer un site web robuste et évolutif.",
+    "link": "https://kasa-location-immobiliere-iota.vercel.app/",
+    "linkGH": "https://github.com/DiNeTe/Kasa-location_immobiliere/tree/inversion-des-dependances"
   },
   {
-      "id": "3",
-      "title": "Mon Vieux Grimoire",
-      "cover": "/images/projets/MVG/MVG1.webp",
-      "pictures": [
-          "/images/projets/MVG/MVG1.webp",
-          "/images/projets/MVG/MVG2.webp",
-          "/images/projets/MVG/MVG3.webp"
-      ],
-      "tags": ["Node.js", "Express", "MongoDB", "REST API", "JWT", "Multer"],
-      "description": "Développement du back-end pour le site de notation de livres 'Mon Vieux Grimoire' utilisant Node.js, Express et MongoDB. Création d'une API RESTful, implémentation de l'authentification des utilisateurs avec JWT, gestion et optimisation des images téléchargées par les utilisateurs avec Multer, et intégration de la fonctionnalité de notation et de calcul de la moyenne des livres.",
-      "link": "https://mon-vieux-grimoire-5tbb.vercel.app/",
-      "linkGH": "https://github.com/DiNeTe/Mon_Vieux_Grimoire"
+    "id": "3",
+    "title": "Mon Vieux Grimoire",
+    "cover": "/images/projets/MVG/MVG1.webp",
+    "pictures": [
+      "/images/projets/MVG/MVG1.webp",
+      "/images/projets/MVG/MVG2.webp",
+      "/images/projets/MVG/MVG3.webp"
+    ],
+    "tags": ["Node.js", "Express", "MongoDB", "REST API", "JWT", "Multer"],
+    "description": "Pour le projet 'Mon Vieux Grimoire', j'ai été confronté à des défis de sécurité et de gestion de fichiers. Le développement du back-end avec Node.js, Express et MongoDB impliquait la création d'une API RESTful sécurisée. L'implémentation de l'authentification avec JWT a permis de protéger les données des utilisateurs. La gestion des images téléchargées a été optimisée avec Multer, et la fonctionnalité de notation des livres a été intégrée, permettant de calculer la moyenne des notes. Ces solutions ont renforcé la sécurité et amélioré l'expérience utilisateur du site.",
+    "link": "https://mon-vieux-grimoire-5tbb.vercel.app/",
+    "linkGH": "https://github.com/DiNeTe/Mon_Vieux_Grimoire"
   },
   {
-      "id": "4",
-      "title": "Booki",
-      "cover": "/images/projets/Booki/booki1.webp",
-      "pictures": [
-          "/images/projets/Booki/booki1.webp",
-          "/images/projets/Booki/booki2.webp",
-          "/images/projets/Booki/booki3.webp"
-      ],
-      "tags": ["HTML", "CSS", "Responsive Design"],
-      "description": "Intégration de l'interface utilisateur du site Booki en utilisant HTML et CSS. Collaboration étroite avec l'UI designer pour respecter les maquettes fournies et création d'un site responsive.",
-      "link": "https://oc-projet1-booki-ui6d.vercel.app/",
-      "linkGH": "https://github.com/DiNeTe/OC_projet1_BOOKI"
+    "id": "4",
+    "title": "Booki",
+    "cover": "/images/projets/Booki/booki1.webp",
+    "pictures": [
+      "/images/projets/Booki/booki1.webp",
+      "/images/projets/Booki/booki2.webp",
+      "/images/projets/Booki/booki3.webp"
+    ],
+    "tags": ["HTML", "CSS", "Responsive Design"],
+    "description": "Lors de l'intégration de l'interface utilisateur du site Booki, j'ai rencontré des défis en matière de responsive design. En utilisant uniquement HTML et CSS, j'ai dû m'assurer que le site était accessible et utilisable sur différents appareils et résolutions. J'ai suivi les maquettes fournies avec précision pour garantir une cohérence visuelle et fonctionnelle. Ce projet m'a permis de renforcer mes compétences en design responsive et en intégration fidèle des maquettes.",
+    "link": "https://oc-projet1-booki-ui6d.vercel.app/",
+    "linkGH": "https://github.com/DiNeTe/OC_projet1_BOOKI"
   },
   {
-      "id": "5",
-      "title": "Portfolio Sophie Bluel",
-      "cover": "/images/projets/SophieBluel/sophiebluel1.webp",
-      "pictures": [
-          "/images/projets/SophieBluel/sophiebluel1.webp",
-          "/images/projets/SophieBluel/sophiebluel2.webp",
-          "/images/projets/SophieBluel/sophiebluel3.webp",
-          "/images/projets/SophieBluel/sophiebluel4.webp",
-          "/images/projets/SophieBluel/sophiebluel5.webp"
-      ],
-      "tags": ["TypeScript", "HTML", "CSS", "API", "Node.js"],
-      "description": "Développement de fonctionnalités dynamiques pour le portfolio de Sophie Bluel, architecte d'intérieur. Implémentation d'une galerie de projets, d'une page de connexion pour l'administrateur, et d'une modale pour l'ajout de nouveaux projets.",
-      "link": "https://oc-projet2-portfolio-architecte-sophie-bluel.vercel.app/",
-      "linkGH": "https://github.com/DiNeTe/OC_projet2_Portfolio-architecte-sophie-bluel"
-  }
+    "id": "5",
+    "title": "Portfolio Sophie Bluel",
+    "cover": "/images/projets/SophieBluel/sophiebluel1.webp",
+    "pictures": [
+      "/images/projets/SophieBluel/sophiebluel1.webp",
+      "/images/projets/SophieBluel/sophiebluel2.webp",
+      "/images/projets/SophieBluel/sophiebluel3.webp",
+      "/images/projets/SophieBluel/sophiebluel4.webp",
+      "/images/projets/SophieBluel/sophiebluel5.webp"
+    ],
+    "tags": ["TypeScript", "HTML", "CSS", "API", "Node.js"],
+    "description": "Dans le cadre du développement du portfolio de Sophie Bluel, architecte d'intérieur, j'ai rencontré des défis liés à l'interactivité et à la gestion des utilisateurs. J'ai implémenté une galerie dynamique de projets et une page de connexion sécurisée pour l'administrateur. La création d'une modale pour l'ajout de nouveaux projets a nécessité une gestion rigoureuse des états et des validations. Ces fonctionnalités ont rendu le portfolio interactif et facile à administrer, améliorant ainsi l'expérience utilisateur et la gestion des contenus.",
+    "link": "https://oc-projet2-portfolio-architecte-sophie-bluel.vercel.app/",
+    "linkGH": "https://github.com/DiNeTe/OC_projet2_Portfolio-architecte-sophie-bluel"
+  },
+  {
+    "id": "6",
+    "title": "Menu Maker by Qwenta",
+    "cover": "/mnt/data/public_images/image_0.png",
+    "pictures": [
+      "/images/projets/menuMaker/menuMaker1.webp",
+      "/images/projets/menuMaker/menuMaker2.webp",
+      "/images/projets/menuMaker/menuMaker3.webp",
+    ],
+    "tags": ["Trello", "Veille Technologique", "Spécifications Fonctionnelles", "Planification de Projet"],
+    "description": "Menu Maker by Qwenta est un projet de développement d'une application web destinée à simplifier la création et la gestion de menus en ligne pour les restaurateurs. En tant que membre de l'équipe de Webgencia, j'étais responsable de la préparation et de la planification du projet. J'ai effectué une veille technologique approfondie pour identifier les meilleures pratiques et technologies adaptées. J'ai rédigé les spécifications fonctionnelles détaillées, planifié les différentes étapes du projet et utilisé Trello avec un tableau Kanban pour organiser et suivre les tâches. J'ai également créé plusieurs présentations pour les différentes étapes du projet afin de communiquer efficacement avec les parties prenantes et l'équipe de développement. Mon rôle chez Webgencia était crucial pour assurer une préparation optimale et une planification rigoureuse du projet.",
+    "linkGH": "https://github.com/DiNeTe/OC_projet7_Menu_Maker_by_Qwenta"
+
+}
+    
 ]

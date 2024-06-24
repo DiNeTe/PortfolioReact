@@ -9,7 +9,6 @@ import { useHapticFeedback } from "../hooks/useHapticFeedback";
 import Tag from "../components/Tag";
 import SlideShow from "../components/SlideShow";
 import Icon from "../components/Icons";
-
 import TypewriterEffect from "../components/TypewriterEffect";
 
 const ProjectPage: React.FC = () => {
@@ -47,7 +46,7 @@ const ProjectPage: React.FC = () => {
     return <div>Loading...</div>;
   }
 
-  // Redirige vers une page "not found" si le projet n'est pas trouvé
+  // Redirige vers la page "not found" si le projet n'est pas trouvé
   if (!project) {
     return <Navigate to="/not-found" replace />;
   }
@@ -62,14 +61,14 @@ const ProjectPage: React.FC = () => {
   const prevProject = allProjects[prevProjectIndex];
   const nextProject = allProjects[nextProjectIndex];
 
-
-  
   return (
     <div className="project-page">
       <div className="project-header">
+        {/* Lien de retour à l'accueil */}
         <NavLink to="/home" className="back-arrow">
           ← Retour à l'accueil
         </NavLink>
+        {/* Lien vers le projet */}
         <a
           href={project.link}
           target="_blank"
@@ -83,6 +82,7 @@ const ProjectPage: React.FC = () => {
             alt="Lien vers le projet"
           />
         </a>
+        {/* Lien vers le code source sur GitHub */}
         <div className="github-link">
           <Icon
             dataTitle="code source"
@@ -94,6 +94,7 @@ const ProjectPage: React.FC = () => {
             }}
           />
         </div>
+        {/* Affichage des tags du projet */}
         <div id="tag-container">
           {project.tags.map((tag, index) => (
             <Tag key={index}>{tag}</Tag>
@@ -101,6 +102,7 @@ const ProjectPage: React.FC = () => {
         </div>
       </div>
       <div className="project-body">
+        {/* Diaporama des images du projet */}
         <SlideShow images={project.pictures} />
         {/* Description du projet avec effet machine à écrire */}
         <div className="description-container">
@@ -125,17 +127,17 @@ const ProjectPage: React.FC = () => {
             )}
           </div>
 
-        <NavLink
-          to="/home"
-          id="home-button-project-page"
-          onClick={handleHapticFeedback}
-        >
-          <img
-            src="/icons/homeButton.png"
-            id="home-button-project-page-img"
-            alt="Retour à l'accueil"
-          />
-        </NavLink>
+          <NavLink
+            to="/home"
+            id="home-button-project-page"
+            onClick={handleHapticFeedback}
+          >
+            <img
+              src="/icons/homeButton.png"
+              id="home-button-project-page-img"
+              alt="Retour à l'accueil"
+            />
+          </NavLink>
 
           <div className="next-project-container">
             {nextProject && (
@@ -150,7 +152,7 @@ const ProjectPage: React.FC = () => {
           </div>
         </div>
       </div>
-          </div>
+    </div>
   );
 };
 

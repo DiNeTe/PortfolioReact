@@ -8,12 +8,14 @@ import CurrentTime from "./CurrentTime";
 import { useAppDependencies } from "../app/context";
 import { Project } from "../data/Interfaces";
 
+// Interface pour les props de la barre des tâches
 interface TaskbarProps {
   handleClick: (id: string) => void;
   bringToFront: (id: string) => void;
   handleCloseAll: () => void;
 }
 
+// Composant de la barre des tâches
 const Taskbar: React.FC<TaskbarProps> = ({
   handleClick,
   bringToFront,
@@ -24,12 +26,14 @@ const Taskbar: React.FC<TaskbarProps> = ({
 
   // Hook de navigation
   const navigate = useNavigate();
-  // Fonction pour gérer le clic sur une photo de couverture
-  const CoverClick = (id: string) => {
-    // navigue vers la page de détail des projets
+
+  // Fonction pour gérer le clic sur un projet dans le menu demarrer
+  const projectClick = (id: string) => {
+    // Navigue vers la page de détail des projets
     navigate(`/project/${id}`);
   };
 
+  // Effet pour récupérer les projets au montage du composant
   useEffect(() => {
     async function initPage() {
       const projects = await projectDataSource.fetchMany();
@@ -38,15 +42,19 @@ const Taskbar: React.FC<TaskbarProps> = ({
     initPage();
   }, [projectDataSource]);
 
+  // Utilisation du hook pour le retour haptique
   const { handleHapticFeedback } = useHapticFeedback();
 
   return (
     <section id="taskbar">
       <div className="taskbar-left">
+        {/* Logo Windows */}
         <img src="/icons/logoW11.png" id="logo-win" alt="Windows Logo" />
         <div id="start-menu">
           <div id="start-menu-lateral-bar">
+            {/* Avatar utilisateur */}
             <img src="/pp/avatar_clear.png" id="avatar" alt="Avatar" />
+            {/* Bouton pour éteindre */}
             <NavLink to="/">
               <img src="/icons/shutdown.png" id="shutdown" alt="Shutdown" />
             </NavLink>
@@ -54,7 +62,7 @@ const Taskbar: React.FC<TaskbarProps> = ({
           <div id="start-menu-content">
             <ul>
               {projects.map((project, index) => (
-                <li key={index} onClick={() => CoverClick(project.id)}>
+                <li key={index} onClick={() => projectClick(project.id)}>
                   {project.title}
                 </li>
               ))}
@@ -65,6 +73,7 @@ const Taskbar: React.FC<TaskbarProps> = ({
       <div className="taskbar-center">
         <nav id="nav">
           <ul id="nav-list">
+            {/* Icônes de navigation */}
             <Icon
               dataTitle="A propos de moi"
               imgSrc="/icons/about-icon.png"
@@ -94,7 +103,7 @@ const Taskbar: React.FC<TaskbarProps> = ({
               id="home-button"
               onClick={() => {
                 handleHapticFeedback();
-                handleCloseAll(); // Appel direct à handleCloseAll
+                handleCloseAll();
               }}
             />
             <Icon
@@ -123,10 +132,12 @@ const Taskbar: React.FC<TaskbarProps> = ({
         </nav>
       </div>
       <div className="taskbar-right">
+        {/* Affichage du prix du Bitcoin */}
         <BitcoinPrice />
         <div id="volume-control">
           <img src="/icons/volume.png" alt="Volume" id="volume-icon" />
         </div>
+        {/* Affichage de l'heure actuelle */}
         <CurrentTime />
       </div>
     </section>

@@ -14,8 +14,12 @@ import PortfolioContent from "../components/WindowPortfolio";
 import SkillsContent from "../components/WindowSkills";
 import ContactForm from "../components/WindowContact";
 
+// Composant principal de la page d'accueil
 const Home: React.FC = () => {
+  // Initialisation de l'état des fenêtres
   const initialState = useInitialState();
+
+  // Récupération des actions de gestion des fenêtres
   const {
     windowsState,
     bringToFront,
@@ -27,6 +31,7 @@ const Home: React.FC = () => {
     handleCloseAll,
   } = useWindowActions(initialState);
 
+  // Gestion du clic sur une fenêtre
   const handleWindowClick = (windowId: WindowId) => {
     if (window.innerWidth <= 500) {
       // Ferme toutes les autres fenêtres en mode mobile
@@ -39,22 +44,27 @@ const Home: React.FC = () => {
     bringToFront(windowId);
   };
 
+  // Gestion du clic sur l'icône PDF pour ouvrir le CV
   const handlePdfClick = () => {
     window.open("/cv.pdf", "_blank");
   };
 
+  // Référence pour l'élément draggable
   const draggableRef = useRef(null);
 
   return (
     <section id="desktop">
+      {/* Menu démarrer */}
       <StartMenu />
 
+      {/* Barre des tâches */}
       <Taskbar
         handleClick={handleTaskbarClick}
         bringToFront={bringToFront}
         handleCloseAll={handleCloseAll}
       />
 
+      {/* Icône PDF pour télécharger le CV */}
       <Draggable nodeRef={draggableRef}>
         <div
           ref={draggableRef}
@@ -69,8 +79,10 @@ const Home: React.FC = () => {
         </div>
       </Draggable>
 
+      {/* Affichage de l'heure  */}
       <CurrentTime className="desktop" />
 
+      {/* Affichage des fenêtres */}
       {Object.keys(windowsState).map(
         (windowId) =>
           windowsState[windowId as WindowId].open && (

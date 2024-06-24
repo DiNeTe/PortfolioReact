@@ -12,7 +12,7 @@ import NotFoundPage from '../views/NotFoundPage';
 const AppRouter: React.FC = () => {
   const location = useLocation();
   const [routeKeys, setRouteKeys] = useState<{ [key: string]: string }>({});
-  const nodeRef = useRef(null); // Créez une référence pour le nœud DOM
+  const nodeRef = useRef(null); // Crée une réf pour le nœud DOM
 
   useEffect(() => {
     setRouteKeys((prevKeys) => ({
@@ -29,7 +29,7 @@ const AppRouter: React.FC = () => {
         key={currentKey}
         timeout={300}
         classNames="fade"
-        nodeRef={nodeRef} // Passez la référence à CSSTransition
+        nodeRef={nodeRef} // Passe la réf à CSSTransition
       >
         <div ref={nodeRef}>
           <Routes location={location}>

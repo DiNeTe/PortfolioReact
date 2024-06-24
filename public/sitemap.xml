@@ -54,11 +54,11 @@
     <priority>0.8</priority>
   </url>
 
-   <!-- <url>
+   <url>
     <loc>https://www.web-dev-pierre.fr/project/6</loc>
     <lastmod>2024-06-17T09:45:29+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url> -->
+  </url>
 
 </urlset>

@@ -3,7 +3,7 @@ import AppRouter from "./routes/AppRouter";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { inject } from '@vercel/analytics';
 
-// Inject the Vercel Analytics script
+// Injecte le script Vercel Analytics
 inject();
 
 const App: React.FC = () => {
@@ -12,44 +12,47 @@ const App: React.FC = () => {
   const [animationClass, setAnimationClass] = useState<string>('');
 
   useEffect(() => {
+    // Vérifie si le chemin est '/Home'
     if (location.pathname === '/Home') {
-      console.log(location.pathname)
-    const handleBeforeInstallPrompt = (e: any) => {
-      e.preventDefault();
-      setDeferredPrompt(e);
+      console.log(location.pathname);
+      
+      // Gestionnaire pour l'événement 'beforeinstallprompt'
+      const handleBeforeInstallPrompt = (e: any) => {
+        e.preventDefault();
+        setDeferredPrompt(e);
 
-      // Show the install promotion after 2 seconds
-      setTimeout(() => {
-        setAnimationClass('show');
-        setShowInstallPromotion(true);
-
-        // Hide the install promotion after 5 seconds with fade out effect
+        // Affiche la demande d'installation après 2 secondes
         setTimeout(() => {
-          setAnimationClass('hide');
+          setAnimationClass('show');
+          setShowInstallPromotion(true);
+
+          // Cache la demande d'installation après 5 secondes avec un effet de fondu
           setTimeout(() => {
-            setShowInstallPromotion(false);
-            setAnimationClass(''); // Reset animation class for next time
-          }, 1000); // Match the duration of the CSS transition
-        }, 5000);
-      }, 2000);
-    };
+            setAnimationClass('hide');
+            setTimeout(() => {
+              setShowInstallPromotion(false);
+              setAnimationClass(''); // Réinitialise la classe d'animation
+            }, 1000); // Durée de la transition CSS
+          }, 5000);
+        }, 2000);
+      };
 
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
 
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    };
-  }
+      // Nettoyage de l'écouteur d'événement lors du démontage du composant
+      return () => {
+        window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      };
+    }
   }, [location.pathname]);
 
+  // Fonction pour gérer le clic sur le bouton d'installation
   const handleInstallClick = () => {
     if (deferredPrompt) {
       deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult: any) => {
         if (choiceResult.outcome === 'accepted') {
-          console.log('User accepted the install prompt');
         } else {
-          console.log('User dismissed the install prompt');
         }
         setDeferredPrompt(null);
         setShowInstallPromotion(false);

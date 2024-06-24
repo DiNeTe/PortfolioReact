@@ -11,15 +11,19 @@ type WindowDetails = {
   zIndex: number;
 };
 
-// Définition du type pour l'état des fenêtres, chaque fenêtre étant identifiée par un string
+// Définition du type pour l'état des fenêtres, chaque fenêtre étant identifiée par une chaîne de caractères
 type WindowState = {
   [key: string]: WindowDetails;
 };
 
+// Hook personnalisé pour gérer l'état des fenêtres
 const useWindowState = (initialState: WindowState) => {
+  // État pour stocker l'état des fenêtres
   const [windowsState, setWindowsState] = useState<WindowState>(initialState);
+  // État pour suivre le zIndex maximum, utilisé pour amener une fenêtre au premier plan
   const [maxZIndex, setMaxZIndex] = useState(Object.keys(initialState).length);
 
+  // Fonction pour amener une fenêtre au premier plan
   const bringToFront = (id: string) => {
     setWindowsState((prevState) => {
       const newMaxZIndex = maxZIndex + 1;
@@ -62,7 +66,7 @@ const useWindowState = (initialState: WindowState) => {
   // Fonction pour mettre à jour la taille d'une fenêtre
   const updateSize = (id: string, width: number, height: number) => {
     setWindowsState((prevState) => ({
-      ...prevState, // Conserver l'état précédent
+      ...prevState, // Conserve l'état précédent
       [id]: {
         ...prevState[id], // Conserve les propriétés de la fenêtre ciblée
         width, // MAJ largeur
@@ -82,13 +86,13 @@ const useWindowState = (initialState: WindowState) => {
     }));
   };
 
+  // Fonction pour réinitialiser l'état d'une fenêtre avec de nouvelles propriétés
   const resetWindowState = (id: string, newState: Partial<WindowDetails>) => {
     setWindowsState(prevState => ({
       ...prevState,
       [id]: {
         ...initialState[id], // Réinitialise les propriétés de la fenêtre ciblée
         ...newState, // Applique les nouvelles propriétés
-
       }
     }));
   };

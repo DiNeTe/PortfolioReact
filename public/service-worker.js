@@ -11,6 +11,7 @@ self.addEventListener('install', (event) => {
         './android-chrome-256x256.png',
         './apple-touch-icon.png',
         './site.webmanifest',
+        './sitemap.xml'
       ]);
     })
   );
