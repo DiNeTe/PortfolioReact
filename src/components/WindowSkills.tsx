@@ -33,7 +33,7 @@ const SkillsContent: React.FC = () => {
         const contentTop = content.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
 
-        if (contentTop < windowHeight * 0.6 && contentTop > -10) {
+        if (contentTop < windowHeight * 0.5 && contentTop > -170) {
           content.classList.add("visible");
         } else {
           content.classList.remove("visible");

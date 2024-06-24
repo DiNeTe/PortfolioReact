@@ -9,7 +9,7 @@ type TypewriterEffectProps = {
 
 const TypewriterEffect: React.FC<TypewriterEffectProps> = ({
   text,
-  speed = 30,
+  speed = 15,
   className = "",
 }) => {
   const displayText = useTypewriter(text, speed);

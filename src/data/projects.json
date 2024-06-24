@@ -10,7 +10,7 @@
       "/images/projets/Nina/Nina_Carducci_Photographe.webp"
     ],
     "tags": ["HTML", "CSS", "jQuery", "SEO", "Performance"],
-    "description": "Lors de la refonte du site de Nina Carducci, photographe, j'ai rencontré plusieurs problématiques liées à l'optimisation des performances et au SEO. Le site était initialement développé en jQuery et présentait deux bugs mineurs : la persistance de l'effet de sélection des filtres de la galerie et la navigation d'une photo à l'autre. J'ai corrigé ces bugs en modifiant le code jQuery existant et le CSS concerné. De plus, j'ai opté pour un format d'image moderne WebP afin d'optimiser les performances et réduit la taille totale des images de 95.44%. J'ai ajouté des balises de métadonnées OpenGraph et des données structurées avec schema.org pour améliorer le référencement et la visibilité sur les réseaux sociaux. L'utilisation des balises preload et defer a considérablement amélioré le score de performance de l'audit Lighthouse. Ces optimisations ont permis de réduire les temps de chargement et d'améliorer l'expérience utilisateur ainsi que la visibilité en ligne.",
+    "description": "Lors de la refonte du site de Nina Carducci, photographe, j'ai rencontré plusieurs problématiques liées à l'optimisation des performances et au SEO. Le site était développé en jQuery et présentait quelques bug que j'ai corrigé. De plus, j'ai opté pour un format d'image moderne WebP afin d'optimiser les performances et réduit la taille totale des images de 95.44%. J'ai ajouté des balises de métadonnées OpenGraph et des données structurées avec schema.org pour améliorer le référencement et la visibilité sur les réseaux sociaux. L'utilisation des balises preload et defer a considérablement amélioré le score de performance de l'audit Lighthouse. Ces optimisations ont permis de réduire les temps de chargement et d'améliorer l'expérience utilisateur ainsi que la visibilité en ligne.",
     "link": "https://dinete.github.io/nina-carducci/",
     "linkGH": "https://github.com/DiNeTe/nina-carducci/tree/nina-carducci_prod"
   },
@@ -75,14 +75,14 @@
   {
     "id": "6",
     "title": "Menu Maker by Qwenta",
-    "cover": "/mnt/data/public_images/image_0.png",
+    "cover": "/images/projets/menuMaker/menuMaker1.webp",
     "pictures": [
       "/images/projets/menuMaker/menuMaker1.webp",
       "/images/projets/menuMaker/menuMaker2.webp",
       "/images/projets/menuMaker/menuMaker3.webp"
     ],
-    "tags": ["Trello", "Veille Technologique", "Spécifications Fonctionnelles", "Planification de Projet"],
-    "description": "Menu Maker by Qwenta est un projet de développement d'une application web destinée à simplifier la création et la gestion de menus en ligne pour les restaurateurs. En tant que membre de l'équipe de Webgencia, j'étais responsable de la préparation et de la planification du projet. J'ai effectué une veille technologique approfondie pour identifier les meilleures pratiques et technologies adaptées. J'ai rédigé les spécifications fonctionnelles détaillées, planifié les différentes étapes du projet et utilisé Trello avec un tableau Kanban pour organiser et suivre les tâches. J'ai également créé plusieurs présentations pour les différentes étapes du projet afin de communiquer efficacement avec les parties prenantes et l'équipe de développement. Mon rôle chez Webgencia était crucial pour assurer une préparation optimale et une planification rigoureuse du projet.",
+    "tags": ["Trello", "wakelet", "Kanban", "veille"],
+    "description": "Menu Maker by Qwenta est un projet de planification dans le cadre du développement d'une application web. En tant que membre de l'équipe de Webgencia, j'étais chargé de la préparation et de la planification du projet. J'ai effectué une veille technologique approfondie pour identifier les meilleures pratiques et technologies adaptées. J'ai rédigé les spécifications fonctionnelles détaillées, planifié les différentes étapes du projet et utilisé Trello avec un tableau Kanban pour organiser et suivre les tâches. J'ai également créé plusieurs présentations pour les différentes étapes du projet afin de communiquer efficacement avec les parties prenantes et l'équipe de développement.",
     "linkGH": "https://github.com/DiNeTe/OC_projet7_Menu_Maker_by_Qwenta"
 
 }

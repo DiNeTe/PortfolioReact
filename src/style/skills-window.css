@@ -33,7 +33,7 @@
 }
 
 .skill-header {
-  background: rgba(255, 255, 255, 0.4);
+  background:  rgb(232, 238, 248, 0.65);
   transition: backdrop-filter 5s ease-in;
 }
 

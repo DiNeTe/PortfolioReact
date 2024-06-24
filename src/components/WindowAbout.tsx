@@ -9,7 +9,7 @@ const AboutContent: React.FC = () => {
     <>
       <TypewriterEffect
         className="typewriter-about"
-        text="Depuis toujours passionné par l'informatique, j'ai constamment exploré et expérimenté avec les technologies. Aujourd'hui, je me tourne vers le développement web avec une grande motivation. Mon intérêt se porte sur l'IA, le Web3 et la blockchain. Je suis déterminé à contribuer activement à l'expansion du Web3 et à participer à l'innovation numérique."
+        text="Depuis toujours, je suis animé par une passion insatiable pour l'informatique. J'adore créer, concevoir et imaginer des projets, et surtout, les voir prendre vie. Chaque nouvelle technologie est une opportunité pour moi d'explorer et d'innover. Aujourd'hui, je m'investis avec une immense motivation dans le développement web. Mon envie de développer et d'apprendre sans cesse me pousse à relever de nouveaux défis et à explorer des horizons technologiques inédits."
       />
       <Draggable nodeRef={draggableRef}>
         <div ref={draggableRef}>

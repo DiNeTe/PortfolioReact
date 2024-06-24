@@ -3,241 +3,161 @@
     "id": "21",
     "name": "UX/UI Design",
     "image": "./skills_logo/ui.png",
-    "tags": [
-      "design",
-      "UX",
-      "UI"
-    ],
+    "tags": ["design", "UX", "UI"],
     "description": "Je conçois des interfaces utilisateur attrayantes et intuitives qui maximisent l'engagement et la satisfaction des utilisateurs. Grâce à une utilisation habile des outils de design et à une application rigoureuse des principes de l'expérience utilisateur, je transforme des concepts en sites web fonctionnels et esthétiquement plaisants, augmentant ainsi les taux de conversion et de rétention."
   },
   {
     "id": "22",
     "name": "SEO (Search Engine Optimization)",
     "image": "./skills_logo/seo.png",
-    "tags": [
-      "SEO",
-      "optimisation",
-      "référencement"
-    ],
+    "tags": ["SEO", "optimisation", "référencement"],
     "description": "J'améliore la visibilité des sites web dans les moteurs de recherche pour attirer un trafic organique accru et qualifié. En appliquant des techniques d'optimisation on-page et off-page, je rends les sites web plus accessibles et pertinents pour les moteurs de recherche, augmentant leur classement et, par conséquent, le nombre de visiteurs et de prospects."
   },
   {
     "id": "23",
     "name": "Web Accessibility (WCAG)",
     "image": "./skills_logo/wcag.png",
-    "tags": [
-      "accessibilité",
-      "WCAG",
-      "inclusion"
-    ],
+    "tags": ["accessibilité", "WCAG", "inclusion"],
     "description": "J'assure que les sites web sont conformes aux normes WCAG, permettant à tous les utilisateurs, y compris ceux en situation de handicap, d'accéder facilement au contenu. En rendant les sites plus inclusifs et ergonomiques, j'élargis l'audience potentielle et améliore l'expérience utilisateur globale, répondant ainsi aux besoins de diversité et d'inclusion."
   },
   {
     "id": "3",
     "name": "JavaScript (ES6+)",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-    "tags": [
-      "scripting",
-      "développement web",
-      "frontend",
-      "backend"
-    ],
+    "tags": ["scripting", "développement web", "frontend", "backend"],
     "description": "Rendre les sites web interactifs et dynamiques en manipulant le DOM, en gérant des événements utilisateurs et en utilisant des APIs pour des fonctionnalités avancées. Apporter des solutions innovantes et réactives aux besoins des utilisateurs."
   },
   {
     "id": "5",
     "name": "React.js",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-    "tags": [
-      "framework",
-      "bibliothèque",
-      "frontend"
-    ],
-    "description": "Créer des interfaces utilisateur dynamiques et réactives, gérer l'état de l'application avec Hooks et Redux. Structurer les applications en composants réutilisables pour une meilleure maintenabilité."
+    "tags": ["framework", "bibliothèque", "frontend"],
+    "description": "Créer des interfaces utilisateur dynamiques et réactives avec React, en utilisant les Hooks pour gérer l'état et les effets. Développer des hooks personnalisés pour réutiliser la logique de l'application. Utiliser React Router pour structurer les applications en composants réutilisables et améliorer la navigation et la maintenabilité."
   },
+  {
+    "id": "21",
+    "name": "Vite",
+    "image": "./skills_logo/vite.png",
+    "tags": ["Build Tool", "Fast", "Modern"],
+    "description": "Utilisation de Vite comme outil de build moderne et rapide pour les projets React. Vite permet une expérience de développement ultra-rapide grâce à son serveur de développement léger et sa construction optimisée pour les performances."
+  },  
   {
     "id": "4",
     "name": "TypeScript",
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-    "tags": [
-      "scripting",
-      "développement web",
-      "frontend",
-      "backend"
-    ],
+    "tags": ["scripting", "développement web", "frontend", "backend"],
     "description": "Améliorer la qualité du code avec un typage statique, écrire du code plus robuste et maintenable. Faciliter la collaboration et la gestion des projets d'équipe grâce à un code bien structuré."
   },
   {
     "id": "9",
     "name": "Node.js",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
-    "tags": [
-      "runtime",
-      "JavaScript",
-      "backend"
-    ],
+    "tags": ["runtime", "JavaScript", "backend"],
     "description": "Développer des applications backend performantes, utiliser des modules, gérer des serveurs HTTP et manipuler des bases de données. Assurer la scalabilité et la performance des services web."
   },
   {
     "id": "10",
     "name": "Express.js",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
-    "tags": [
-      "framework",
-      "backend",
-      "Node.js"
-    ],
+    "tags": ["framework", "backend", "Node.js"],
     "description": "Construire des APIs RESTful, gérer les routes et les middlewares, structurer les applications backend de manière modulaire. Faciliter la communication entre le frontend et le backend."
   },
   {
     "id": "11",
     "name": "RESTful API",
     "image": "./skills_logo/restapi.png",
-    "tags": [
-      "API",
-      "REST",
-      "backend"
-    ],
+    "tags": ["API", "REST", "backend"],
     "description": "Créer et consommer des APIs RESTful pour permettre la communication entre le frontend et le backend. Gérer l'authentification et les autorisations, documenter les endpoints pour une intégration fluide."
   },
   {
     "id": "6",
     "name": "MongoDB",
     "image": "https://upload.wikimedia.org/wikipedia/fr/4/45/MongoDB-Logo.svg",
-    "tags": [
-      "base de données",
-      "NoSQL",
-      "backend"
-    ],
+    "tags": ["base de données", "NoSQL", "backend"],
     "description": "Gérer efficacement les données des applications web avec une base de données NoSQL. Créer des schémas de données, effectuer des opérations CRUD et optimiser les requêtes pour des performances accrues."
   },
   {
     "id": "1",
     "name": "HTML5",
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
-    "tags": [
-      "balisage",
-      "développement web",
-      "frontend"
-    ],
+    "tags": ["balisage", "développement web", "frontend"],
     "description": "Structurer des pages web de manière sémantique et accessible pour créer des sites web adaptatifs et dynamiques. Intégration d'éléments multimédia et de formulaires interactifs pour une expérience utilisateur enrichie."
   },
   {
     "id": "2",
     "name": "CSS3",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
-    "tags": [
-      "stylisation",
-      "design web",
-      "frontend"
-    ],
+    "tags": ["stylisation", "design web", "frontend"],
     "description": "Styliser des pages web de manière professionnelle avec des techniques avancées comme Flexbox et Grid Layout, créant des mises en page complexes et responsives. Utiliser des animations CSS pour améliorer l'expérience utilisateur."
   },
   {
     "id": "12",
     "name": "Inversion of Control (IoC)",
     "image": "./skills_logo/dip.png",
-    "tags": [
-      "design pattern",
-      "architecture",
-      "backend"
-    ],
+    "tags": ["design pattern", "architecture", "backend"],
     "description": "Appliquer le principe de l'Inversion of Control pour améliorer la modularité et la testabilité des applications backend. Utiliser des conteneurs IoC pour gérer les dépendances efficacement."
   },
   {
     "id": "13",
     "name": "Dependency Injection (DI)",
     "image": "./skills_logo/di.png",
-    "tags": [
-      "design pattern",
-      "architecture",
-      "backend"
-    ],
+    "tags": ["design pattern", "architecture", "backend"],
     "description": "Mettre en œuvre la Dependency Injection pour gérer les dépendances dans les applications backend. Écrire un code plus flexible et maintenable, facilitant la gestion des projets."
   },
   {
     "id": "14",
     "name": "Agile Methodologies (Scrum, Kanban)",
     "image": "./skills_logo/agile.png",
-    "tags": [
-      "agile",
-      "gestion de projet",
-      "Scrum",
-      "Kanban"
-    ],
+    "tags": ["agile", "gestion de projet", "Scrum", "Kanban"],
     "description": "Participer à des projets utilisant Scrum et Kanban, planifier des sprints, organiser des stand-ups, gérer les tâches avec des outils comme Jira et Trello. Optimiser la productivité et la collaboration d'équipe."
   },
   {
     "id": "8",
     "name": "Visual Studio Code",
     "image": "./skills_logo/vsc.png",
-    "tags": [
-      "IDE",
-      "éditeur de code",
-      "outil"
-    ],
+    "tags": ["IDE", "éditeur de code", "outil"],
     "description": "Utiliser Visual Studio Code comme principal éditeur de code, profiter des extensions et fonctionnalités pour améliorer la productivité et faciliter le débogage."
   },
   {
     "id": "7",
     "name": "GitHub",
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
-    "tags": [
-      "versioning",
-      "collaboration",
-      "outil"
-    ],
+    "tags": ["versioning", "collaboration", "outil"],
     "description": "Gérer les versions et collaborer sur des projets de développement, cloner des dépôts, gérer des branches et résoudre des conflits de fusion."
   },
   {
     "id": "15",
     "name": "Trello",
     "image": "https://upload.wikimedia.org/wikipedia/en/8/8c/Trello_logo.svg",
-    "tags": [
-      "gestion de projet",
-      "outil",
-      "collaboration"
-    ],
+    "tags": ["gestion de projet", "outil", "collaboration"],
     "description": "Utiliser Trello pour la gestion de projets et la collaboration en équipe, créer des tableaux de bord, gérer des cartes et suivre l'avancement des tâches."
   },
   {
     "id": "16",
     "name": "Problem Solving",
     "image": "./skills_logo/problem.png",
-    "tags": [
-      "résolution de problèmes",
-      "soft skills"
-    ],
+    "tags": ["résolution de problèmes", "soft skills"],
     "description": "Identifier les causes des problèmes, élaborer des solutions et les mettre en œuvre efficacement. Apporter des réponses innovantes aux défis rencontrés."
   },
   {
     "id": "17",
     "name": "Communication",
     "image": "./skills_logo/com.png",
-    "tags": [
-      "communication",
-      "soft skills"
-    ],
+    "tags": ["communication", "soft skills"],
     "description": "Exprimer clairement ses idées, écouter activement, collaborer efficacement en équipe. Faciliter les échanges et la compréhension mutuelle."
   },
   {
     "id": "19",
     "name": "Time Management",
     "image": "./skills_logo/timemanagement.png",
-    "tags": [
-      "gestion du temps",
-      "soft skills"
-    ],
+    "tags": ["gestion du temps", "soft skills"],
     "description": "Planifier les tâches et respecter les délais, prioriser les activités, utiliser des outils de gestion du temps pour rester organisé."
   },
   {
     "id": "20",
     "name": "Adaptability",
     "image": "./skills_logo/adaptability.png",
-    "tags": [
-      "adaptabilité",
-      "soft skills"
-    ],
+    "tags": ["adaptabilité", "soft skills"],
     "description": "S'adapter à de nouvelles situations, apprendre rapidement de nouvelles technologies, être flexible et réagir efficacement aux changements."
   }
 ]
