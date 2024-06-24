@@ -54,7 +54,7 @@
   height: 100%;
   border-radius: 10px;
   background: rgb(122, 122, 122);
-  padding: 35px;
+  padding: 10px;
 }
 
 @keyframes blink {

@@ -27,7 +27,6 @@
 
 .back-arrow {
   visibility: hidden;
-  position: absolute;
   left: 2%;
   text-decoration: none;
   color: #333;
@@ -66,8 +65,8 @@ a.title-project:hover {
 }
 
 .link-ico {
-  width: 4%;
-  margin: 1%;
+  width: 25px;
+  margin: 10px;
 }
 
 .github-link {
@@ -99,7 +98,7 @@ a#github-ico:hover {
 }
 
 #tag-container {
-  position: absolute;
+  /* position: absolute; */
   right: 2%;
 }
 

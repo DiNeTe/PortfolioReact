@@ -37,7 +37,6 @@ ul {
 .cover-project {
   width: 100%;
   transition: filter 0.3s ease, transform 0.3s ease;
-  margin-bottom: 02%;
   border-radius: 10px;
 }
 

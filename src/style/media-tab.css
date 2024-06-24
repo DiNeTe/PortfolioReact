@@ -18,9 +18,9 @@
 
   .project-header {
     position: relative;
-    flex-direction: column;
+    flex-direction: row;
     padding: 10px 0;
-    height: 70px;
+    height: 95px;
   }
 
 
@@ -38,7 +38,7 @@
   }
 
   .tag {
-    font-size: 1vw;
+    font-size: 1.60vw;
     padding: 0px 5px 2px;
   }
 
